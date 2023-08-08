@@ -16,7 +16,7 @@
 		0 16px 32px rgba(var(--gray), 33%);
 }
 
-@font-face {
+/* @font-face {
 	font-family: 'Atkinson';
 	src: url('/fonts/atkinson-regular.woff') format('woff');
 	font-weight: 400;
@@ -30,7 +30,7 @@
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
-}
+} */
 
 body {
 	font-family: 'Atkinson', sans-serif;
@@ -44,6 +44,7 @@ body {
 	color: rgb(var(--gray-dark));
 	font-size: 20px;
 	line-height: 1.7;
+	background: --accent url(/public/images/bg-line-art-1.svg) top center no-repeat;
 }
 
 main {
@@ -70,6 +71,12 @@ h1 {
 
 h2 {
 	font-size: 2.441em;
+}
+
+body.home h1,
+body.home h2 {
+	display: inline;
+	font-size: 1em;
 }
 
 h3 {
