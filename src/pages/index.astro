@@ -1,4 +1,5 @@
 ---
+import "bootstrap/dist/css/bootstrap.css";
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -13,22 +14,98 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 	<body class="home">
 		<Header title={SITE_TITLE} />
 		<main class="container mx-auto">
-			<section>
-				<h1>Welcome. I’m Edward, a Senior Manager of UX and Design Systems.</h1>
-				<h2>
-					I specialize in building enterprise-level visual design systems,
-					crafting intuitive user experiences, and overseeing fellow designers.
-					Additionally, I have a strong affinity for front-end coding. Need help
-					on getting your project started? <a href="/contact/">Let’s chat</a>.
-				</h2>
+			<section class="hero row">
+				<div class="col-md-7">
+					<h1>Welcome. I’m Edward, a Senior Manager of UX and Design Systems.</h1>
+					<h2>
+						I specialize in building enterprise-level visual design systems, crafting
+						intuitive user experiences, and overseeing fellow designers. Additionally,
+						I have a strong affinity for front-end coding. Need help on getting your
+						project started? <a href="/contact/">Let’s chat</a>.
+					</h2>
+				</div>
+				<div class="col-md-5 text-end align-middle">
+					<div class="vstack gap-4 px-5">
+						<a href="/portfolio/" class="btn btn-primary">View projects</a>
+						<a href="/about" class="btn btn-primary">Learn about me</a>
+					</div>
+				</div>
 			</section>
-			<section>
-				<h2>Featured Projects</h2>
-				<div>
-					<h3>Project Name Here</h3>
-					<p>Project description</p>
-					<div class="img">
-						<img src="" alt="">
+			<section class="row gx-5">
+				<h2 class="col-12 pb-5">Featured Projects</h2>
+
+				<div class="col-md-6 mb-5">
+					<div class="card card-portfolio">
+						<div class="row">
+							<div class="col-md-6">
+								<h3>Project Name Here</h3>
+								<p>
+									Amet eiusmod ea incididunt tempor enim nisi non veniam.
+									Exercitation id Lorem nostrud voluptate nulla ut.
+									Pariatur nostrud nisi nostrud adipisicing. Labore
+									officia magna magna enim nostrud. Ullamco occaecat
+									incididunt non voluptate officia proident.
+								</p>
+								<a href="#" class="text-link">View project</a>
+							</div>
+							<div class="col-md-6 img">
+								<img
+									src="/images/Image Container@2x.png"
+									class="object-contain h-96 w-96 float-right"
+									alt=""
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 mb-5">
+					<div class="card card-portfolio">
+						<div class="row">
+							<div class="col-md-6">
+								<h3>Project Name Here</h3>
+								<p>
+									Amet eiusmod ea incididunt tempor enim nisi non veniam.
+									Exercitation id Lorem nostrud voluptate nulla ut.
+									Pariatur nostrud nisi nostrud adipisicing. Labore
+									officia magna magna enim nostrud. Ullamco occaecat
+									incididunt non voluptate officia proident.
+								</p>
+								<a href="#" class="text-link">View project</a>
+							</div>
+							<div class="col-md-6 img">
+								<img
+									src="/images/Image Container@2x.png"
+									class="object-contain h-96 w-96 float-right"
+									alt=""
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12 mb-5">
+					<div class="card card-portfolio">
+						<div class="row">
+							<div class="col-md-5">
+								<h3>Project Name Here</h3>
+								<p>
+									Amet eiusmod ea incididunt tempor enim nisi non veniam.
+									Exercitation id Lorem nostrud voluptate nulla ut.
+									Pariatur nostrud nisi nostrud adipisicing. Labore
+									officia magna magna enim nostrud. Ullamco occaecat
+									incididunt non voluptate officia proident.
+								</p>
+								<a href="#" class="text-link">View project</a>
+							</div>
+							<div class="col-md-6 img">
+								<img
+									src="/images/Image Container@2x.png"
+									class="float-right"
+									alt=""
+								/>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
