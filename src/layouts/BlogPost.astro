@@ -18,7 +18,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 	<body data-barba="wrapper">
 		<Header />
-		<main data-barba="container">
+		<main class="container mx-auto" data-barba="container" data-barba-namespace={title}>
 			<article>
 				<div class="hero-image">
 					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
