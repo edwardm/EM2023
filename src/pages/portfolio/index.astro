@@ -85,9 +85,9 @@ const posts = (await getCollection("portfolio")).sort(
 			}
 		</style> -->
 	</head>
-	<body>
+	<body data-barba="wrapper">
 		<Header />
-		<main>
+		<main data-barba="container" data-barba-namespace="blog">
 			<section>
 				<ul>
 					{
@@ -97,23 +97,12 @@ const posts = (await getCollection("portfolio")).sort(
 									<img
 										width={720}
 										height={360}
-										src={
-											post.data
-												.heroImage
-										}
+										src={post.data.heroImage}
 										alt=""
 									/>
-									<h4 class="title">
-										{post.data.title}
-									</h4>
+									<h4 class="title">{post.data.title}</h4>
 									<p class="date">
-										<FormattedDate
-											date={
-												post
-													.data
-													.pubDate
-											}
-										/>
+										<FormattedDate date={post.data.pubDate} />
 									</p>
 								</a>
 							</li>

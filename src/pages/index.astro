@@ -11,9 +11,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="home">
+	<body class="home" data-barba="wrapper">
 		<Header title={SITE_TITLE} />
-		<main class="container mx-auto">
+		<main class="container mx-auto" data-barba="container" data-barba-namespace="home">
 			<section class="hero row">
 				<div class="col-md-7">
 					<h1>Welcome. I’m Edward, a Senior Manager of UX and Design Systems.</h1>
@@ -28,19 +28,20 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 				<div class="col-md-1"></div>
 				<div class="col-md-4 text-end align-middle">
 					<div class="vstack gap-4 px-5">
-						<a href="/portfolio/" class="btn btn-primary">View projects</a>
-						<a href="/about" class="btn btn-primary">Learn about me</a>
+						<a href="/portfolio" class="btn btn-primary">My work</a>
+						<a href="/about" class="btn btn-primary">About me</a>
 					</div>
 				</div>
 			</section>
 			<section class="row gx-5">
 				<h2 class="col-12 pb-5">Featured Projects</h2>
-
 				<div class="col-md-6 mb-5">
 					<div class="card card-portfolio card-link">
 						<div class="row">
 							<div class="col-md-6">
-								<h3>Project Name Here</h3>
+								<h3>Automation Anywhere Web Design System 3.0</h3>
+								<span class="tag">Design System</span>
+								<span class="tag">User Interface</span>
 								<p>
 									Amet eiusmod ea incididunt tempor enim nisi non veniam.
 									Exercitation id Lorem nostrud voluptate nulla ut.
@@ -65,7 +66,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 					<div class="card card-portfolio card-link">
 						<div class="row">
 							<div class="col-md-6">
-								<h3>Project Name Here</h3>
+								<h3>Automation Anywhere Website Redesign 3.0</h3>
+								<span class="tag">User Interface</span><span class="tag"
+									>User Experience</span
+								>
 								<p>
 									Amet eiusmod ea incididunt tempor enim nisi non veniam.
 									Exercitation id Lorem nostrud voluptate nulla ut.
@@ -90,10 +94,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 					<div class="card card-portfolio card-link">
 						<div class="row">
 							<div class="col-md-5">
-								<h3>Project Name Here</h3>
-								<span class="tag">Design System</span><span class="tag"
-									>Design System</span
-								><span class="tag">Design System</span>
+								<h3>RM Timing Systems Event Timing App</h3>
+								<span class="tag">App Design</span><span class="tag"
+									>Xamarin</span
+								>
 								<p>
 									Amet eiusmod ea incididunt tempor enim nisi non veniam.
 									Exercitation id Lorem nostrud voluptate nulla ut.
