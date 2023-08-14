@@ -6,7 +6,8 @@
 
 :root {
 	--accent: #2337ff;
-	--accent-light: #00F0FF;
+	--accent-light: #88B9E6;
+	--accent-bright: #00F0FF;
 	--accent-dark: #000d8a;
 	--black: #000;
 	--white: #fff;
@@ -77,7 +78,8 @@ header {
 	border: none !important;
 }
 
-a.logo {
+a.logo,
+a.logo:hover {
 	color: var(--white) !important;
 	/* vertical-align: center; */
 }
@@ -177,16 +179,23 @@ h5 {
 }
 
 .btn-primary {
-	padding: 0.75em 2em !important;
+	border: none !important;
+	padding: 0.75em 1.75em !important;
 	border-radius: 10px !important;
 	background: linear-gradient(180deg, #C7D0F0 0%, #6496A6 100%);
 	box-shadow: 0px 1px 0px 0px #FFF inset;
-	color: #111;
+	color: var(--gray-dark);
 	text-shadow: 0px -1px 0px rgba(255, 255, 255, 0.50);
 	font-family: League Spartan;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
+	transition: transform ease 1000ms;
+}
+
+.btn-primary:hover {
+	color: var(--black) !important;
+	transform: translate(0, -5px);
 }
 
 strong,
@@ -197,12 +206,12 @@ b {
 a {
 	color: var(--white) !important;
 	text-decoration: none !important;
-	border-bottom: 1px solid var(--accent-light);
+	border-bottom: 1px solid var(--accent-bright);
 }
 
 a:hover {
 	/* cursor: pointer !important; */
-	color: var(--accent-light) !important;
+	color: var(--accent-bright) !important;
 }
 
 header a {
@@ -211,6 +220,7 @@ header a {
 
 p {
 	margin-bottom: 1em;
+	letter-spacing: 0.8px;
 }
 
 .prose p {
@@ -268,22 +278,43 @@ footer {
 	padding: 15vh 0;
 }
 
+.tag {
+	color: var(--white);
+	font-weight: 500;
+	font-size: 0.6em;
+	letter-spacing: 0.4px;
+	display: inline-block;
+	padding: 0.2em 1em;
+	margin: 0 1em 1em 0;
+	border-radius: 50px;
+	border: 1px solid var(--accent-light);
+}
+
 .card-portfolio {
 	padding: 2em 0 2em 3em;
 	border-radius: 20px !important;
-	background: rgba(0, 0, 0, 0.30) !important;
-	backdrop-filter: blur(5px);
+	background-color: rgba(0, 0, 0, 0.40) !important;
+	backdrop-filter: blur(2px);
+	transition: transform ease 300ms;
 }
 
 .card-portfolio:hover {
-	background: rgba(0, 0, 0, 0.60) !important;
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.6) !important;
+	/* -webkit-transition: background-color 1000ms linear;
+	-ms-transition: background-color 1000ms linear;
+	transition: background-color 1000ms linear; */
 	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.25), 0px 1px 0px 0px rgba(255, 255, 255, 0.30) inset !important;
-	backdrop-filter: blur(2px) !important;
+	backdrop-filter: blur(6px) !important;
+	transform: translate(0, -5px);
 }
 
-.card-portfolio h3,
-.card-portfolio p {
+.card-portfolio h3 {
 	color: var(--white);
+}
+
+.card-portfolio p {
+	color: var(--gray-light);
 }
 
 .card-portfolio .img {
