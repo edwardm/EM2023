@@ -13,6 +13,7 @@
 		"@astrojs/mdx": "^0.19.7",
 		"@astrojs/rss": "^2.4.3",
 		"@astrojs/sitemap": "^2.0.1",
+		"@esbuild/win32-x64": "^0.19.1",
 		"astro": "^2.10.1",
 		"astro-bootstrap": "^0.6.1"
 	}
