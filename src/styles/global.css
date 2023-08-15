@@ -227,6 +227,10 @@ p {
 	margin-bottom: 2em;
 }
 
+small {
+	font-size: 0.7em !important;
+}
+
 textarea {
 	width: 100%;
 	font-size: 16px;

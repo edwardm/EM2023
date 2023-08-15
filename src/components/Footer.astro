@@ -1,18 +1,15 @@
 ---
+import { MY_NAME } from "../consts";
 const today = new Date();
 ---
 
 <footer class="container mx-auto text-center">
-	&copy; {today.getFullYear()} Your name here. All rights reserved.
+	<p>&copy; {today.getFullYear()} {MY_NAME}. All rights reserved.</p>
+	<p><small>Other trademarks mentioned are copyright their respective owners.</small></p>
 </footer>
 
-<!-- load barba (UMD version) -->
-<script is:inline src="https://unpkg.com/@barba/core"></script>
-
-<!-- load gsap animation library (minified version) -->
+<!-- <script is:inline src="https://unpkg.com/@barba/core"></script>
 <script is:inline src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
-
-<!-- init barba with a simple opacity transition -->
 <script type="text/javascript">
 barba.init({
 	transitions: [
@@ -31,4 +28,4 @@ barba.init({
 		},
 	],
 });
-</script>
+</script> -->
