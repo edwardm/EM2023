@@ -3,16 +3,17 @@
 	--accent-light: #88B9E6;
 	--accent-bright: #00F0FF;
 	--accent-dark: #000d8a;
-	--black: #000;
 	--white: #fff;
 	--offwhite: #ddd;
 	--gray: #666;
 	--gray-light: #ccc;
-	--gray-dark: #222;
+	--gray-dark: #333;
+	--gray-very-dark: #111;
+	--black: #000;
 	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
-	--bg-gradient: linear-gradient(121deg, #11174F 0%, #172179 100%);
+	--bg-gradient: linear-gradient(0deg, #11174F 0%, #172179 100%);
 }
 
 .highlight {
@@ -50,7 +51,7 @@ body {
 	color: var(--offwhite) !important;
 	line-height: 1.4em !important;
 	/* min-height: 100vh; */
-	background: var(--bg-gradient);
+	background-color: var(--gray-very-dark) !important;
 	/* background: var(--bg-gradient) url(/images/bg-line-art-1.svg) top center no-repeat; */
 }
 
@@ -63,7 +64,7 @@ body::after {
 	left: 0;
 	bottom: 0;
 	/* height: 2000px; */
-	background: url(/images/bg-line-art-1.svg) top center no-repeat;
+	background: transparent url(/images/bg-line-art-1.svg) top center no-repeat;
 	/* background-size: cover; */
 }
 
@@ -170,27 +171,28 @@ h5 {
 
 .btn {
 	font-size: 1.3em !important;
-	color: var(--gray-dark) !important;
+	color: var(--white);
 }
 
 .btn-primary {
 	border: none !important;
 	padding: 0.75em 1.75em !important;
-	border-radius: 10px !important;
-	background: linear-gradient(180deg, #C7D0F0 0%, #6496A6 100%);
-	box-shadow: 0px 1px 0px 0px #FFF inset;
-	color: var(--gray-dark);
-	text-shadow: 0px -1px 0px rgba(255, 255, 255, 0.50);
+	border-radius: 50px !important;
+	/* background: linear-gradient(180deg, #C7D0F0 0%, #6496A6 100%); */
+	background: var(--bg-gradient);
+	box-shadow: 0px 0.5px 0px 0px #ccc inset;
+
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 1);
 	font-family: League Spartan;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
-	transition: transform ease 1000ms;
+	transition: transform ease-in 100ms !important;
 }
 
 .btn-primary:hover {
-	color: var(--black) !important;
-	transform: translate(0, -5px);
+	color: var(--accent-bright) !important;
+	transform: translate(0, -3px);
 }
 
 strong,
@@ -298,7 +300,8 @@ footer {
 .card-portfolio {
 	padding: 2em 0 2em 3em;
 	border-radius: 20px !important;
-	background-color: rgba(0, 0, 0, 0.40) !important;
+	background: var(--bg-gradient) !important;
+	/* background-color: rgba(0, 0, 0, 0.40) !important; */
 	backdrop-filter: blur(2px);
 	transition: transform ease 300ms;
 }
