@@ -1,10 +1,11 @@
 ---
-import { MY_NAME } from "../consts";
+import { MY_NAME, SITE_TITLE } from "../consts";
 const today = new Date();
 ---
 
 <footer class="container mx-auto text-center">
-	<p>&copy; {today.getFullYear()} {MY_NAME}. All rights reserved.</p>
+	<p><img src="/images/EM-Logo-Mark.svg" style="width: 60px;" class="mb-3" alt={SITE_TITLE} /></p>
+	<p><small></small>&copy; {today.getFullYear()} {MY_NAME}. All rights reserved.</p>
 	<p><small>Other trademarks mentioned are copyright their respective owners.</small></p>
 </footer>
 

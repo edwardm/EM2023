@@ -2,11 +2,12 @@
 	--accent: #2337ff;
 	--accent-light: #88B9E6;
 	--accent-bright: #00F0FF;
-	--accent-dark: #000d8a;
+	--accent-dark: #111222;
 	--white: #fff;
 	--offwhite: #ddd;
+	--gray-very-light: #ccc;
+	--gray-light: #aaa;
 	--gray: #666;
-	--gray-light: #ccc;
 	--gray-dark: #333;
 	--gray-very-dark: #111;
 	--black: #000;
@@ -14,6 +15,8 @@
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
 	--bg-gradient: linear-gradient(0deg, #11174F 0%, #172179 100%);
+	--bg-gradient-x: linear-gradient(165deg, #2D5EA8 0%, #1F2C9E 100%);
+	--bg-gradient-transparent: linear-gradient(165deg, rgba(45, 94, 168, 0.10) 0%, rgba(31, 44, 158, 0.10) 100%);
 }
 
 .highlight {
@@ -39,7 +42,7 @@
 body {
 	position: relative;
 	font-family: 'League Spartan', sans-serif !important;
-	font-weight: 100 !important;
+	font-weight: 300 !important;
 	font-size: 1.1em !important;
 	margin: 0;
 	padding: 0;
@@ -48,10 +51,10 @@ body {
 	/* background-size: 100% 600px; */
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: var(--offwhite) !important;
-	line-height: 1.4em !important;
+	color: var(--gray-light) !important;
+	line-height: 1.5em !important;
 	/* min-height: 100vh; */
-	background-color: var(--gray-very-dark) !important;
+	background-color: var(--accent-dark) !important;
 	/* background: var(--bg-gradient) url(/images/bg-line-art-1.svg) top center no-repeat; */
 }
 
@@ -76,46 +79,74 @@ a.logo,
 a.logo:hover,
 a.logo:active,
 a.logo:focus {
+	padding-top: 3em;
 	color: var(--white) !important;
 	/* vertical-align: center; */
+
 }
 
 a.logo img {
 	/* float: left; */
 	display: inline-block;
-	height: 100px;
+	height: auto;
 	width: auto;
+}
+
+a.logo img {
+	transition: transform ease-in 100ms !important;
+}
+
+a.logo:hover img {
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.40);
+	transform: translate(0, -3px);
 }
 
 a.logo>span {
 	display: inline-block;
-	padding: 0 0 1.5em 0.5em;
+	padding: 0 0 0 1.5em;
 }
 
 a.logo>span>span {
 	clear: both;
 	display: block;
-	font-family: 'Lexend', sans-serif;
 }
 
 a.logo>span>span:first-child {
-	font-size: 1.2em;
+	font-family: 'Lexend Mega', sans-serif;
+	font-size: 1.05em;
 	font-weight: 600;
 	letter-spacing: 0.4px;
 }
 
 a.logo>span>span:last-child {
+	font-family: 'Lexend', sans-serif;
+	color: var(--gray-very-light) !important;
 	font-size: 0.8em;
 	font-weight: 200;
 	letter-spacing: 0.4px;
 }
 
-.nav {}
-
-.nav-item a {
+.nav {
+	font-family: 'Lexend Mega', sans-serif;
+	font-size: 0.8em;
 	font-weight: 400;
 	letter-spacing: 0.4px;
-	padding: 0.5em 1.5em;
+}
+
+.nav-item a {
+	position: relative;
+	padding: 3.25em 2.0em 0.5em 2.0em;
+}
+
+.nav-item a.active::before {
+	content: " ";
+	position: absolute;
+	top: 0;
+	right: 2.0em;
+	left: 2.0em;
+	height: 4px;
+	border-radius: 0px 0px 5px 5px;
+	background: var(--bg-gradient-x);
 }
 
 main {
@@ -133,23 +164,32 @@ h5,
 h6 {
 	font-family: 'Lexend', sans-serif;
 	font-weight: 600 !important;
-	color: var(--white);
+	color: var(--white) !important;
 	margin: 0 0 1.5em 0 !important;
 	line-height: 1.4 !important;
 }
 
 h1 {
-	font-size: 3em !important;
-
+	font-family: 'Lexend Mega', sans-serif;
+	text-transform: uppercase;
+	font-size: 2.2em !important;
 }
 
 h2 {
-	font-size: 1.6em !important;
+	font-size: 1.4em !important;
+}
+
+h2.description {
+	font-size: 0.9em !important;
+	font-weight: 200 !important;
+	letter-spacing: 1px;
+	color: var(--offwhite) !important;
 }
 
 body.home .hero h1,
 body.home .hero h2 {
 	font-family: 'League Spartan', sans-serif;
+	text-transform: none;
 	display: inline;
 	font-size: 1.7em !important;
 	font-weight: 100 !important;
@@ -157,16 +197,16 @@ body.home .hero h2 {
 }
 
 h3 {
-	font-size: 1.2em !important;
+	font-size: 1.0em !important;
 
 }
 
 h4 {
-	font-size: 1.0em !important;
+	font-size: 0.9em !important;
 }
 
 h5 {
-	font-size: 1.0em;
+	font-size: 0.9em;
 }
 
 .btn {
@@ -180,8 +220,6 @@ h5 {
 	border-radius: 50px !important;
 	/* background: linear-gradient(180deg, #C7D0F0 0%, #6496A6 100%); */
 	background: var(--bg-gradient);
-	box-shadow: 0px 0.5px 0px 0px #ccc inset;
-
 	text-shadow: 0px -1px 0px rgba(0, 0, 0, 1);
 	font-family: League Spartan;
 	font-style: normal;
@@ -191,8 +229,10 @@ h5 {
 }
 
 .btn-primary:hover {
+	text-shadow: 0px -2px 0px rgba(0, 0, 0, 1);
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.40), 0px 1px 0px 0px rgba(255, 255, 255, 0.20) inset !important;
 	color: var(--accent-bright) !important;
-	transform: translate(0, -3px);
+	transform: translate(0, -1px);
 }
 
 strong,
@@ -208,7 +248,7 @@ a {
 
 main a {
 	font-weight: 400;
-	display: inline-block;
+	display: inline;
 }
 
 a:hover {
@@ -228,6 +268,10 @@ p {
 .prose p {
 	margin-bottom: 2em;
 }
+
+/* .binder-paper p {
+	border-bottom: 1px dashed #444;
+} */
 
 small {
 	font-size: 0.7em !important;
@@ -281,7 +325,15 @@ hr {
 
 section,
 footer {
-	padding: 15vh 0;
+	padding: 10vh 0;
+}
+
+section.hero {
+	padding: 20vh 0;
+}
+
+section.title {
+	padding: 8em 0 0 0;
 }
 
 .tag {
@@ -297,13 +349,20 @@ footer {
 	border: 1px solid var(--accent-light);
 }
 
-.card-portfolio {
-	padding: 2em 0 2em 3em;
+.card-portfolio,
+.card-normal {
+	padding: 2em 0 2em 2em;
 	border-radius: 20px !important;
 	background: var(--bg-gradient) !important;
 	/* background-color: rgba(0, 0, 0, 0.40) !important; */
 	backdrop-filter: blur(2px);
 	transition: transform ease 300ms;
+}
+
+.card-normal {
+	padding: 2em 2em 2em 2em;
+
+	background: var(--bg-gradient-transparent) !important;
 }
 
 .card-portfolio:hover {
@@ -312,16 +371,20 @@ footer {
 	/* -webkit-transition: background-color 1000ms linear;
 	-ms-transition: background-color 1000ms linear;
 	transition: background-color 1000ms linear; */
-	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.25), 0px 1px 0px 0px rgba(255, 255, 255, 0.30) inset !important;
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.40), 0px 1px 0px 0px rgba(255, 255, 255, 0.30) inset !important;
 	backdrop-filter: blur(6px) !important;
 	transform: translate(0, -5px);
 }
 
-.card-portfolio h3 {
+.card-portfolio h3,
+.card-normal h3 {
 	color: var(--white);
 }
 
-.card-portfolio p {
+.card-portfolio p,
+.card-portfolio ul,
+.card-normal p,
+.card-normal ul {
 	color: var(--gray-light);
 }
 

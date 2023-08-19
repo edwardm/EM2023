@@ -1,0 +1,50 @@
+---
+import Layout from "../../layouts/Default.astro";
+// import BaseHead from "../../components/BaseHead.astro";
+// import Header from "../../components/Header.astro";
+// import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+const title = "About Me";
+const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit";
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+const posts = (await getCollection("portfolio")).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body data-barba="wrapper">
+		<Header />
+		<main data-barba="container mx-auto" data-barba-namespace="portfolio">
+			<section class="row gx-5"> -->
+<Layout
+	title={title}
+	description={description}
+	pubDate={new Date("August 08 2021")}
+	heroImage="/blog-placeholder-about.jpg">
+	<!-- NEED BREADCRUMB -->
+	<h1 class="col-12 pb-5">Automation Anywhere Web Design System 3.0</h1>
+	<div class="col-12">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
+			viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend
+			quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet
+			volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non
+			diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea
+			dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque
+			sagittis purus sit amet.
+		</p>
+	</div>
+</Layout>
+<!-- </section>
+		</main>
+		<Footer />
+	</body>
+</html> -->

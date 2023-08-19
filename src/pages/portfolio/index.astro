@@ -28,7 +28,93 @@ const posts = (await getCollection("portfolio")).sort(
 	description={description}
 	pubDate={new Date("August 08 2021")}
 	heroImage="/blog-placeholder-about.jpg">
-	<ul class="col-md-12">
+	<section class="row title">
+		<h1 class="col-12 mb-2">Portfolio</h1>
+		<h2 class="col-12 mb-5 pb-5 description">
+			A curated list of works showcasing UX, product and visual design
+		</h2>
+	</section>
+	<section class="row gx-5">
+		<div class="col-md-6 mb-5">
+			<div class="card card-portfolio card-link">
+				<div class="row">
+					<div class="col-md-6">
+						<h3>Automation Anywhere Web Design System 3.0</h3>
+						<span class="tag">Design System</span>
+						<span class="tag">User Interface</span>
+						<p>
+							Amet eiusmod ea incididunt tempor enim nisi non veniam. Exercitation
+							id Lorem nostrud voluptate nulla ut. Pariatur nostrud nisi nostrud
+							adipisicing. Labore officia magna magna enim nostrud. Ullamco
+							occaecat incididunt non voluptate officia proident.
+						</p>
+						<a href="/portfolio/automation-anywhere-design-system" class="text-link"
+							>View project</a
+						>
+					</div>
+					<div class="col-md-6 img">
+						<img
+							src="/images/Image Container@2x.png"
+							class="object-contain h-96 w-96 float-right"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 mb-5">
+			<div class="card card-portfolio card-link">
+				<div class="row">
+					<div class="col-md-6">
+						<h3>Automation Anywhere Web Design System 3.0</h3>
+						<span class="tag">Design System</span>
+						<span class="tag">User Interface</span>
+						<p>
+							Amet eiusmod ea incididunt tempor enim nisi non veniam. Exercitation
+							id Lorem nostrud voluptate nulla ut. Pariatur nostrud nisi nostrud
+							adipisicing. Labore officia magna magna enim nostrud. Ullamco
+							occaecat incididunt non voluptate officia proident.
+						</p>
+						<a href="/portfolio/automation-anywhere-design-system" class="text-link"
+							>View project</a
+						>
+					</div>
+					<div class="col-md-6 img">
+						<img
+							src="/images/Image Container@2x.png"
+							class="object-contain h-96 w-96 float-right"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12 mb-5">
+			<div class="card card-portfolio card-link">
+				<div class="row">
+					<div class="col-md-5">
+						<h3>Automation Anywhere Web Design System 3.0</h3>
+						<span class="tag">Design System</span>
+						<span class="tag">User Interface</span>
+						<p>
+							Amet eiusmod ea incididunt tempor enim nisi non veniam. Exercitation
+							id Lorem nostrud voluptate nulla ut. Pariatur nostrud nisi nostrud
+							adipisicing. Labore officia magna magna enim nostrud. Ullamco
+							occaecat incididunt non voluptate officia proident.
+						</p>
+						<a href="/portfolio/automation-anywhere-design-system" class="text-link"
+							>View project</a
+						>
+					</div>
+					<div class="col-md-1"></div>
+					<div class="col-md-5 img">
+						<img src="/images/Image Container@2x.png" class="float-end" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- <ul class="col-md-12">
 		{
 			posts.map((post) => (
 				<li>
@@ -42,7 +128,7 @@ const posts = (await getCollection("portfolio")).sort(
 				</li>
 			))
 		}
-	</ul>
+	</ul> -->
 </Layout>
 <!-- </section>
 		</main>
