@@ -377,30 +377,26 @@ footer {
 }
 
 section.hero-home {
-	padding: 20vh initial;
+	margin: 3em auto !important;
 }
 
 section.title {
 	padding: 8em 0 0 0;
 }
 
-section.hero-home-detail {
+/* section.hero-home-detail {
 	padding: 8em 0 5em 0;
-	/* overflow-x: visible !important; */
+
 }
 
 section.hero-home-detail .img-container {
-	/* overflow: hidden;
-	position: relative; */
+
 }
 
 section.hero-home-detail .img-container img {
 	border-radius: 30px;
-	/* position: absolute;
-	max-width: none;
-	max-height: none;
-	width: 60vw !important; */
-}
+
+} */
 
 section.section-portfolio {
 	position: relative;
@@ -464,7 +460,8 @@ section.section-portfolio i {
 
 .modal-fullscreen img {
 	/* max-height: 85vh; */
-	max-height: 1080px;
+	/* max-height: 1080px; */
+	width: 100%;
 	max-width: 1600px;
 }
 
