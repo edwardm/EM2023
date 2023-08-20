@@ -486,6 +486,7 @@ footer {
 
 .card-portfolio,
 .card-normal {
+	height: 100% !important;
 	color: var(--offwhite);
 	padding: 2em 0 2em 2em;
 	border-radius: 20px !important;
