@@ -3,11 +3,44 @@ import { MY_NAME, SITE_TITLE } from "../consts";
 const today = new Date();
 ---
 
-<footer class="container mx-auto text-center">
-	<p><img src="/images/EM-Logo-Mark.svg" style="width: 60px;" class="mb-3" alt={SITE_TITLE} /></p>
-	<p><small></small>&copy; {today.getFullYear()} {MY_NAME}. All rights reserved.</p>
+<footer class="text-center">
+	<p>
+		<a href="/" class="logo"
+			><img
+				src="/images/EM-Logo-Mark.svg"
+				style="width: 60px;"
+				class="mb-3"
+				alt={SITE_TITLE}
+			/></a
+		>
+	</p>
+	<p><small>&copy; {today.getFullYear()} {MY_NAME}. All rights reserved.</small></p>
 	<p><small>Other trademarks mentioned are copyright their respective owners.</small></p>
 </footer>
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+	const galleryModal = document.getElementById("galleryModal");
+	if (galleryModal) {
+		galleryModal.addEventListener("show.bs.modal", (event) => {
+			// Button that triggered the modal
+			const button = event.relatedTarget;
+			// Extract info from data-bs-* attributes
+			const imgSrc = button.getAttribute("data-bs-image");
+			const titleText = button.getAttribute("data-bs-title");
+			// If necessary, you could initiate an Ajax request here
+			// and then do the updating in a callback.
+
+			// Update the modal's content.
+			const modalTitle = galleryModal.querySelector(".modal-title");
+			const modalImg = galleryModal.querySelector(".modal-body img");
+
+			modalTitle.textContent = `${titleText}`;
+			modalImg.src = imgSrc;
+		});
+	}
+</script>
 
 <!-- <script is:inline src="https://unpkg.com/@barba/core"></script>
 <script is:inline src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
@@ -18,12 +51,12 @@ barba.init({
 			name: "opacity-transition",
 			leave(data) {
 				return gsap.to(data.current.container, {
-					opacity: 0,
+					opacity: 0
 				});
 			},
 			enter(data) {
 				return gsap.from(data.next.container, {
-					opacity: 0,
+					opacity: 0
 				});
 			},
 		},

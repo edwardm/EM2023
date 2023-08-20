@@ -16,8 +16,32 @@ const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit";
 		</h2>
 	</section>
 	<section class="row gx-5">
-		<div class="col-12">
-			<p>
+		<div class="col-xl-7">
+			<form id="my-form" action="https://formspree.io/f/xyyqwznb" method="POST" data-bs-theme="dark">
+				<div class="row">
+					<div class="col-xl-6">
+						<div class="form-floating mb-4">
+							<input type="text" name="name" class="form-control" required />
+							<label  for="name">Name:</label>
+						</div>
+					</div>
+					<div class="col-xl-6">
+						<div class="form-floating mb-4">
+							<input type="email" name="email" class="form-control" required />
+							<label  for="email">Email:</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-floating mb-5">
+					<textarea name="message" class="form-control" required rows="10" style="height: 170px;"></textarea>
+					<label for="message">Message:</label>
+				</div>
+				<div class="text-center">
+					<button id="my-form-button" class="btn btn-primary">Submit</button>
+					<p id="my-form-status" class="mt-4"></p>
+				</div>
+			</form>
+			<!-- <p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 				incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada
 				nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod
@@ -26,7 +50,71 @@ const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit";
 				egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius
 				sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer
 				quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-			</p>
+			</p> -->
+		</div>
+		<div class="col-xl-1"></div>
+		<div class="col-xl-4">
+			<h3>Other ways to find me&hellip;</h3>
+			<ul>
+				<li><script type="text/javascript">
+					/*<![CDATA[*/
+
+					/***********************************************
+					* Encrypt Email script- Please keep notice intact
+					* Tool URL: http://www.dynamicdrive.com/emailriddler/
+					* **********************************************/
+					<!-- Encrypted version of: contact [at] **************.*** //-->
+
+					var emailriddlerarray=[99,111,110,116,97,99,116,64,101,100,119,97,114,100,109,97,114,103,97,108,108,111,46,99,111,109]
+					var encryptedemail_id41='' //variable to contain encrypted email 
+					for (var i=0; i<emailriddlerarray.length; i++)
+					encryptedemail_id41+=String.fromCharCode(emailriddlerarray[i])
+
+					document.write('<a href="mailto:'+encryptedemail_id41+'?subject=Email from EdwardMargallo.com"><i class="fa-fw fa-regular fa-envelope"></i> Send an email</a>')
+
+					/*]]>*/
+					</script></li>
+				<li><a href="https://www.linkedin.com/in/edwardmargallo/" target="_blank"><i class="fa-fw fa-brands fa-linkedin"></i> LinkedIn</a></li>
+				<li><a href="https://www.behance.net/edwardmargallo" target="_blank"><i class="fa-fw fa-brands fa-square-behance"></i> Behance</a></li>
+				<li><a href="https://dribbble.com/etmargallo" target="_blank"><i class="fa-fw fa-brands fa-square-dribbble"></i> Dribbble</a></li>
+			</ul>
 		</div>
 	</section>
 </Layout>
+
+<script>
+	var form = document.getElementById("my-form");
+
+	async function handleSubmit(event) {
+		event.preventDefault();
+		var status = document.getElementById("my-form-status");
+		var data = new FormData(event.target);
+		fetch(event.target.action, {
+			method: form.method,
+			body: data,
+			headers: {
+				Accept: "application/json",
+			},
+		})
+			.then((response) => {
+				if (response.ok) {
+					status.innerHTML = "Thanks for your submission!";
+					form.reset();
+				} else {
+					response.json().then((data) => {
+						if (Object.hasOwn(data, "errors")) {
+							status.innerHTML = data["errors"]
+								.map((error) => error["message"])
+								.join(", ");
+						} else {
+							status.innerHTML = "Oops! There was a problem submitting your form";
+						}
+					});
+				}
+			})
+			.catch((error) => {
+				status.innerHTML = "Oops! There was a problem submitting your form";
+			});
+	}
+	form.addEventListener("submit", handleSubmit);
+</script>
