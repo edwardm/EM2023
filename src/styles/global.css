@@ -187,6 +187,7 @@ h6 {
 }
 
 h1.modal-title {
+	font-size: 1em !important;
 	margin-bottom: 0 !important;
 }
 
@@ -376,9 +377,9 @@ footer {
 	padding: 5em 0;
 }
 
-section.hero-home {
-	margin: 3em auto !important;
-}
+/* section.hero-home {
+	padding: 6em initial !important;
+} */
 
 section.title {
 	padding: 8em 0 0 0;
@@ -550,6 +551,16 @@ footer {
 	right: -3em !important;
 }
 
+/* modal */
+
+.modal.show .modal-dialog {
+	background-color: var(--bg-gradient-transparent) !important;
+}
+
+.modal-header {
+	gap: 20px;
+}
+
 /* .carousel-control-prev:hover,
 .carousel-control-prev:focus,
 .carousel-control-next:hover,
@@ -558,6 +569,17 @@ footer {
 } */
 
 @media (max-width: 720px) {
+
+	body::after {
+		/* background: transparent url(/images/bg-line-art-1.svg) top center no-repeat; */
+		/* background-position: top center; */
+		background-size: cover;
+	}
+
+	/* .navbar-toggler {
+		background-color: var(--bg-gradient) !important;
+	} */
+
 	/* body {
 		font-size: 18px;
 	} */
@@ -568,6 +590,54 @@ footer {
 }
 
 @media (max-width: 428px) {
+
+	a.logo,
+	a.logo:hover,
+	a.logo:active,
+	a.logo:focus {
+		padding-top: 1.5em;
+	}
+
+	a.logo img {
+		width: 90px !important;
+	}
+
+	a.logo>span {
+		padding: 0 0 0 1.0em;
+	}
+
+	a.logo>span>span:first-child {
+
+		font-size: 0.85em;
+		line-height: 20px;
+	}
+
+	a.logo>span>span:last-child {
+		font-size: 0.7em;
+		line-height: 20px;
+	}
+
+	.nav {
+
+		font-size: 0.7em;
+
+	}
+
+	.nav-item a {
+
+		padding: 1.5em 1.5em;
+	}
+
+	.nav-item a.active::before {
+		content: " ";
+		position: absolute;
+		top: 0;
+		right: 1.5em;
+		left: 1.5em;
+		height: 4px;
+		border-radius: 0px 0px 5px 5px;
+		background: var(--bg-gradient-x);
+	}
 
 	h1,
 	h2,
@@ -580,7 +650,7 @@ footer {
 	}
 
 	.title h1 {
-		font-size: 2.2em !important;
+		font-size: 1.6em !important;
 
 	}
 
@@ -597,7 +667,7 @@ footer {
 	}
 
 	h2.description {
-		font-size: 1.1em !important;
+		font-size: 1em !important;
 	}
 
 	.hero-home h1,
@@ -632,6 +702,15 @@ footer {
 	.card-portfolio,
 	.card-normal {
 		padding: 2em 2em 0 2em;
+	}
+
+	section.title {
+		padding: 2em 0 0 0;
+	}
+
+	section,
+	footer {
+		padding: 2em 0;
 	}
 }
 

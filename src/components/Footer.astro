@@ -29,8 +29,8 @@ const today = new Date();
 	<div class="modal-dialog modal-fullscreen">
 		<div class="modal-content">
 			<div class="modal-header">
-				<img src="/images/EM-Logo-Mark.svg" class="float-start mr-3" style="width: 80px;" alt={SITE_TITLE} />
-				<h1 class="float-start modal-title fs-4" id="exampleModalFullscreenLabel">Full screen modal</h1>
+				<img src="/images/EM-Logo-Mark.svg" style="width: 70px;" alt={SITE_TITLE} />
+				<h1 class="float-start modal-title fs-4">Full screen modal</h1>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
 				></button>
 			</div>
@@ -46,9 +46,15 @@ const today = new Date();
 	</div>
 </div>
 
+<script is:inline src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
+	// https://www.npmjs.com/package/lazyload
+	let images = document.querySelectorAll("main img");
+	lazyload(images);
+
+	// https://getbootstrap.com/docs/5.3/components/modal/#varying-modal-content
 	const galleryModal = document.getElementById("galleryModal");
 	if (galleryModal) {
 		galleryModal.addEventListener("show.bs.modal", (event) => {
