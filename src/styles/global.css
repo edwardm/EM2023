@@ -186,8 +186,16 @@ h6 {
 	-webkit-text-fill-color: transparent !important;
 }
 
+h1.modal-title {
+	margin-bottom: 0 !important;
+}
+
 h2 {
 	font-size: 1.4em !important;
+}
+
+.card-portfolio h2 {
+	font-size: 1.2em !important;
 }
 
 h2.description {
@@ -198,8 +206,8 @@ h2.description {
 	color: var(--gray-light) !important;
 }
 
-body.home .hero h1,
-body.home .hero h2 {
+.hero-home h1,
+.hero-home h2 {
 	font-family: 'League Spartan', sans-serif;
 	text-transform: none;
 	display: inline;
@@ -208,11 +216,11 @@ body.home .hero h2 {
 	line-height: 1.4;
 }
 
-body.home .hero h1 {
+.hero-home h1 {
 	font-weight: 300 !important;
 }
 
-body.home .hero h2 {
+.hero-home h2 {
 	color: var(--gray-light) !important;
 }
 
@@ -368,25 +376,25 @@ footer {
 	padding: 5em 0;
 }
 
-section.hero {
-	padding: 20vh 0;
+section.hero-home {
+	padding: 20vh initial;
 }
 
 section.title {
 	padding: 8em 0 0 0;
 }
 
-section.hero-detail {
+section.hero-home-detail {
 	padding: 8em 0 5em 0;
 	/* overflow-x: visible !important; */
 }
 
-section.hero-detail .img-container {
+section.hero-home-detail .img-container {
 	/* overflow: hidden;
 	position: relative; */
 }
 
-section.hero-detail .img-container img {
+section.hero-home-detail .img-container img {
 	border-radius: 30px;
 	/* position: absolute;
 	max-width: none;
@@ -455,8 +463,9 @@ section.section-portfolio i {
 } */
 
 .modal-fullscreen img {
-	max-width: 1600px;
 	/* max-height: 85vh; */
+	max-height: 1080px;
+	max-width: 1600px;
 }
 
 footer {
@@ -534,13 +543,98 @@ footer {
 	max-height: 400px;
 }
 
+/* carousel */
+
+.carousel-control-prev {
+	left: -3em !important;
+}
+
+.carousel-control-next {
+	right: -3em !important;
+}
+
+/* .carousel-control-prev:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:hover,
+.carousel-control-next:focus {
+
+} */
+
 @media (max-width: 720px) {
-	body {
+	/* body {
 		font-size: 18px;
+	} */
+
+	/* main {
+		padding: 1em;
+	} */
+}
+
+@media (max-width: 428px) {
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 0 0 1.5em 0 !important;
+		line-height: 1.4em !important;
 	}
 
-	main {
-		padding: 1em;
+	.title h1 {
+		font-size: 2.2em !important;
+
+	}
+
+	h1.modal-title {
+		margin-bottom: 0 !important;
+	}
+
+	h2 {
+		font-size: 1.4em !important;
+	}
+
+	.card-portfolio h2 {
+		font-size: 1.2em !important;
+	}
+
+	h2.description {
+		font-size: 1.1em !important;
+	}
+
+	.hero-home h1,
+	.hero-home h2 {
+		display: inline;
+		font-size: 1.4em !important;
+		font-weight: 100 !important;
+		line-height: 1.4;
+	}
+
+	.hero-home h1 {
+		font-weight: 300 !important;
+	}
+
+	.hero-home h2 {
+		color: var(--gray-light) !important;
+	}
+
+	h3 {
+		font-size: 0.9em !important;
+
+	}
+
+	h4 {
+		font-size: 0.9em !important;
+	}
+
+	h5 {
+		font-size: 0.9em;
+	}
+
+	.card-portfolio,
+	.card-normal {
+		padding: 2em 2em 0 2em;
 	}
 }
 

@@ -23,7 +23,7 @@ const posts = (await getCollection("portfolio")).sort(
 	<body data-barba="wrapper">
 		<Header />
 		<main data-barba="container mx-auto" data-barba-namespace="portfolio">
-			<section class="row gx-5"> -->
+			<section class="row gx-md-5"> -->
 <Layout
 	title={title}
 	description={description}
@@ -49,13 +49,13 @@ const posts = (await getCollection("portfolio")).sort(
 			<img src="../../images/work/screenshot-main@2x.jpg" />
 		</div>
 	</section>
-	<section class="row gx-5 section-portfolio">
+	<section class="row gx-md-5 section-portfolio">
 		<div class="col-xl-3 pr-5 section-portfolio-label">
 			<i class="fa fa-users-viewfinder"></i>
 			<h2 class="pr-5">Overview</h2>
 		</div>
 		<div class="col-xl-9">
-			<div class="row gx-5">
+			<div class="row gx-md-5">
 				<div class="col-xl-6 pb-5">
 					<div class="card card-normal">
 						<h3>Design Skills</h3><ul>
@@ -81,30 +81,30 @@ const posts = (await getCollection("portfolio")).sort(
 			</div>
 		</div>
 	</section>
-	<section class="row gx-5 section-portfolio">
+	<section class="row gx-md-5 section-portfolio">
 		<div class="col-xl-3 pr-5 section-portfolio-label">
 			<i class="fa-regular fa-images"></i>
 			<h2 class="pr-5">Project Gallery</h2>
 		</div>
 		<div class="col-xl-9">
-			<div class="card card-portfolio">
-				<div id="carouselExampleDark" class="carousel carousel-dark slide mb-4">
+			<div class="card card-portfolio card-padding" style="height: auto !important;">
+				<div id="galleryCarousel" class="carousel carousel-dark slide mb-4">
 					<div class="carousel-indicators">
 						<button
 							type="button"
-							data-bs-target="#carouselExampleDark"
+							data-bs-target="#galleryCarousel"
 							data-bs-slide-to="0"
 							class="active"
 							aria-current="true"
 							aria-label="Slide 1"></button>
 						<button
 							type="button"
-							data-bs-target="#carouselExampleDark"
+							data-bs-target="#galleryCarousel"
 							data-bs-slide-to="1"
 							aria-label="Slide 2"></button>
 						<button
 							type="button"
-							data-bs-target="#carouselExampleDark"
+							data-bs-target="#galleryCarousel"
 							data-bs-slide-to="2"
 							aria-label="Slide 3"></button>
 					</div>
@@ -123,24 +123,36 @@ const posts = (await getCollection("portfolio")).sort(
 							</a>
 						</div>
 						<div class="carousel-item" data-bs-interval="2000">
-							<img
-								src="/images/Image Container - Full@3x.png"
-								class="d-block w-100"
-								alt="..."
-							/>
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/Image Container - Full@3x.png"
+								data-bs-title="Title of Screenshot Here">
+								<img
+									src="/images/Image Container - Full@3x.png"
+									class="d-block w-100"
+									alt="..."
+								/>
+							</a>
 						</div>
 						<div class="carousel-item">
-							<img
-								src="/images/Image Container - Full@3x.png"
-								class="d-block w-100"
-								alt="..."
-							/>
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/Image Container - Full@3x.png"
+								data-bs-title="Title of Screenshot Here">
+								<img
+									src="/images/Image Container - Full@3x.png"
+									class="d-block w-100"
+									alt="..."
+								/>
+							</a>
 						</div>
 					</div>
 					<button
 						class="carousel-control-prev"
 						type="button"
-						data-bs-target="#carouselExampleDark"
+						data-bs-target="#galleryCarousel"
 						data-bs-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						<span class="visually-hidden">Previous</span>
@@ -148,17 +160,17 @@ const posts = (await getCollection("portfolio")).sort(
 					<button
 						class="carousel-control-next"
 						type="button"
-						data-bs-target="#carouselExampleDark"
+						data-bs-target="#galleryCarousel"
 						data-bs-slide="next">
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
 						<span class="visually-hidden">Next</span>
 					</button>
 				</div>
-				<p class="text-center"><small>Click to enlarge</small></p>
+				<p class="text-center"><small>Click image to enlarge</small></p>
 			</div>
 		</div>
 	</section>
-	<!-- <section class="row gx-5 section-portfolio">
+	<!-- <section class="row gx-md-5 section-portfolio">
 		<div class="col-xl-12 pr-5 section-portfolio-label">
 			<i class="fa-regular fa-file-lines"></i>
 			<h2 class="pr-5">Tech Stack & Tools</h2>
@@ -200,7 +212,7 @@ const posts = (await getCollection("portfolio")).sort(
 			</div>
 		</div>
 	</section> -->
-	<section class="row gx-5 section-portfolio">
+	<section class="row gx-md-5 section-portfolio">
 		<div class="col-xl-3 pr-5 section-portfolio-label">
 			<i class="fa-regular fa-file-lines"></i>
 			<h2 class="pr-5">Planning &amp; Wireframing</h2>
@@ -243,7 +255,7 @@ const posts = (await getCollection("portfolio")).sort(
 			</div>
 		</div>
 	</section>
-	<section class="row gx-5 section-portfolio">
+	<section class="row gx-md-5 section-portfolio">
 		<div class="col-xl-3 pr-5 section-portfolio-label">
 			<i class="fa"></i>
 			<h2 class="pr-5">Design &amp; Prototyping</h2>
@@ -259,7 +271,7 @@ const posts = (await getCollection("portfolio")).sort(
 				sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer
 				quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
 			</p>
-			<div class="row gx-5">
+			<div class="row gx-md-5">
 				<div class="col-md-6 mb-5">
 					<div class="card card-portfolio card-padding card-link">
 						<div class="row">
@@ -301,7 +313,7 @@ const posts = (await getCollection("portfolio")).sort(
 					</div>
 				</div>
 			</div>
-			<div class="row gx-5">
+			<div class="row gx-md-5">
 				<div class="col-md-6 mb-5">
 					<div class="card card-portfolio card-padding card-link">
 						<div class="row">
@@ -345,7 +357,7 @@ const posts = (await getCollection("portfolio")).sort(
 			</div>
 		</div>
 	</section>
-	<section class="row gx-5 section-portfolio">
+	<section class="row gx-md-5 section-portfolio">
 		<div class="col-xl-3 pr-5 section-portfolio-label">
 			<i class="fa"></i>
 			<h2 class="pr-5">Feedback &amp; Iteration</h2>
@@ -363,7 +375,7 @@ const posts = (await getCollection("portfolio")).sort(
 			</p>
 		</div>
 	</section>
-	<section class="row gx-5 section-portfolio mb-5">
+	<section class="row gx-md-5 section-portfolio mb-5">
 		<div class="col-xl-3 pr-5 section-portfolio-label">
 			<!-- <i class="fa"></i> -->
 			<h2 class="pr-5">Next steps&hellip;</h2>
@@ -375,37 +387,6 @@ const posts = (await getCollection("portfolio")).sort(
 			<p><a href="#">Back to Top</a></p>
 		</div>
 	</section>
-	<!-- MODAL -->
-	<div
-		class="modal fade"
-		id="galleryModal"
-		data-bs-theme="dark"
-		aria-hidden="true"
-		aria-labelledby="galleryModal"
-		tabindex="-1">
-		<div class="modal-dialog modal-fullscreen">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h1 class="modal-title fs-4" id="exampleModalFullscreenLabel">
-						Full screen modal
-					</h1>
-					<button
-						type="button"
-						class="btn-close"
-						data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body text-center">
-					<img src="" class="mx-auto" alt="..." />
-				</div>
-				<!-- <div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-						>Close</button
-					>
-				</div> -->
-			</div>
-		</div>
-	</div>
 </Layout>
 <!-- </section>
 		</main>
