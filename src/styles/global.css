@@ -385,19 +385,21 @@ section.title {
 	padding: 8em 0 0 0;
 }
 
-/* section.hero-home-detail {
-	padding: 8em 0 5em 0;
+section.hero-detail {
+	padding-bottom: 5em;
 
 }
 
-section.hero-home-detail .img-container {
-
+section.hero-detail .img-container {
+	padding: 0;
+	overflow: hidden;
 }
 
-section.hero-home-detail .img-container img {
-	border-radius: 30px;
 
-} */
+section.hero-detail .img-container img {
+	border-radius: 20px;
+
+}
 
 section.section-portfolio {
 	position: relative;
@@ -545,11 +547,33 @@ footer {
 /* carousel */
 
 .carousel-control-prev {
-	left: -3em !important;
+	left: -4em !important;
 }
 
 .carousel-control-next {
-	right: -3em !important;
+	right: -4em !important;
+}
+
+section.section-portfolio .carousel-control-prev i,
+section.section-portfolio .carousel-control-next i {
+	font-size: 1em;
+	color: var(--white) !important;
+	-webkit-text-fill-color: var(--white) !important;
+	border: none;
+	background: none;
+}
+
+.carousel-dark .carousel-indicators {}
+
+.carousel-dark .carousel-indicators [data-bs-target] {
+	flex-shrink: 0;
+	width: 1em;
+	height: 0.5em;
+	fill: currentcolor;
+	border-radius: 20px !important;
+	border: 1px solid var(--white);
+	transition: 0.2s ease-in-out transform;
+	box-shadow: 0 5px 10px var(--gray-very-dark);
 }
 
 /* modal */
@@ -571,11 +595,11 @@ footer {
 
 @media (max-width: 720px) {
 
-	body::after {
-		/* background: transparent url(/images/bg-line-art-1.svg) top center no-repeat; */
-		/* background-position: top center; */
+	/* body::after {
+		
+		background-position: top center;
 		background-size: cover;
-	}
+	} */
 
 	/* .navbar-toggler {
 		background-color: var(--bg-gradient) !important;
