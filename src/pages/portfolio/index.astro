@@ -29,10 +29,25 @@ const posts = (await getCollection("portfolio")).sort(
 	pubDate={new Date("August 08 2021")}
 	heroImage="/blog-placeholder-about.jpg">
 	<section class="row title">
-		<h1 class="col-12 mb-2">Portfolio</h1>
-		<h2 class="col-12 mb-5 pb-5 description">
-			A curated list of works showcasing UX, product and visual design
-		</h2>
+		<div class="col-sm-9">
+			<div class="row">
+				<h1 class="col-12 mb-2">Portfolio</h1>
+				<h2 class="col-12 mb-5 pb-5 description">
+					A curated list of works showcasing UX, product and visual design
+				</h2>
+			</div>
+		</div>
+		<div class="col-sm-3 pt-4">
+			<select
+				class="form-select float-sm-end"
+				data-bs-theme="dark"
+				aria-label="Default select example">
+				<option selected>All Projects</option>
+				<option value="1">UI / UX</option>
+				<option value="2">Visual / Brand</option>
+				<!-- <option value="3">View Brand</option> -->
+			</select>
+		</div>
 	</section>
 	<section class="row gx-md-5">
 		<div class="col-md-6 mb-5">
