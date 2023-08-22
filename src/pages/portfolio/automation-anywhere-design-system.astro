@@ -15,15 +15,6 @@ const posts = (await getCollection("portfolio")).sort(
 );
 ---
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body data-barba="wrapper">
-		<Header />
-		<main data-barba="container mx-auto" data-barba-namespace="portfolio">
-			<section class="row gx-md-5"> -->
 <Layout
 	title={title}
 	description={description}
@@ -464,8 +455,3 @@ const posts = (await getCollection("portfolio")).sort(
 		</div>
 	</section>
 </Layout>
-<!-- </section>
-		</main>
-		<Footer />
-	</body>
-</html> -->

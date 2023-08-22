@@ -48,6 +48,40 @@ const today = new Date();
 
 <script is:inline src="https://unpkg.com/@barba/core"></script>
 <script is:inline src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
+
+<script>
+	// https://barba.js.org/docs/getstarted/legacy/
+	barba.init({
+		transitions: [
+			{
+				name: "opacity-transition",
+				leave(data) {
+					return gsap.to(data.current.container, {
+						opacity: 0,
+						duration: 0.4,
+					});
+				},
+				enter(data) {
+					return (
+						gsap.from(data.next.container, {
+							opacity: 0,
+							duration: 0.4,
+						}),
+						scrollTop()
+					);
+				},
+			},
+		],
+	});
+	// this function makes barba smoother, page-to-page
+	function scrollTop() {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	}
+</script>
+
 <script is:inline src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -55,35 +89,6 @@ const today = new Date();
 	document.addEventListener(
 		"DOMContentLoaded",
 		function () {
-			// https://barba.js.org/docs/getstarted/legacy/
-			barba.init({
-				transitions: [
-					{
-						name: "opacity-transition",
-						leave(data) {
-							return gsap.to(data.current.container, {
-								opacity: 0,
-							});
-						},
-						enter(data) {
-							return (
-								gsap.from(data.next.container, {
-									opacity: 0,
-								}),
-								scrollTop()
-							);
-						},
-					},
-				],
-			});
-			// this function makes barba smoother, page-to-page
-			function scrollTop() {
-				window.scrollTo({
-					top: 0,
-					behavior: "smooth",
-				});
-			}
-
 			// https://www.npmjs.com/package/lazyload
 			let images = document.querySelectorAll("main img");
 			lazyload(images);

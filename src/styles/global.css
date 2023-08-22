@@ -17,6 +17,7 @@
 	--bg-gradient: linear-gradient(165deg, rgba(21, 103, 227, 0.3) 25%, rgba(31, 44, 158, 0.80) 80%);
 	--bg-gradient-hover: linear-gradient(165deg, rgba(21, 103, 227, 0.5) 25%, rgba(31, 44, 158, 85) 60%);
 	--bg-gradient-x: linear-gradient(165deg, #2D5EA8 0%, #1F2C9E 100%);
+	--bg-gradient-x-bright: linear-gradient(165deg, var(--accent-bright) 0%, #1F2C9E 100%);
 	--bg-gradient-transparent: linear-gradient(165deg, rgba(45, 94, 168, 0.10) 0%, rgba(31, 44, 158, 0.25) 100%);
 }
 
@@ -370,15 +371,27 @@ main ul li {
 }
 
 main ul li i {
-	vertical-align: middle;
-	font-size: 1.5em;
 	margin-right: 0.25em;
 	color: var(--white) !important;
-	background-image: var(--bg-gradient-x) !important;
+	background-image: var(--bg-gradient-x-bright) !important;
 	background-clip: text !important;
 	-webkit-background-clip: text !important;
 	text-fill-color: transparent !important;
 	-webkit-text-fill-color: transparent !important;
+}
+
+main ul.big-icons li {
+	padding: 0.8em 0;
+}
+
+main ul.big-icons li i {
+	font-size: 1.5em;
+	vertical-align: middle;
+	line-height: 1.1em;
+}
+
+main ul.big-icons li a:hover i {
+	text-indent: -3px;
 }
 
 section,
