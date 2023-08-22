@@ -138,6 +138,7 @@ a.logo>span>span:last-child {
 }
 
 .nav-item a {
+	display: inline-block;
 	position: relative;
 	padding: 4.5em 2.5em 0.5em 2.5em;
 }
@@ -369,7 +370,15 @@ main ul li {
 }
 
 main ul li i {
+	vertical-align: middle;
+	font-size: 1.5em;
 	margin-right: 0.25em;
+	color: var(--white) !important;
+	background-image: var(--bg-gradient-x) !important;
+	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	text-fill-color: transparent !important;
+	-webkit-text-fill-color: transparent !important;
 }
 
 section,
@@ -660,13 +669,11 @@ section.section-portfolio .carousel-control-next i {
 	}
 
 	.nav {
-
 		font-size: 0.7em;
 
 	}
 
 	.nav-item a {
-
 		padding: 1.5em 1.5em;
 	}
 
