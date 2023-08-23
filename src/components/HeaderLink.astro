@@ -10,18 +10,7 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, "");
 ---
 
 <li class="nav-item">
-	<!-- <a href="#" class="nav-link active" aria-current="page">Home</a> -->
 	<a href={href} class:list={[className, { active: isActive }]} {...props}>
 		<slot />
 	</a>
 </li>
-<!-- <style>
-	a {
-		display: inline-block;
-		text-decoration: none;
-	}
-	a.active {
-		font-weight: bolder;
-		text-decoration: underline;
-	}
-</style> -->
