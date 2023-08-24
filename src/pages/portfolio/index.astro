@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Default.astro";
+import PortfolioFeatured from "../../components/PortfolioFeatured.astro";
 // import BaseHead from "../../components/BaseHead.astro";
 // import Header from "../../components/Header.astro";
 // import Footer from "../../components/Footer.astro";
@@ -39,128 +40,7 @@ const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit";
 			</select>
 		</div> -->
 	</section>
-	<section class="row gx-md-5">
-		<div class="col-md-6 mb-5">
-			<a
-				href="/portfolio/automation-anywhere-design-system"
-				class="card card-portfolio card-link">
-				<div class="row">
-					<div class="col-md-6">
-						<h2>Automation Anywhere Web Design System 3.0</h2>
-						<span class="tag">Design System</span>
-						<span class="tag">User Interface</span>
-						<p>
-							Crafting a new design system from the ground up for an
-							enterprise-level organization, while managing a team of designers.
-							The system was globally adopted by all other customer facing web
-							properties.
-						</p>
-						<span class="text-link">View project</span>
-					</div>
-					<div class="col-md-6 img">
-						<img src="/images/work/img-listing-aai-wds.png" class="" alt="" />
-					</div>
-				</div>
-			</a>
-		</div>
-		<div class="col-md-6 mb-5">
-			<a
-				href="/portfolio/automation-anywhere-website-redesign"
-				class="card card-portfolio card-link">
-				<div class="row">
-					<div class="col-md-6">
-						<h2>Automation Anywhere Website Redesign 2023</h2>
-						<span class="tag">User Experience</span>
-						<span class="tag">User Interface</span>
-						<p>
-							Getting the chance to completely redesign the web experience for a
-							Forbes Top 100 Cloud Company. From planning and design, to
-							production and development collaboration.
-						</p>
-						<span class="text-link">View project</span>
-					</div>
-					<div class="col-md-6 img">
-						<img
-							src="/images/work/img-listing-aai-website-redesign.png"
-							class=""
-							alt=""
-						/>
-					</div>
-				</div>
-			</a>
-		</div>
-		<div class="col-md-6 mb-5">
-			<a
-				href="/portfolio/silicon-valley-site-services-website-redesign"
-				class="card card-portfolio card-link">
-				<div class="row">
-					<div class="col-md-6">
-						<h2>Silicon Valley Site Services</h2>
-						<span class="tag">Design System</span>
-						<span class="tag">User Interface</span>
-						<p>
-							Four company websites revamped all-at-once, from the ground up.
-							Beginning with wireframes to high-fidelity designs, to HTML/CSS
-							mockups implemented into a CMS theme package.
-						</p>
-						<span class="text-link">View project</span>
-					</div>
-					<div class="col-md-6 img">
-						<img
-							src="/images/work/img-listing-svss-website-redesign.png"
-							class="float-end"
-							alt=""
-						/>
-					</div>
-				</div>
-			</a>
-		</div>
-		<!-- <div class="col-md-6 mb-5">
-			<a href="/portfolio/vector-launch-visual-design" class="card card-portfolio card-link">
-				<div class="row">
-					<div class="col-md-6">
-						<h2>Vector Launch</h2>
-						<span class="tag">Visual Design</span>
-						<span class="tag">User Interface</span>
-						<p>
-							Amet eiusmod ea incididunt tempor enim nisi non veniam. Exercitation
-							id Lorem nostrud voluptate nulla ut. Pariatur nostrud nisi nostrud
-							adipisicing. Labore officia magna magna enim nostrud. Ullamco
-							occaecat incididunt non voluptate officia proident.
-						</p>
-						<span class="text-link">View project</span>
-					</div>
-					<div class="col-md-6 img">
-						<img src="/images/Image Container@2x.png" class="float-end" alt="" />
-					</div>
-				</div>
-			</a>
-		</div> -->
-		<div class="col-md-12 mb-5">
-			<a
-				href="/portfolio/automation-anywhere-design-system"
-				class="card card-portfolio card-link">
-				<div class="row">
-					<div class="col-md-5">
-						<h2>Visual Design and Branding Compilation</h2>
-						<span class="tag">Visual Design</span>
-						<span class="tag">Identity Design</span>
-						<p>
-							Amet eiusmod ea incididunt tempor enim nisi non veniam. Exercitation
-							id Lorem nostrud voluptate nulla ut. Pariatur nostrud nisi nostrud
-							adipisicing. Labore officia magna magna enim nostrud. Ullamco
-							occaecat incididunt non voluptate officia proident.
-						</p>
-						<span class="text-link">View project</span>
-					</div>
-					<div class="col-md-1"></div>
-					<div class="col-md-5 img">
-						<img src="/images/Image Container@2x.png" class="float-end" alt="" />
-					</div>
-				</div>
-			</a>
-		</div>
-	</section>
+	<PortfolioFeatured />
 	<!-- <ul class="col-md-12">
 		{
 			posts.map((post) => (
