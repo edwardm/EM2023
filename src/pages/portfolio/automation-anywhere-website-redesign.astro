@@ -29,10 +29,11 @@ const posts = (await getCollection("portfolio")).sort(
 				<span class="tag">User Interface</span>
 			</div>
 			<h2 class="col-12 mb-5 pb-5 pe-lg-5 description">
-				Tasked to completely overhaul the web presence of an enterprise-level software company
-				can definitely get the gears turning. This project was no exception as it involved
-				many stakeholders, departments and technical teams to kick-it off. I led the efforts
-				to drive the new creative vision for this Forbes Top 100 Cloud company.
+				Given the responsibility to revamp the online identity of an enterprise-level software
+				company is a stimulating challenge. This project, in particular, required
+				collaboration with numerous stakeholders, departments, and technical teams to
+				initiate. I assumed a leadership role in shaping the fresh creative direction for this
+				renowned Forbes Top 100 Cloud company.
 			</h2>
 		</div>
 		<div class="col-lg-6 card-normal img-container">
@@ -73,10 +74,11 @@ const posts = (await getCollection("portfolio")).sort(
 					<div class="card card-normal">
 						<h3>Collaboration</h3>
 						<ul>
-							<li>Directors and C-Suite</li>
+							<li>Marketing Leaders and CMO</li>
 							<li>Product Marketing Managers</li>
+							<li>Regional/Global Managers</li>
 							<li>Web Development Team</li>
-							<li>Brand and in-house Creative Team</li>
+							<li>In-house Brand/Creative Team</li>
 							<li>Sub-domain Owners</li>
 							<li>CRO and SEO</li>
 						</ul>
@@ -142,33 +144,7 @@ const posts = (await getCollection("portfolio")).sort(
 								<img
 									src="/images/work/aai-website/full/HP - AAI.COM 2023 - EM 1.png"
 									class=""
-									alt="..."
-								/>
-							</a>
-						</div>
-						<div class="carousel-item" data-bs-interval="10000">
-							<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/aai-website/full/Cloud Platform - Refresh WDS 3 - 1.png"
-								data-bs-title="Automation Anywhere - Website Redesign">
-								<img
-									src="/images/work/aai-website/full/Cloud Platform - Refresh WDS 3 - 1.png"
-									class=""
-									alt="..."
-								/>
-							</a>
-						</div>
-						<div class="carousel-item" data-bs-interval="10000">
-							<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/aai-website/full/docs.aai.com - detail.png"
-								data-bs-title="Automation Anywhere - Website Redesign">
-								<img
-									src="/images/work/aai-website/full/docs.aai.com - detail.png"
-									class=""
-									alt="..."
+									alt={title}
 								/>
 							</a>
 						</div>
@@ -181,7 +157,33 @@ const posts = (await getCollection("portfolio")).sort(
 								<img
 									src="/images/work/aai-website/full/Product - ASP V2.png"
 									class=""
-									alt="..."
+									alt={title}
+								/>
+							</a>
+						</div>
+						<div class="carousel-item" data-bs-interval="10000">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/aai-website/full/Cloud Platform - Refresh WDS 3 - 1.png"
+								data-bs-title="Automation Anywhere - Website Redesign">
+								<img
+									src="/images/work/aai-website/full/Cloud Platform - Refresh WDS 3 - 1.png"
+									class=""
+									alt={title}
+								/>
+							</a>
+						</div>
+						<div class="carousel-item" data-bs-interval="10000">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/aai-website/full/docs.aai.com - detail.png"
+								data-bs-title="Automation Anywhere - Website Redesign">
+								<img
+									src="/images/work/aai-website/full/docs.aai.com - detail.png"
+									class=""
+									alt={title}
 								/>
 							</a>
 						</div>
@@ -194,7 +196,7 @@ const posts = (await getCollection("portfolio")).sort(
 								<img
 									src="/images/work/aai-website/full/RPA Security - REFRESH WDS 3.0 - 1 - 1.png"
 									class=""
-									alt="..."
+									alt={title}
 								/>
 							</a>
 						</div>
@@ -207,7 +209,7 @@ const posts = (await getCollection("portfolio")).sort(
 								<img
 									src="/images/work/aai-website/full/TEMPLATE Product - Redesign 3.0 - 2 - 1.png"
 									class=""
-									alt="..."
+									alt={title}
 								/>
 							</a>
 						</div>
@@ -220,7 +222,7 @@ const posts = (await getCollection("portfolio")).sort(
 								<img
 									src="/images/work/aai-website/full/SCREENSHOT - Customer Stories Listing.png"
 									class=""
-									alt="..."
+									alt={title}
 								/>
 							</a>
 						</div>
@@ -317,25 +319,13 @@ const posts = (await getCollection("portfolio")).sort(
 								creative team
 							</li>
 							<li>User journey mapping</li>
-							<li>Determining best page flow for user journeys</li>
+							<li>Determining best page flow for consumption</li>
 							<li>Crafting component variations for certain use-cases</li>
 							<li>Feedback from SEO and CRO for best-practices</li>
 						</ul>
 					</div>
 				</div>
 			</div>
-			<!-- <h3>Kick-off Calls: Key Takeaways</h3>
-			<p>
-				After a competitive analysis, we had several kick-off calls where we discussed the
-				general design and visual langauge that we as an orgnization wanted to embrace. Over
-				the course of these meetings, we looked at brainstorming ideas for a new home page
-				that would essentially become the foundation for defining the initial design system.
-				Besides the obvious, primary point of site-wide consistency, our key takeaways
-				included: 1) A modernization of visual style though miminmalism 2) From a content
-				style guide standpoint, an emphasis on heading typography and presentation, and 3) A
-				more focused, and toned-down, usage of our brand color system (not only through CSS
-				application, but through actual image assets).
-			</p> -->
 		</div>
 	</section>
 	<section class="row gx-md-5 section-portfolio">
@@ -363,15 +353,15 @@ const posts = (await getCollection("portfolio")).sort(
 							<div class="col-md-12">
 								<h3>Component Variations</h3>
 								<p>
-									Covering the themes of color, typograhy, grids,
-									responsiveness and overall design system usage.
+									Common content blocks had pre-built variants to choose
+									from, which allowed for presentation flexibility.
 								</p>
 							</div>
 							<div class="col-md-12 img">
 								<img
 									src="/images/work/aai-website/thumb-component-variations.png"
 									class=""
-									alt=""
+									alt={title}
 								/>
 							</div>
 						</div>
@@ -388,15 +378,15 @@ const posts = (await getCollection("portfolio")).sort(
 							<div class="col-md-12">
 								<h3>Navigation Updates</h3>
 								<p>
-									Amet eiusmod ea incididunt tempor enim nisi non veniam.
-									Exercitation id Lorem nostrud voluptate nulla ut.
+									Several rounds of navigation updates were executed, to
+									cater to the new product stack and narrative.
 								</p>
 							</div>
 							<div class="col-md-12 img">
 								<img
 									src="/images/work/aai-website/thumb-navigation-updates.png"
 									class=""
-									alt=""
+									alt={title}
 								/>
 							</div>
 						</div>
@@ -415,15 +405,16 @@ const posts = (await getCollection("portfolio")).sort(
 							<div class="col-md-12">
 								<h3>Page Templatization</h3>
 								<p>
-									Amet eiusmod ea incididunt tempor enim nisi non veniam.
-									Exercitation id Lorem nostrud voluptate nulla ut.
+									For faster page building and consistency, we templatized
+									the most common sections. This allowed PMMs to more
+									easily plan for the future.
 								</p>
 							</div>
 							<div class="col-md-12 img">
 								<img
 									src="/images/work/aai-website/thumb-page-templatization.png"
 									class=""
-									alt=""
+									alt={title}
 								/>
 							</div>
 						</div>
@@ -440,15 +431,16 @@ const posts = (await getCollection("portfolio")).sort(
 							<div class="col-md-12">
 								<h3>Responsive Layouts</h3>
 								<p>
-									Amet eiusmod ea incididunt tempor enim nisi non veniam.
-									Exercitation id Lorem nostrud voluptate nulla ut.
+									Most top-level layouts and MVP pages were built with
+									responsive design frames. Aiding not only PMMs, but the
+									development team as well.
 								</p>
 							</div>
 							<div class="col-md-12 img">
 								<img
 									src="/images/work/aai-website/thumb-responsive-layouts.png"
 									class=""
-									alt=""
+									alt={title}
 								/>
 							</div>
 						</div>
@@ -465,15 +457,18 @@ const posts = (await getCollection("portfolio")).sort(
 							<div class="col-md-6">
 								<h3>Subdomain Support</h3>
 								<p>
-									Amet eiusmod ea incididunt tempor enim nisi non veniam.
-									Exercitation id Lorem nostrud voluptate nulla ut.
+									I took lead and made it a priority for our company's sub
+									domain properties to adopt the new design system. My
+									main role was to evangelize the system and provide any
+									UI/UX support that was needed. I managed senior
+									designers during the adoption.
 								</p>
 							</div>
 							<div class="col-md-6 img">
 								<img
 									src="/images/work/aai-website/thumb-subdomain-support.png"
 									class=""
-									alt=""
+									alt={title}
 								/>
 							</div>
 						</div>
@@ -490,15 +485,17 @@ const posts = (await getCollection("portfolio")).sort(
 							<div class="col-md-6">
 								<h3>Region Specific, Cultural Design</h3>
 								<p>
-									Amet eiusmod ea incididunt tempor enim nisi non veniam.
-									Exercitation id Lorem nostrud voluptate nulla ut.
+									I worked directly with regional managers to make sure
+									our visual style was catering to the corresponding
+									culture. Options were provided and iterations were made.
+									I managed senior designers during these stages.
 								</p>
 							</div>
 							<div class="col-md-6 img">
 								<img
 									src="/images/work/aai-website/thumb-cultural-design.png"
 									class=""
-									alt=""
+									alt={title}
 								/>
 							</div>
 						</div>
@@ -519,17 +516,17 @@ const posts = (await getCollection("portfolio")).sort(
 						<h3>Feedback Gathering</h3>
 						<ul>
 							<li>
-								Continuous adjustment and audits applied to current components
-								as new content strategy docs and requirements were rolling in
+								As new content docs and requirements were rolling in, WCS team
+								made sure to stay in sync with the strategy of "hot" pages
 							</li>
 							<li>
 								Sub-domain owners and key development team members provided
-								feedback on usage and areas of improvement for certain use
+								direct feedback on usage and areas of improvement for use
 								cases
 							</li>
 							<li>
 								Reporting back to the development team for updates to the
-								design system
+								design system, updates to sections or net new pages.
 							</li>
 						</ul>
 					</div>
@@ -538,12 +535,15 @@ const posts = (await getCollection("portfolio")).sort(
 					<div class="card card-normal">
 						<h3>Updates &amp; Evolution</h3>
 						<ul>
-							<li>Net new UI components and content blocks added as needed</li>
 							<li>
-								Sync with senior designers for update reviews and library
-								publishing
+								New designs in the pipeline: Customer Stories, Blogs, Asset
+								Library and Events & Webinars
 							</li>
-							<li>Continuous improvements to the image style library</li>
+							<li>
+								Continued experimentation with Conversion Rate methods and
+								Call to Action approaches
+							</li>
+							<li>Continued monthly support for sub-domain redesign projects</li>
 						</ul>
 					</div>
 				</div>

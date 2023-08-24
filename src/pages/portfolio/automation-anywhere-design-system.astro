@@ -116,6 +116,11 @@ const posts = (await getCollection("portfolio")).sort(
 							data-bs-target="#galleryCarousel"
 							data-bs-slide-to="4"
 							aria-label="Slide 5"></button>
+						<button
+							type="button"
+							data-bs-target="#galleryCarousel"
+							data-bs-slide-to="5"
+							aria-label="Slide 6"></button>
 					</div>
 					<div class="carousel-inner">
 						<div class="carousel-item active" data-bs-interval="10000">
@@ -123,11 +128,11 @@ const posts = (await getCollection("portfolio")).sort(
 								data-bs-toggle="modal"
 								data-bs-target="#galleryModal"
 								data-bs-image="/images/work/aai-wds/full/AAI WDS - Color Palette.png"
-								data-bs-title="Title of Screenshot Here">
+								data-bs-title="Web Design System - Color Pallete">
 								<img
 									src="/images/work/aai-wds/full/AAI WDS - Color Palette.png"
 									class=""
-									alt="..."
+									alt={title}
 								/>
 							</a>
 						</div>
@@ -136,11 +141,11 @@ const posts = (await getCollection("portfolio")).sort(
 								data-bs-toggle="modal"
 								data-bs-target="#galleryModal"
 								data-bs-image="/images/work/aai-wds/full/AAI WDS - Buttons & Links.png"
-								data-bs-title="Title of Screenshot Here">
+								data-bs-title="Web Design System - Buttons, Links and Pagination">
 								<img
 									src="/images/work/aai-wds/full/AAI WDS - Buttons & Links.png"
 									class=""
-									alt="..."
+									alt={title}
 								/>
 							</a>
 						</div>
@@ -149,11 +154,24 @@ const posts = (await getCollection("portfolio")).sort(
 								data-bs-toggle="modal"
 								data-bs-target="#galleryModal"
 								data-bs-image="/images/work/aai-wds/full/AAI WDS - Typography - Desktop.png"
-								data-bs-title="Title of Screenshot Here">
+								data-bs-title="Web Design System - Typography for Desktop, Tablet & Mobile">
 								<img
 									src="/images/work/aai-wds/full/AAI WDS - Typography - Desktop.png"
 									class=""
-									alt="..."
+									alt={title}
+								/>
+							</a>
+						</div>
+						<div class="carousel-item">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/aai-wds/full/AAI WDS - Form Elements.png"
+								data-bs-title="Web Design System - Form Elements">
+								<img
+									src="/images/work/aai-wds/full/AAI WDS - Form Elements.png"
+									class=""
+									alt={title}
 								/>
 							</a>
 						</div>
@@ -162,11 +180,11 @@ const posts = (await getCollection("portfolio")).sort(
 								data-bs-toggle="modal"
 								data-bs-target="#galleryModal"
 								data-bs-image="/images/work/aai-wds/full/AAI WDS - Grids and Responsiveness.png"
-								data-bs-title="Title of Screenshot Here">
+								data-bs-title="Web Design System - Grids and Responsiveness">
 								<img
 									src="/images/work/aai-wds/full/AAI WDS - Grids and Responsiveness.png"
 									class=""
-									alt="..."
+									alt={title}
 								/>
 							</a>
 						</div>
@@ -175,11 +193,24 @@ const posts = (await getCollection("portfolio")).sort(
 								data-bs-toggle="modal"
 								data-bs-target="#galleryModal"
 								data-bs-image="/images/work/aai-wds/full/global components - responsive.png"
-								data-bs-title="Title of Screenshot Here">
+								data-bs-title="Web Design System - Global Components and Responsiveness">
 								<img
 									src="/images/work/aai-wds/full/global components - responsive.png"
 									class=""
-									alt="..."
+									alt={title}
+								/>
+							</a>
+						</div>
+						<div class="carousel-item">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/aai-wds/full/responsive banners.png"
+								data-bs-title="Web Design System - Banner Templates and Responsiveness">
+								<img
+									src="/images/work/aai-wds/full/responsive banners.png"
+									class=""
+									alt={title}
 								/>
 							</a>
 						</div>
@@ -311,126 +342,162 @@ const posts = (await getCollection("portfolio")).sort(
 			</p>
 			<div class="row gx-md-5">
 				<div class="col-md-6 mb-5">
-					<div class="card card-portfolio card-padding card-link">
+					<a
+						class="card card-portfolio card-padding card-link"
+						data-bs-toggle="modal"
+						data-bs-target="#galleryModal"
+						data-bs-image="/images/work/aai-wds/thumb-base-foundations.png"
+						data-bs-title="Automation Anywhere - Website Redesign">
 						<div class="row">
 							<div class="col-md-12">
 								<h3>Base Foundations</h3>
 								<p>
-									Covering the themes of color, typograhy, grids,
-									responsiveness and overall design system usage.
+									Covering the essentials: color, typography, grids,
+									responsiveness and overall system usage.
 								</p>
 							</div>
 							<div class="col-md-12 img">
 								<img
-									src="/images/Image Container - Full.png"
+									src="/images/work/aai-wds/thumb-base-foundations.png"
 									class=""
-									alt=""
+									alt={title}
 								/>
 							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 				<div class="col-md-6 mb-5">
-					<div class="card card-portfolio card-padding card-link">
+					<a
+						class="card card-portfolio card-padding card-link"
+						data-bs-toggle="modal"
+						data-bs-target="#galleryModal"
+						data-bs-image="/images/work/aai-wds/thumb-key-ui-components.png"
+						data-bs-title="Automation Anywhere - Website Redesign">
 						<div class="row">
 							<div class="col-md-12">
 								<h3>Key UI Components</h3>
 								<p>
-									Amet eiusmod ea incididunt tempor enim nisi non veniam.
-									Exercitation id Lorem nostrud voluptate nulla ut.
+									The common and basics of creating user interfaces. From
+									buttons and links, to icons and pagination utilities,
+									and forms elements.
 								</p>
 							</div>
 							<div class="col-md-12 img">
 								<img
-									src="/images/Image Container - Full.png"
+									src="/images/work/aai-wds/thumb-key-ui-components.png"
 									class=""
-									alt=""
+									alt={title}
 								/>
 							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 			</div>
 			<div class="row gx-md-5">
 				<div class="col-md-6 mb-5">
-					<div class="card card-portfolio card-padding card-link">
+					<a
+						class="card card-portfolio card-padding card-link"
+						data-bs-toggle="modal"
+						data-bs-target="#galleryModal"
+						data-bs-image="/images/work/aai-wds/thumb-layout-content-blocks.png"
+						data-bs-title="Automation Anywhere - Website Redesign">
 						<div class="row">
 							<div class="col-md-12">
 								<h3>Layout &amp; Content Blocks</h3>
 								<p>
-									Amet eiusmod ea incididunt tempor enim nisi non veniam.
-									Exercitation id Lorem nostrud voluptate nulla ut.
+									An extensive library containing numerous layout and
+									content blocks for rapid page design in Figma. This
+									section was key for consistency.
 								</p>
 							</div>
 							<div class="col-md-12 img">
 								<img
-									src="/images/Image Container - Full.png"
+									src="/images/work/aai-wds/thumb-layout-content-blocks.png"
 									class=""
-									alt=""
+									alt={title}
 								/>
 							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 				<div class="col-md-6 mb-5">
-					<div class="card card-portfolio card-padding card-link">
+					<a
+						class="card card-portfolio card-padding card-link"
+						data-bs-toggle="modal"
+						data-bs-target="#galleryModal"
+						data-bs-image="/images/work/aai-wds/thumb-component-variations.png"
+						data-bs-title="Automation Anywhere - Website Redesign">
 						<div class="row">
 							<div class="col-md-12">
-								<h3>Component Variations</h3>
+								<h3>Component Variants</h3>
 								<p>
-									Amet eiusmod ea incididunt tempor enim nisi non veniam.
-									Exercitation id Lorem nostrud voluptate nulla ut.
+									Component presentations were not the same in all cases,
+									thus variations were made. In the library, designers can
+									easily switch between the variants.
 								</p>
 							</div>
 							<div class="col-md-12 img">
 								<img
-									src="/images/Image Container - Full.png"
+									src="/images/work/aai-wds/thumb-component-variations.png"
 									class=""
-									alt=""
+									alt={title}
 								/>
 							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 				<div class="col-md-12 mb-5">
-					<div class="card card-portfolio card-full card-link">
+					<a
+						class="card card-portfolio card-full card-link"
+						data-bs-toggle="modal"
+						data-bs-target="#galleryModal"
+						data-bs-image="/images/work/aai-wds/thumb-responsive.png"
+						data-bs-title="Automation Anywhere - Website Redesign">
 						<div class="row">
 							<div class="col-md-6">
-								<h3>Responsive Variations</h3>
+								<h3>Responsive Thinking</h3>
 								<p>
-									Amet eiusmod ea incididunt tempor enim nisi non veniam.
-									Exercitation id Lorem nostrud voluptate nulla ut.
+									An important aspect in UI/UX/Product design. Each
+									component needed to take into consideration all the top,
+									common device types and their resolutions.
 								</p>
 							</div>
 							<div class="col-md-6 img">
 								<img
-									src="/images/Image Container - Full.png"
+									src="/images/work/aai-wds/thumb-responsive.png"
 									class=""
-									alt=""
+									alt={title}
 								/>
 							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 				<div class="col-md-12 mb-5">
-					<div class="card card-portfolio card-full card-link">
+					<a
+						class="card card-portfolio card-full card-link"
+						data-bs-toggle="modal"
+						data-bs-target="#galleryModal"
+						data-bs-image="/images/work/aai-wds/thumb-image-style-guide.png"
+						data-bs-title="Automation Anywhere - Website Redesign">
 						<div class="row">
 							<div class="col-md-6">
 								<h3>Image Style Guide</h3>
 								<p>
-									Amet eiusmod ea incididunt tempor enim nisi non veniam.
-									Exercitation id Lorem nostrud voluptate nulla ut.
+									Since there was a strive for consistency, a new image
+									style guide was created. This was co-managed with the
+									in-house creative team to make sure all materials were
+									visually in sync.
 								</p>
 							</div>
 							<div class="col-md-6 img">
 								<img
-									src="/images/Image Container - Full.png"
+									src="/images/work/aai-wds/thumb-image-style-guide.png"
 									class=""
-									alt=""
+									alt={title}
 								/>
 							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 			</div>
 		</div>
