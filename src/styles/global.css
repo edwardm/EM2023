@@ -584,7 +584,8 @@ footer {
 
 .card-portfolio p,
 .card-portfolio ul {
-	/* line-height: 1.3em; */
+	font-size: 1em;
+	line-height: 1.4em;
 	color: var(--offwhite);
 }
 
@@ -609,6 +610,15 @@ footer {
 
 .card-portfolio .col-md-12.img img {
 	width: 100%;
+}
+
+.card-full {
+	min-height: 250px;
+}
+
+.card-full h3,
+.card-full p {
+	padding-right: 3em;
 }
 
 /* carousel *********************************************/
@@ -664,7 +674,8 @@ section.section-portfolio .carousel-control-next i {
 }
 
 .carousel-dark .carousel-indicators button {
-	width: 20px !important;
+	/* height: 15px !important; */
+	width: 22px !important;
 }
 
 .carousel-dark .carousel-indicators button.active {
