@@ -6,23 +6,14 @@ import Layout from "../../layouts/Default.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 const title = "Portfolio";
 const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit";
-import { getCollection } from "astro:content";
-import FormattedDate from "../../components/FormattedDate.astro";
+// import { getCollection } from "astro:content";
+// import FormattedDate from "../../components/FormattedDate.astro";
 
-const posts = (await getCollection("portfolio")).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
+// const posts = (await getCollection("portfolio")).sort(
+// 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+// );
 ---
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body data-barba="wrapper">
-		<Header />
-		<main data-barba="container mx-auto" data-barba-namespace="portfolio">
-			<section class="row gx-md-5"> -->
 <Layout
 	title={title}
 	description={description}
@@ -50,7 +41,9 @@ const posts = (await getCollection("portfolio")).sort(
 	</section>
 	<section class="row gx-md-5">
 		<div class="col-md-6 mb-5">
-			<div class="card card-portfolio card-link">
+			<a
+				href="/portfolio/automation-anywhere-design-system"
+				class="card card-portfolio card-link">
 				<div class="row">
 					<div class="col-md-6">
 						<h2>Automation Anywhere Web Design System 3.0</h2>
@@ -62,22 +55,18 @@ const posts = (await getCollection("portfolio")).sort(
 							The system was globally adopted by all other customer facing web
 							properties.
 						</p>
-						<a href="/portfolio/automation-anywhere-design-system" class="text-link"
-							>View project</a
-						>
+						<span class="text-link">View project</span>
 					</div>
 					<div class="col-md-6 img">
-						<img
-							src="/images/Image Container@2x.png"
-							class="object-contain h-96 w-96 float-right"
-							alt=""
-						/>
+						<img src="/images/work/img-listing-aai-wds.png" class="" alt="" />
 					</div>
 				</div>
-			</div>
+			</a>
 		</div>
 		<div class="col-md-6 mb-5">
-			<div class="card card-portfolio card-link">
+			<a
+				href="/portfolio/automation-anywhere-website-redesign"
+				class="card card-portfolio card-link">
 				<div class="row">
 					<div class="col-md-6">
 						<h2>Automation Anywhere Website Redesign 2023</h2>
@@ -88,90 +77,88 @@ const posts = (await getCollection("portfolio")).sort(
 							Forbes Top 100 Cloud Company. From planning and design, to
 							production and development collaboration.
 						</p>
-						<a
-							href="/portfolio/automation-anywhere-website-redesign"
-							class="text-link">View project</a
-						>
+						<span class="text-link">View project</span>
 					</div>
 					<div class="col-md-6 img">
 						<img
-							src="/images/Image Container@2x.png"
-							class="object-contain h-96 w-96 float-right"
+							src="/images/work/img-listing-aai-website-redesign.png"
+							class=""
 							alt=""
 						/>
 					</div>
 				</div>
-			</div>
+			</a>
 		</div>
 		<div class="col-md-6 mb-5">
-			<div class="card card-portfolio card-link">
+			<a
+				href="/portfolio/silicon-valley-site-services-website-redesign"
+				class="card card-portfolio card-link">
 				<div class="row">
 					<div class="col-md-6">
 						<h2>Silicon Valley Site Services</h2>
 						<span class="tag">Design System</span>
 						<span class="tag">User Interface</span>
 						<p>
-							Amet eiusmod ea incididunt tempor enim nisi non veniam. Exercitation
-							id Lorem nostrud voluptate nulla ut. Pariatur nostrud nisi nostrud
-							adipisicing. Labore officia magna magna enim nostrud. Ullamco
-							occaecat incididunt non voluptate officia proident.
+							Four company websites revamped all-at-once, from the ground up.
+							Beginning with wireframes to high-fidelity designs, to HTML/CSS
+							mockups implemented into a CMS theme package.
 						</p>
-						<a href="/portfolio/silicon-valley-site-services-website-redesign" class="text-link"
-							>View project</a
-						>
+						<span class="text-link">View project</span>
 					</div>
 					<div class="col-md-6 img">
-						<img src="/images/work/img-hero-svss-website-redesign@2x.png" class="float-end" alt="" />
+						<img
+							src="/images/work/img-listing-svss-website-redesign.png"
+							class="float-end"
+							alt=""
+						/>
 					</div>
 				</div>
-			</div>
+			</a>
 		</div>
 		<div class="col-md-6 mb-5">
-			<div class="card card-portfolio card-link">
+			<a href="/portfolio/vector-launch-visual-design" class="card card-portfolio card-link">
 				<div class="row">
 					<div class="col-md-6">
-						<h2>RM Timing Systems App</h2>
+						<h2>Vector Launch</h2>
+						<span class="tag">Visual Design</span>
 						<span class="tag">User Interface</span>
-						<span class="tag">Product Design</span>
 						<p>
 							Amet eiusmod ea incididunt tempor enim nisi non veniam. Exercitation
 							id Lorem nostrud voluptate nulla ut. Pariatur nostrud nisi nostrud
 							adipisicing. Labore officia magna magna enim nostrud. Ullamco
 							occaecat incididunt non voluptate officia proident.
 						</p>
-						<a href="/portfolio/automation-anywhere-design-system" class="text-link"
-							>View project</a
-						>
+						<span class="text-link">View project</span>
 					</div>
 					<div class="col-md-6 img">
 						<img src="/images/Image Container@2x.png" class="float-end" alt="" />
 					</div>
 				</div>
-			</div>
+			</a>
 		</div>
 		<div class="col-md-12 mb-5">
-			<div class="card card-portfolio card-link">
+			<a
+				href="/portfolio/automation-anywhere-design-system"
+				class="card card-portfolio card-link">
 				<div class="row">
 					<div class="col-md-5">
-						<h2>Visual Design and Branding Works</h2>
+						<h2>Visual Design and Branding Compilation</h2>
 						<span class="tag">Visual Design</span>
-						<span class="tag">Brand / Identity Design</span>
+						<span class="tag">Identity Design</span>
 						<p>
 							Amet eiusmod ea incididunt tempor enim nisi non veniam. Exercitation
 							id Lorem nostrud voluptate nulla ut. Pariatur nostrud nisi nostrud
 							adipisicing. Labore officia magna magna enim nostrud. Ullamco
 							occaecat incididunt non voluptate officia proident.
 						</p>
-						<a href="/portfolio/automation-anywhere-design-system" class="text-link"
-							>View project</a
-						>
+						<span class="text-link">View project</span>
 					</div>
 					<div class="col-md-1"></div>
 					<div class="col-md-5 img">
 						<img src="/images/Image Container@2x.png" class="float-end" alt="" />
 					</div>
 				</div>
-			</div>
+			</a>
 		</div>
 	</section>
 	<!-- <ul class="col-md-12">
@@ -190,8 +177,3 @@ const posts = (await getCollection("portfolio")).sort(
 		}
 	</ul> -->
 </Layout>
-<!-- </section>
-		</main>
-		<Footer />
-	</body>
-</html> -->

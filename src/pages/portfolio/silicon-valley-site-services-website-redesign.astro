@@ -7,11 +7,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 const title = "Silicon Valley Site Services Website Redesign 2023";
 const description = "A completely revamped web exerperience for this company's branches of businesses.";
 import { getCollection } from "astro:content";
-import FormattedDate from "../../components/FormattedDate.astro";
+// import FormattedDate from "../../components/FormattedDate.astro";
 
-const posts = (await getCollection("portfolio")).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
+// const posts = (await getCollection("portfolio")).sort(
+// 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+// );
 ---
 
 <Layout
@@ -19,7 +19,7 @@ const posts = (await getCollection("portfolio")).sort(
 	description={description}
 	pubDate={new Date("August 08 2021")}
 	heroImage="/blog-placeholder-about.jpg">
-	<!-- NEED BREADCRUMB -->
+	<!-- TO-DO BREADCRUMB -->
 	<section class="row title hero-detail">
 		<div class="col-lg-6 pe-lg-5">
 			<h1 class="col-12 mb-2">{title}</h1>
@@ -48,7 +48,8 @@ const posts = (await getCollection("portfolio")).sort(
 			<div class="row gx-md-5">
 				<div class="col-xl-4 pb-5">
 					<div class="card card-normal">
-						<h3>Credits</h3><ul>
+						<h3>Credits</h3>
+						<ul>
 							<li>Edward Margallo</li>
 							<li>Gurpreet Singh</li>
 							<li>Hermanpreet Singh</li>
@@ -63,8 +64,8 @@ const posts = (await getCollection("portfolio")).sort(
 						<ul>
 							<li>Principal UI Designer</li>
 							<li>Design Systems Evangelist</li>
-							<li>Managing Web Strategy</li>
-							<li>Managing Strategy Meetings</li>
+							<li>Co-managing Web Strategy</li>
+							<li>Co-managing Strategy Meetings</li>
 						</ul>
 					</div>
 				</div>

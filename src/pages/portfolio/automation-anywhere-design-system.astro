@@ -20,7 +20,7 @@ const posts = (await getCollection("portfolio")).sort(
 	description={description}
 	pubDate={new Date("August 08 2021")}
 	heroImage="/blog-placeholder-about.jpg">
-	<!-- NEED BREADCRUMB -->
+	<!-- TO-DO BREADCRUMB -->
 	<section class="row title hero-detail">
 		<div class="col-lg-6 pe-lg-5">
 			<h1 class="col-12 mb-2">{title}</h1>
@@ -37,7 +37,7 @@ const posts = (await getCollection("portfolio")).sort(
 			</h2>
 		</div>
 		<div class="col-lg-6 card-normal img-container">
-			<img src="../../images/work/img-hero-aai-wds@2x.png" />
+			<img src="/images/work/aai-wds/img-hero-aai-wds@2x.png" />
 		</div>
 	</section>
 	<section class="row gx-md-5 section-portfolio">
@@ -106,16 +106,26 @@ const posts = (await getCollection("portfolio")).sort(
 							data-bs-target="#galleryCarousel"
 							data-bs-slide-to="2"
 							aria-label="Slide 3"></button>
+						<button
+							type="button"
+							data-bs-target="#galleryCarousel"
+							data-bs-slide-to="3"
+							aria-label="Slide 4"></button>
+						<button
+							type="button"
+							data-bs-target="#galleryCarousel"
+							data-bs-slide-to="4"
+							aria-label="Slide 5"></button>
 					</div>
 					<div class="carousel-inner">
 						<div class="carousel-item active" data-bs-interval="10000">
 							<a
 								data-bs-toggle="modal"
 								data-bs-target="#galleryModal"
-								data-bs-image="/images/Image Container - Full@3x.png"
+								data-bs-image="/images/work/aai-wds/full/AAI WDS - Color Palette.png"
 								data-bs-title="Title of Screenshot Here">
 								<img
-									src="/images/Image Container - Full@3x.png"
+									src="/images/work/aai-wds/full/AAI WDS - Color Palette.png"
 									class=""
 									alt="..."
 								/>
@@ -125,10 +135,10 @@ const posts = (await getCollection("portfolio")).sort(
 							<a
 								data-bs-toggle="modal"
 								data-bs-target="#galleryModal"
-								data-bs-image="/images/Image Container - Full@3x.png"
+								data-bs-image="/images/work/aai-wds/full/AAI WDS - Buttons & Links.png"
 								data-bs-title="Title of Screenshot Here">
 								<img
-									src="/images/Image Container - Full@3x.png"
+									src="/images/work/aai-wds/full/AAI WDS - Buttons & Links.png"
 									class=""
 									alt="..."
 								/>
@@ -138,10 +148,36 @@ const posts = (await getCollection("portfolio")).sort(
 							<a
 								data-bs-toggle="modal"
 								data-bs-target="#galleryModal"
-								data-bs-image="/images/Image Container - Full@3x.png"
+								data-bs-image="/images/work/aai-wds/full/AAI WDS - Typography - Desktop.png"
 								data-bs-title="Title of Screenshot Here">
 								<img
-									src="/images/Image Container - Full@3x.png"
+									src="/images/work/aai-wds/full/AAI WDS - Typography - Desktop.png"
+									class=""
+									alt="..."
+								/>
+							</a>
+						</div>
+						<div class="carousel-item">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/aai-wds/full/AAI WDS - Grids and Responsiveness.png"
+								data-bs-title="Title of Screenshot Here">
+								<img
+									src="/images/work/aai-wds/full/AAI WDS - Grids and Responsiveness.png"
+									class=""
+									alt="..."
+								/>
+							</a>
+						</div>
+						<div class="carousel-item">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/aai-wds/full/Content - Global Layout.png"
+								data-bs-title="Title of Screenshot Here">
+								<img
+									src="/images/work/aai-wds/full/Content - Global Layout.png"
 									class=""
 									alt="..."
 								/>
@@ -216,10 +252,10 @@ const posts = (await getCollection("portfolio")).sort(
 	<section class="row gx-md-5 section-portfolio">
 		<div class="col-xl-3 pr-5 section-portfolio-label">
 			<i class="fa-regular fa-file-lines"></i>
-			<h2 class="pr-5">Planning &amp; Wireframing</h2>
+			<h2 class="pr-5">Planning &amp; Brainstorming</h2>
 		</div>
 		<div class="col-xl-9">
-			<div class="row mb-5">
+			<div class="row gx-md-5 mb-5">
 				<div class="col-xl-6">
 					<div class="card card-normal">
 						<h3>Research &amp; Analysis</h3>
@@ -264,7 +300,7 @@ const posts = (await getCollection("portfolio")).sort(
 	<section class="row gx-md-5 section-portfolio">
 		<div class="col-xl-3 pr-5 section-portfolio-label">
 			<i class="fa-brands fa-figma"></i>
-			<h2 class="pr-5">Design &amp; Prototyping</h2>
+			<h2 class="pr-5">Design &amp; Build-Out</h2>
 		</div>
 		<div class="col-xl-9">
 			<p class="mb-5">
@@ -405,7 +441,7 @@ const posts = (await getCollection("portfolio")).sort(
 			<h2 class="pr-5">Feedback &amp; Iteration</h2>
 		</div>
 		<div class="col-xl-9">
-			<div class="row mb-5">
+			<div class="row gx-md-5 mb-5">
 				<div class="col-xl-6">
 					<div class="card card-normal">
 						<h3>Feedback Gathering</h3>

@@ -20,7 +20,7 @@ const posts = (await getCollection("portfolio")).sort(
 	description={description}
 	pubDate={new Date("August 08 2021")}
 	heroImage="/blog-placeholder-about.jpg">
-	<!-- NEED BREADCRUMB -->
+	<!-- TO-DO BREADCRUMB -->
 	<section class="row title hero-detail">
 		<div class="col-lg-6 pe-lg-5">
 			<h1 class="col-12 mb-2">{title}</h1>
@@ -29,15 +29,14 @@ const posts = (await getCollection("portfolio")).sort(
 				<span class="tag">User Interface</span>
 			</div>
 			<h2 class="col-12 mb-5 pb-5 pe-lg-5 description">
-				The main goal of this project was to modernize, and completely revamp the look and
-				feel of not only the company’s corporate website, but all other customer facing
-				subdomains for a consistent brand presence. To do this, I led the build-out and
-				evangelized the adoption of an entirely new design system from the ground up, while
-				managing a team of web experts.
+				Tasked to completely overhaul the web presence of an enterprise-level software company
+				can definitely get the gears turning. This project was no exception as it involved
+				many stakeholders, departments and technical teams to kick-it off. I led the efforts
+				to drive the new creative vision for this Forbes Top 100 Cloud company.
 			</h2>
 		</div>
 		<div class="col-lg-6 card-normal img-container">
-			<img src="../../images/work/img-hero-aai-website-redesign@2x.png" />
+			<img src="/images/work/img-hero-aai-website-redesign@2x.png" />
 		</div>
 	</section>
 	<section class="row gx-md-5 section-portfolio">
@@ -49,7 +48,8 @@ const posts = (await getCollection("portfolio")).sort(
 			<div class="row gx-md-5">
 				<div class="col-xl-4 pb-5">
 					<div class="card card-normal">
-						<h3>Credits</h3><ul>
+						<h3>Credits</h3>
+						<ul>
 							<li>Edward Margallo</li>
 							<li>Gurpreet Singh</li>
 							<li>Hermanpreet Singh</li>
@@ -64,8 +64,8 @@ const posts = (await getCollection("portfolio")).sort(
 						<ul>
 							<li>Principal UI Designer</li>
 							<li>Design Systems Evangelist</li>
-							<li>Managing Web Strategy</li>
-							<li>Managing Strategy Meetings</li>
+							<li>Co-managing Web Strategy</li>
+							<li>Co-managing Stakeholder Meetings</li>
 						</ul>
 					</div>
 				</div>
@@ -97,9 +97,9 @@ const posts = (await getCollection("portfolio")).sort(
 						<button
 							type="button"
 							data-bs-target="#galleryCarousel"
-							data-bs-slide-to="0"
 							class="active"
 							aria-current="true"
+							data-bs-slide-to="0"
 							aria-label="Slide 1"></button>
 						<button
 							type="button"
@@ -111,42 +111,114 @@ const posts = (await getCollection("portfolio")).sort(
 							data-bs-target="#galleryCarousel"
 							data-bs-slide-to="2"
 							aria-label="Slide 3"></button>
+						<button
+							type="button"
+							data-bs-target="#galleryCarousel"
+							data-bs-slide-to="3"
+							aria-label="Slide 4"></button>
+						<button
+							type="button"
+							data-bs-target="#galleryCarousel"
+							data-bs-slide-to="4"
+							aria-label="Slide 5"></button>
+						<button
+							type="button"
+							data-bs-target="#galleryCarousel"
+							data-bs-slide-to="5"
+							aria-label="Slide 6"></button>
+						<button
+							type="button"
+							data-bs-target="#galleryCarousel"
+							data-bs-slide-to="6"
+							aria-label="Slide 7"></button>
 					</div>
 					<div class="carousel-inner">
 						<div class="carousel-item active" data-bs-interval="10000">
 							<a
 								data-bs-toggle="modal"
 								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/full/HP - AAI.COM 2023 - EM 1.png"
-								data-bs-title="Title of Screenshot Here">
+								data-bs-image="/images/work/aai-website/full/HP - AAI.COM 2023 - EM 1.png"
+								data-bs-title="Automation Anywhere - Website Redesign">
 								<img
-									src="/images/work/full/HP - AAI.COM 2023 - EM 1.png"
+									src="/images/work/aai-website/full/HP - AAI.COM 2023 - EM 1.png"
 									class=""
 									alt="..."
 								/>
 							</a>
 						</div>
-						<div class="carousel-item" data-bs-interval="2000">
+						<div class="carousel-item" data-bs-interval="10000">
 							<a
 								data-bs-toggle="modal"
 								data-bs-target="#galleryModal"
-								data-bs-image="/images/Image Container - Full@3x.png"
-								data-bs-title="Title of Screenshot Here">
+								data-bs-image="/images/work/aai-website/full/Cloud Platform - Refresh WDS 3 - 1.png"
+								data-bs-title="Automation Anywhere - Website Redesign">
 								<img
-									src="/images/Image Container - Full@3x.png"
+									src="/images/work/aai-website/full/Cloud Platform - Refresh WDS 3 - 1.png"
 									class=""
 									alt="..."
 								/>
 							</a>
 						</div>
-						<div class="carousel-item">
+						<div class="carousel-item" data-bs-interval="10000">
 							<a
 								data-bs-toggle="modal"
 								data-bs-target="#galleryModal"
-								data-bs-image="/images/Image Container - Full@3x.png"
-								data-bs-title="Title of Screenshot Here">
+								data-bs-image="/images/work/aai-website/full/docs.aai.com - detail.png"
+								data-bs-title="Automation Anywhere - Website Redesign">
 								<img
-									src="/images/Image Container - Full@3x.png"
+									src="/images/work/aai-website/full/docs.aai.com - detail.png"
+									class=""
+									alt="..."
+								/>
+							</a>
+						</div>
+						<div class="carousel-item" data-bs-interval="10000">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/aai-website/full/Product - ASP V2.png"
+								data-bs-title="Automation Anywhere - Website Redesign">
+								<img
+									src="/images/work/aai-website/full/Product - ASP V2.png"
+									class=""
+									alt="..."
+								/>
+							</a>
+						</div>
+						<div class="carousel-item" data-bs-interval="10000">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/aai-website/full/RPA Security - REFRESH WDS 3.0 - 1 - 1.png"
+								data-bs-title="Automation Anywhere - Website Redesign">
+								<img
+									src="/images/work/aai-website/full/RPA Security - REFRESH WDS 3.0 - 1 - 1.png"
+									class=""
+									alt="..."
+								/>
+							</a>
+						</div>
+						<div class="carousel-item" data-bs-interval="10000">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/aai-website/full/TEMPLATE Product - Redesign 3.0 - 2 - 1.png"
+								data-bs-title="Automation Anywhere - Website Redesign">
+								<img
+									src="/images/work/aai-website/full/TEMPLATE Product - Redesign 3.0 - 2 - 1.png"
+									class=""
+									alt="..."
+								/>
+							</a>
+						</div>
+						<div class="carousel-item" data-bs-interval="10000">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/aai-website/full/SCREENSHOT - Customer Stories Listing.png"
+								data-bs-title="Automation Anywhere - Website Redesign">
+								<img
+									src="/images/work/aai-website/full/SCREENSHOT - Customer Stories Listing.png"
 									class=""
 									alt="..."
 								/>
@@ -224,35 +296,35 @@ const posts = (await getCollection("portfolio")).sort(
 			<h2 class="pr-5">Planning &amp; Wireframing</h2>
 		</div>
 		<div class="col-xl-9">
-			<div class="row mb-5">
+			<div class="row gx-md-5 mb-5">
 				<div class="col-xl-6">
 					<div class="card card-normal">
 						<h3>Research &amp; Analysis</h3>
 						<ul>
-							<li>Review and audit of previous design system</li>
-							<li>Pinpoint missing components</li>
-							<li>Pinpoint pain points with developers</li>
-							<li>Competitive website analysis</li>
-							<li>Studying other well-known design systems</li>
+							<li>Historical Analytics</li>
+							<li>Competitive Analysis</li>
+							<li>Industry best-practices (marketing focused)</li>
+							<li>Interviews with stakeholders</li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-xl-6">
 					<div class="card card-normal">
-						<h3>Defining Requirements</h3>
+						<h3>Brainstorming &amp; Wireframing</h3>
 						<ul>
 							<li>
-								Needs base foundations, core UI components and layout blocks
+								Internal "design jam" with senior designers and in-house
+								creative team
 							</li>
-							<li>Ability to rapid prototype layouts with ease</li>
-							<li>Allows for templatization of key sections and pages</li>
-							<li>Adaptable to all corporate web properties</li>
-							<li>Easily understandable by fellow designers and developers</li>
+							<li>User journey mapping</li>
+							<li>Determining best page flow for user journeys</li>
+							<li>Crafting component variations for certain use-cases</li>
+							<li>Feedback from SEO and CRO for best-practices</li>
 						</ul>
 					</div>
 				</div>
 			</div>
-			<h3>Kick-off Calls: Key Takeaways</h3>
+			<!-- <h3>Kick-off Calls: Key Takeaways</h3>
 			<p>
 				After a competitive analysis, we had several kick-off calls where we discussed the
 				general design and visual langauge that we as an orgnization wanted to embrace. Over
@@ -263,7 +335,7 @@ const posts = (await getCollection("portfolio")).sort(
 				style guide standpoint, an emphasis on heading typography and presentation, and 3) A
 				more focused, and toned-down, usage of our brand color system (not only through CSS
 				application, but through actual image assets).
-			</p>
+			</p> -->
 		</div>
 	</section>
 	<section class="row gx-md-5 section-portfolio">
@@ -273,17 +345,23 @@ const posts = (await getCollection("portfolio")).sort(
 		</div>
 		<div class="col-xl-9">
 			<p class="mb-5">
-				A design system is crucial for any creative team (design, content or technical) since
-				it becomes the source of truth for building interfaces and experiences. While most
-				importantly it requires adoption and support, the system needs to also cover several
-				essential categories for it to be successful.
+				While the website redesign presented a substantial challenge, as a design lead, I had
+				confidence in our execution and delivery capabilities. This assurance stemmed from our
+				development of a design system that significantly streamlined our design process and
+				approach. Moreover, consistently sharing ideas and progress updates with all creative
+				stakeholders throughout the journey ensured alignment and mutual understanding.
 			</p>
 			<div class="row gx-md-5">
 				<div class="col-md-6 mb-5">
-					<div class="card card-portfolio card-padding card-link">
+					<a
+						class="card card-portfolio card-padding card-link"
+						data-bs-toggle="modal"
+						data-bs-target="#galleryModal"
+						data-bs-image="/images/work/aai-website/thumb-component-variations.png"
+						data-bs-title="Automation Anywhere - Website Redesign">
 						<div class="row">
 							<div class="col-md-12">
-								<h3>Base Foundations</h3>
+								<h3>Component Variations</h3>
 								<p>
 									Covering the themes of color, typograhy, grids,
 									responsiveness and overall design system usage.
@@ -291,19 +369,24 @@ const posts = (await getCollection("portfolio")).sort(
 							</div>
 							<div class="col-md-12 img">
 								<img
-									src="/images/Image Container - Full.png"
+									src="/images/work/aai-website/thumb-component-variations.png"
 									class=""
 									alt=""
 								/>
 							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 				<div class="col-md-6 mb-5">
-					<div class="card card-portfolio card-padding card-link">
+					<a
+						class="card card-portfolio card-padding card-link"
+						data-bs-toggle="modal"
+						data-bs-target="#galleryModal"
+						data-bs-image="/images/work/aai-website/thumb-navigation-updates.png"
+						data-bs-title="Automation Anywhere - Website Redesign">
 						<div class="row">
 							<div class="col-md-12">
-								<h3>Key UI Components</h3>
+								<h3>Navigation Updates</h3>
 								<p>
 									Amet eiusmod ea incididunt tempor enim nisi non veniam.
 									Exercitation id Lorem nostrud voluptate nulla ut.
@@ -311,21 +394,26 @@ const posts = (await getCollection("portfolio")).sort(
 							</div>
 							<div class="col-md-12 img">
 								<img
-									src="/images/Image Container - Full.png"
+									src="/images/work/aai-website/thumb-navigation-updates.png"
 									class=""
 									alt=""
 								/>
 							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 			</div>
 			<div class="row gx-md-5">
 				<div class="col-md-6 mb-5">
-					<div class="card card-portfolio card-padding card-link">
+					<a
+						class="card card-portfolio card-padding card-link"
+						data-bs-toggle="modal"
+						data-bs-target="#galleryModal"
+						data-bs-image="/images/work/aai-website/thumb-page-templatization.png"
+						data-bs-title="Automation Anywhere - Website Redesign">
 						<div class="row">
 							<div class="col-md-12">
-								<h3>Layout &amp; Content Blocks</h3>
+								<h3>Page Templatization</h3>
 								<p>
 									Amet eiusmod ea incididunt tempor enim nisi non veniam.
 									Exercitation id Lorem nostrud voluptate nulla ut.
@@ -333,19 +421,24 @@ const posts = (await getCollection("portfolio")).sort(
 							</div>
 							<div class="col-md-12 img">
 								<img
-									src="/images/Image Container - Full.png"
+									src="/images/work/aai-website/thumb-page-templatization.png"
 									class=""
 									alt=""
 								/>
 							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 				<div class="col-md-6 mb-5">
-					<div class="card card-portfolio card-padding card-link">
+					<a
+						class="card card-portfolio card-padding card-link"
+						data-bs-toggle="modal"
+						data-bs-target="#galleryModal"
+						data-bs-image="/images/work/aai-website/thumb-responsive-layouts.png"
+						data-bs-title="Automation Anywhere - Website Redesign">
 						<div class="row">
 							<div class="col-md-12">
-								<h3>Component Variations</h3>
+								<h3>Responsive Layouts</h3>
 								<p>
 									Amet eiusmod ea incididunt tempor enim nisi non veniam.
 									Exercitation id Lorem nostrud voluptate nulla ut.
@@ -353,19 +446,24 @@ const posts = (await getCollection("portfolio")).sort(
 							</div>
 							<div class="col-md-12 img">
 								<img
-									src="/images/Image Container - Full.png"
+									src="/images/work/aai-website/thumb-responsive-layouts.png"
 									class=""
 									alt=""
 								/>
 							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 				<div class="col-md-12 mb-5">
-					<div class="card card-portfolio card-link">
+					<a
+						class="card card-portfolio card-link"
+						data-bs-toggle="modal"
+						data-bs-target="#galleryModal"
+						data-bs-image="/images/work/aai-website/thumb-subdomain-support.png"
+						data-bs-title="Automation Anywhere - Website Redesign">
 						<div class="row">
 							<div class="col-md-6">
-								<h3>Responsive Variations</h3>
+								<h3>Subdomain Support</h3>
 								<p>
 									Amet eiusmod ea incididunt tempor enim nisi non veniam.
 									Exercitation id Lorem nostrud voluptate nulla ut.
@@ -373,19 +471,24 @@ const posts = (await getCollection("portfolio")).sort(
 							</div>
 							<div class="col-md-6 img">
 								<img
-									src="/images/Image Container - Full.png"
+									src="/images/work/aai-website/thumb-subdomain-support.png"
 									class=""
 									alt=""
 								/>
 							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 				<div class="col-md-12 mb-5">
-					<div class="card card-portfolio card-link">
+					<a
+						class="card card-portfolio card-link"
+						data-bs-toggle="modal"
+						data-bs-target="#galleryModal"
+						data-bs-image="/images/work/aai-website/thumb-cultural-design.png"
+						data-bs-title="Automation Anywhere - Website Redesign">
 						<div class="row">
 							<div class="col-md-6">
-								<h3>Image Style Guide</h3>
+								<h3>Region Specific, Cultural Design</h3>
 								<p>
 									Amet eiusmod ea incididunt tempor enim nisi non veniam.
 									Exercitation id Lorem nostrud voluptate nulla ut.
@@ -393,13 +496,13 @@ const posts = (await getCollection("portfolio")).sort(
 							</div>
 							<div class="col-md-6 img">
 								<img
-									src="/images/Image Container - Full.png"
+									src="/images/work/aai-website/thumb-cultural-design.png"
 									class=""
 									alt=""
 								/>
 							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -410,7 +513,7 @@ const posts = (await getCollection("portfolio")).sort(
 			<h2 class="pr-5">Feedback &amp; Iteration</h2>
 		</div>
 		<div class="col-xl-9">
-			<div class="row mb-5">
+			<div class="row gx-md-5 mb-5">
 				<div class="col-xl-6">
 					<div class="card card-normal">
 						<h3>Feedback Gathering</h3>

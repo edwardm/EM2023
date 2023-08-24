@@ -1,0 +1,462 @@
+---
+import Layout from "../../layouts/Default.astro";
+// import BaseHead from "../../components/BaseHead.astro";
+// import Header from "../../components/Header.astro";
+// import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+const title = "Silicon Valley Site Services Website Redesign 2023";
+const description = "A completely revamped web exerperience for this company's branches of businesses.";
+import { getCollection } from "astro:content";
+// import FormattedDate from "../../components/FormattedDate.astro";
+
+// const posts = (await getCollection("portfolio")).sort(
+// 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+// );
+---
+
+<Layout
+	title={title}
+	description={description}
+	pubDate={new Date("August 08 2021")}
+	heroImage="/blog-placeholder-about.jpg">
+	<!-- TO-DO BREADCRUMB -->
+	<section class="row title hero-detail">
+		<div class="col-lg-6 pe-lg-5">
+			<h1 class="col-12 mb-2">{title}</h1>
+			<div class="py-3">
+				<span class="tag">User Experience</span>
+				<span class="tag">User Interface</span>
+			</div>
+			<h2 class="col-12 mb-5 pb-5 pe-lg-5 description">
+				The main goal of this project was to modernize, and completely revamp the look and
+				feel of not only the company’s corporate website, but all other customer facing
+				subdomains for a consistent brand presence. To do this, I led the build-out and
+				evangelized the adoption of an entirely new design system from the ground up, while
+				managing a team of web experts.
+			</h2>
+		</div>
+		<div class="col-lg-6 card-normal img-container">
+			<img src="../../images/work/img-hero-svss-website-redesign@2x.png" />
+		</div>
+	</section>
+	<section class="row gx-md-5 section-portfolio">
+		<div class="col-xl-3 pr-5 section-portfolio-label">
+			<i class="fa fa-users-viewfinder"></i>
+			<h2 class="pr-5">Overview</h2>
+		</div>
+		<div class="col-xl-9">
+			<div class="row gx-md-5">
+				<div class="col-xl-4 pb-5">
+					<div class="card card-normal">
+						<h3>Credits</h3>
+						<ul>
+							<li>Edward Margallo</li>
+							<li>Gurpreet Singh</li>
+							<li>Hermanpreet Singh</li>
+							<li>AAI WCS Team</li>
+							<li>AAI Creative Team</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xl-4 pb-5">
+					<div class="card card-normal">
+						<h3>My Role</h3>
+						<ul>
+							<li>Principal UI Designer</li>
+							<li>Design Systems Evangelist</li>
+							<li>Co-managing Web Strategy</li>
+							<li>Co-managing Strategy Meetings</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xl-4 pb-5">
+					<div class="card card-normal">
+						<h3>Collaboration</h3>
+						<ul>
+							<li>Directors and C-Suite</li>
+							<li>Product Marketing Managers</li>
+							<li>Web Development Team</li>
+							<li>Brand and in-house Creative Team</li>
+							<li>Sub-domain Owners</li>
+							<li>CRO and SEO</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="row gx-md-5 section-portfolio">
+		<div class="col-xl-3 pr-5 section-portfolio-label">
+			<i class="fa-regular fa-images"></i>
+			<h2 class="pr-5">Project Gallery</h2>
+		</div>
+		<div class="col-xl-9">
+			<div class="card card-portfolio card-padding" style="height: auto !important;">
+				<div id="galleryCarousel" class="carousel carousel-dark slide mb-5">
+					<div class="carousel-indicators">
+						<button
+							type="button"
+							data-bs-target="#galleryCarousel"
+							data-bs-slide-to="0"
+							class="active"
+							aria-current="true"
+							aria-label="Slide 1"></button>
+						<button
+							type="button"
+							data-bs-target="#galleryCarousel"
+							data-bs-slide-to="1"
+							aria-label="Slide 2"></button>
+						<button
+							type="button"
+							data-bs-target="#galleryCarousel"
+							data-bs-slide-to="2"
+							aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active" data-bs-interval="10000">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/full/HP - AAI.COM 2023 - EM 1.png"
+								data-bs-title="Title of Screenshot Here">
+								<img
+									src="/images/work/full/HP - AAI.COM 2023 - EM 1.png"
+									class=""
+									alt="..."
+								/>
+							</a>
+						</div>
+						<div class="carousel-item" data-bs-interval="2000">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/Image Container - Full@3x.png"
+								data-bs-title="Title of Screenshot Here">
+								<img
+									src="/images/Image Container - Full@3x.png"
+									class=""
+									alt="..."
+								/>
+							</a>
+						</div>
+						<div class="carousel-item">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/Image Container - Full@3x.png"
+								data-bs-title="Title of Screenshot Here">
+								<img
+									src="/images/Image Container - Full@3x.png"
+									class=""
+									alt="..."
+								/>
+							</a>
+						</div>
+					</div>
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#galleryCarousel"
+						data-bs-slide="prev">
+						<i class="fa-solid fa-chevron-left"></i>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#galleryCarousel"
+						data-bs-slide="next">
+						<i class="fa-solid fa-chevron-right"></i>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+				<p class="text-center">
+					<!-- <small>Click image to enlarge</small> -->
+				</p>
+			</div>
+		</div>
+	</section>
+	<!-- <section class="row gx-md-5 section-portfolio">
+		<div class="col-xl-12 pr-5 section-portfolio-label">
+			<i class="fa-regular fa-file-lines"></i>
+			<h2 class="pr-5">Tech Stack & Tools</h2>
+		</div>
+		<div class="col-xl-3">
+			<div class="card card-normal">
+				<h3>Design Skills</h3><ul>
+					<li>User Research</li><li>Wireframing</li><li>Low/High-Fidelity Designs</li><li>
+						Visual Design Systems
+					</li><li>Adobe Creative Suite</li><li>Figma and XD</li><li>Iterative Design</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-xl-3">
+			<div class="card card-normal">
+				<h3>Design Skills</h3><ul>
+					<li>User Research</li><li>Wireframing</li><li>Low/High-Fidelity Designs</li><li>
+						Visual Design Systems
+					</li><li>Adobe Creative Suite</li><li>Figma and XD</li><li>Iterative Design</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-xl-3">
+			<div class="card card-normal">
+				<h3>Design Skills</h3><ul>
+					<li>User Research</li><li>Wireframing</li><li>Low/High-Fidelity Designs</li><li>
+						Visual Design Systems
+					</li><li>Adobe Creative Suite</li><li>Figma and XD</li><li>Iterative Design</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-xl-3">
+			<div class="card card-normal">
+				<h3>Design Skills</h3><ul>
+					<li>User Research</li><li>Wireframing</li><li>Low/High-Fidelity Designs</li><li>
+						Visual Design Systems
+					</li><li>Adobe Creative Suite</li><li>Figma and XD</li><li>Iterative Design</li>
+				</ul>
+			</div>
+		</div>
+	</section> -->
+	<section class="row gx-md-5 section-portfolio">
+		<div class="col-xl-3 pr-5 section-portfolio-label">
+			<i class="fa-regular fa-file-lines"></i>
+			<h2 class="pr-5">Planning &amp; Wireframing</h2>
+		</div>
+		<div class="col-xl-9">
+			<div class="row mb-5">
+				<div class="col-xl-6">
+					<div class="card card-normal">
+						<h3>Research &amp; Analysis</h3>
+						<ul>
+							<li>Review and audit of previous design system</li>
+							<li>Pinpoint missing components</li>
+							<li>Pinpoint pain points with developers</li>
+							<li>Competitive website analysis</li>
+							<li>Studying other well-known design systems</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xl-6">
+					<div class="card card-normal">
+						<h3>Defining Requirements</h3>
+						<ul>
+							<li>
+								Needs base foundations, core UI components and layout blocks
+							</li>
+							<li>Ability to rapid prototype layouts with ease</li>
+							<li>Allows for templatization of key sections and pages</li>
+							<li>Adaptable to all corporate web properties</li>
+							<li>Easily understandable by fellow designers and developers</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<h3>Kick-off Calls: Key Takeaways</h3>
+			<p>
+				After a competitive analysis, we had several kick-off calls where we discussed the
+				general design and visual langauge that we as an orgnization wanted to embrace. Over
+				the course of these meetings, we looked at brainstorming ideas for a new home page
+				that would essentially become the foundation for defining the initial design system.
+				Besides the obvious, primary point of site-wide consistency, our key takeaways
+				included: 1) A modernization of visual style though miminmalism 2) From a content
+				style guide standpoint, an emphasis on heading typography and presentation, and 3) A
+				more focused, and toned-down, usage of our brand color system (not only through CSS
+				application, but through actual image assets).
+			</p>
+		</div>
+	</section>
+	<section class="row gx-md-5 section-portfolio">
+		<div class="col-xl-3 pr-5 section-portfolio-label">
+			<i class="fa-brands fa-figma"></i>
+			<h2 class="pr-5">Design &amp; Prototyping</h2>
+		</div>
+		<div class="col-xl-9">
+			<p class="mb-5">
+				A design system is crucial for any creative team (design, content or technical) since
+				it becomes the source of truth for building interfaces and experiences. While most
+				importantly it requires adoption and support, the system needs to also cover several
+				essential categories for it to be successful.
+			</p>
+			<div class="row gx-md-5">
+				<div class="col-md-6 mb-5">
+					<div class="card card-portfolio card-padding card-link">
+						<div class="row">
+							<div class="col-md-12">
+								<h3>Base Foundations</h3>
+								<p>
+									Covering the themes of color, typograhy, grids,
+									responsiveness and overall design system usage.
+								</p>
+							</div>
+							<div class="col-md-12 img">
+								<img
+									src="/images/Image Container - Full.png"
+									class=""
+									alt=""
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 mb-5">
+					<div class="card card-portfolio card-padding card-link">
+						<div class="row">
+							<div class="col-md-12">
+								<h3>Key UI Components</h3>
+								<p>
+									Amet eiusmod ea incididunt tempor enim nisi non veniam.
+									Exercitation id Lorem nostrud voluptate nulla ut.
+								</p>
+							</div>
+							<div class="col-md-12 img">
+								<img
+									src="/images/Image Container - Full.png"
+									class=""
+									alt=""
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row gx-md-5">
+				<div class="col-md-6 mb-5">
+					<div class="card card-portfolio card-padding card-link">
+						<div class="row">
+							<div class="col-md-12">
+								<h3>Layout &amp; Content Blocks</h3>
+								<p>
+									Amet eiusmod ea incididunt tempor enim nisi non veniam.
+									Exercitation id Lorem nostrud voluptate nulla ut.
+								</p>
+							</div>
+							<div class="col-md-12 img">
+								<img
+									src="/images/Image Container - Full.png"
+									class=""
+									alt=""
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 mb-5">
+					<div class="card card-portfolio card-padding card-link">
+						<div class="row">
+							<div class="col-md-12">
+								<h3>Component Variations</h3>
+								<p>
+									Amet eiusmod ea incididunt tempor enim nisi non veniam.
+									Exercitation id Lorem nostrud voluptate nulla ut.
+								</p>
+							</div>
+							<div class="col-md-12 img">
+								<img
+									src="/images/Image Container - Full.png"
+									class=""
+									alt=""
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 mb-5">
+					<div class="card card-portfolio card-link">
+						<div class="row">
+							<div class="col-md-6">
+								<h3>Responsive Variations</h3>
+								<p>
+									Amet eiusmod ea incididunt tempor enim nisi non veniam.
+									Exercitation id Lorem nostrud voluptate nulla ut.
+								</p>
+							</div>
+							<div class="col-md-6 img">
+								<img
+									src="/images/Image Container - Full.png"
+									class=""
+									alt=""
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 mb-5">
+					<div class="card card-portfolio card-link">
+						<div class="row">
+							<div class="col-md-6">
+								<h3>Image Style Guide</h3>
+								<p>
+									Amet eiusmod ea incididunt tempor enim nisi non veniam.
+									Exercitation id Lorem nostrud voluptate nulla ut.
+								</p>
+							</div>
+							<div class="col-md-6 img">
+								<img
+									src="/images/Image Container - Full.png"
+									class=""
+									alt=""
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="row gx-md-5 section-portfolio">
+		<div class="col-xl-3 pr-5 section-portfolio-label">
+			<i class="fa-solid fa-rotate"></i>
+			<h2 class="pr-5">Feedback &amp; Iteration</h2>
+		</div>
+		<div class="col-xl-9">
+			<div class="row mb-5">
+				<div class="col-xl-6">
+					<div class="card card-normal">
+						<h3>Feedback Gathering</h3>
+						<ul>
+							<li>
+								Continuous adjustment and audits applied to current components
+								as new content strategy docs and requirements were rolling in
+							</li>
+							<li>
+								Sub-domain owners and key development team members provided
+								feedback on usage and areas of improvement for certain use
+								cases
+							</li>
+							<li>
+								Reporting back to the development team for updates to the
+								design system
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xl-6">
+					<div class="card card-normal">
+						<h3>Updates &amp; Evolution</h3>
+						<ul>
+							<li>Net new UI components and content blocks added as needed</li>
+							<li>
+								Sync with senior designers for update reviews and library
+								publishing
+							</li>
+							<li>Continuous improvements to the image style library</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="row gx-md-5 section-portfolio mb-5">
+		<div class="col-xl-3 col-12 pr-5 section-portfolio-label">
+			<!-- <i class="fa"></i> -->
+			<h2 class="pr-5">Next steps&hellip;</h2>
+		</div>
+		<div class="col-xl-4 col-6 pt-3">
+			<p><a href="/portfolio">Back to Portfolio</a></p>
+		</div>
+		<div class="col-xl-5 col-6 pt-3 text-end">
+			<p><a href="#">Back to Top</a></p>
+		</div>
+	</section>
+</Layout>
