@@ -436,7 +436,7 @@ main ul.big-icons li a:hover i {
 }
 
 section {
-	padding: 0 0 10em 0;
+	padding: 0 0 8em 0;
 }
 
 footer {
@@ -878,11 +878,14 @@ section.section-portfolio .carousel-control-next i {
 	}
 
 	.card-portfolio .img img {
+		margin-top: 1em;
 		position: static;
 		width: 100%;
 		min-height: 200px;
 		max-height: 300px;
 		/* max-height: 400px; */
+		border-radius: 15px 15px 0 0;
+		background: var(--accent-dark);
 	}
 
 	section.title {
