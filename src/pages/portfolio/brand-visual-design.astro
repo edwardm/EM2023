@@ -30,8 +30,8 @@ const posts = (await getCollection("portfolio")).sort(
 			<h2 class="col-12 mb-5 pb-5 pe-lg-5 description">
 				Over the years, I've had the pleasure to work on numerous identity design projects in
 				various industries. Ranging from tech start-ups to endurance race events, and from
-				award-winning wineries to small private businesses. Each project infused the character
-				and brand of their respective organizations.
+				award-winning wineries to small businesses. Each project infused the character and
+				brand of their respective organizations.
 			</h2>
 		</div>
 		<div class="col-lg-6 card-normal img-container">
@@ -67,388 +67,194 @@ const posts = (await getCollection("portfolio")).sort(
 		</div>
 	</section>
 	<section class="row gx-md-5 section-portfolio">
-		<div class="col-xl-3 pr-5 section-portfolio-label">
-			<i class="fa-regular fa-images"></i>
-			<h2 class="pr-5">Project Gallery</h2>
+		<div class="col-xl-3 col-12 pr-5 section-portfolio-label">
+			<i class="fa-regular fa-file-lines"></i>
+			<h2 class="pr-5">Brand Identity Design</h2>
 		</div>
 		<div class="col-xl-9">
-			<div class="card card-portfolio card-padding" style="height: auto !important;">
-				<div id="galleryCarousel" class="carousel carousel-dark slide mb-5">
-					<div class="carousel-indicators">
-						<button
-							type="button"
-							data-bs-target="#galleryCarousel"
-							class="active"
-							aria-current="true"
-							data-bs-slide-to="0"
-							aria-label="Slide 1"></button>
-						<button
-							type="button"
-							data-bs-target="#galleryCarousel"
-							data-bs-slide-to="1"
-							aria-label="Slide 2"></button>
-						<button
-							type="button"
-							data-bs-target="#galleryCarousel"
-							data-bs-slide-to="2"
-							aria-label="Slide 3"></button>
-						<!-- <button
-							type="button"
-							data-bs-target="#galleryCarousel"
-							data-bs-slide-to="3"
-							aria-label="Slide 4"></button>
-						<button
-							type="button"
-							data-bs-target="#galleryCarousel"
-							data-bs-slide-to="4"
-							aria-label="Slide 5"></button>
-						<button
-							type="button"
-							data-bs-target="#galleryCarousel"
-							data-bs-slide-to="5"
-							aria-label="Slide 6"></button>
-						<button
-							type="button"
-							data-bs-target="#galleryCarousel"
-							data-bs-slide-to="6"
-							aria-label="Slide 7"></button> -->
+			<div class="row gx-md-5">
+				<div class="col-xl-6 mb-5">
+					<div class="card card-branding-presentation" style="background: #222;">
+						<img
+							src="/images/work/visual-design/logo-activo.svg"
+							class=""
+							alt={title}
+						/>
 					</div>
-					<div class="carousel-inner">
-						<div class="carousel-item active" data-bs-interval="10000">
-							<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/rmts/full/rm-timing-systems-app-task-analysis.png"
-								data-bs-title="RM Timing Systems - App/Product Design">
-								<img
-									src="/images/work/rmts/full/rm-timing-systems-app-task-analysis.png"
-									class=""
-									alt={title}
-								/>
-							</a>
-						</div>
-						<div class="carousel-item" data-bs-interval="10000">
-							<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/rmts/full/rm-timing-systems-app-use-types-personas.png"
-								data-bs-title="RM Timing Systems - App/Product Design">
-								<img
-									src="/images/work/rmts/full/rm-timing-systems-app-use-types-personas.png"
-									class=""
-									alt={title}
-								/>
-							</a>
-						</div>
-						<div class="carousel-item" data-bs-interval="10000">
-							<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/rmts/full/Asset-19.png"
-								data-bs-title="RM Timing Systems - App/Product Design">
-								<img
-									src="/images/work/rmts/full/Asset-19.png"
-									class=""
-									alt={title}
-								/>
-							</a>
-						</div>
-						<!-- <div class="carousel-item" data-bs-interval="10000">
-							<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/rmts/full/docs.aai.com - detail.png"
-								data-bs-title="RM Timing Systems - App/Product Design">
-								<img
-									src="/images/work/rmts/full/docs.aai.com - detail.png"
-									class=""
-									alt={title}
-								/>
-							</a>
-						</div>
-						<div class="carousel-item" data-bs-interval="10000">
-							<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/rmts/full/RPA Security - REFRESH WDS 3.0 - 1 - 1.png"
-								data-bs-title="RM Timing Systems - App/Product Design">
-								<img
-									src="/images/work/rmts/full/RPA Security - REFRESH WDS 3.0 - 1 - 1.png"
-									class=""
-									alt={title}
-								/>
-							</a>
-						</div>
-						<div class="carousel-item" data-bs-interval="10000">
-							<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/rmts/full/TEMPLATE Product - Redesign 3.0 - 2 - 1.png"
-								data-bs-title="RM Timing Systems - App/Product Design">
-								<img
-									src="/images/work/rmts/full/TEMPLATE Product - Redesign 3.0 - 2 - 1.png"
-									class=""
-									alt={title}
-								/>
-							</a>
-						</div>
-						<div class="carousel-item" data-bs-interval="10000">
-							<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/rmts/full/SCREENSHOT - Customer Stories Listing.png"
-								data-bs-title="RM Timing Systems - App/Product Design">
-								<img
-									src="/images/work/rmts/full/SCREENSHOT - Customer Stories Listing.png"
-									class=""
-									alt={title}
-								/>
-							</a>
-						</div> -->
-					</div>
-					<button
-						class="carousel-control-prev"
-						type="button"
-						data-bs-target="#galleryCarousel"
-						data-bs-slide="prev">
-						<i class="fa-solid fa-chevron-left"></i>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button
-						class="carousel-control-next"
-						type="button"
-						data-bs-target="#galleryCarousel"
-						data-bs-slide="next">
-						<i class="fa-solid fa-chevron-right"></i>
-						<span class="visually-hidden">Next</span>
-					</button>
 				</div>
-				<p class="text-center">
-					<!-- <small>Click image to enlarge</small> -->
-				</p>
+				<div class="col-xl-6 mb-5">
+					<div class="card card-branding-presentation" style="background: #143859;">
+						<img
+							src="/images/work/visual-design/logo-alamitos.svg"
+							class=""
+							alt={title}
+						/>
+					</div>
+				</div>
+				<div class="col-xl-6 mb-5">
+					<div class="card card-branding-presentation" style="background: #0f2d60;">
+						<img
+							src="/images/work/visual-design/logo-galactic-sky.svg"
+							class=""
+							alt={title}
+						/>
+					</div>
+				</div>
+				<div class="col-xl-6 mb-5">
+					<div class="card card-branding-presentation" style="background: #666;">
+						<img
+							src="/images/work/visual-design/logo-vector-badge-1001.png"
+							class=""
+							alt={title}
+						/>
+					</div>
+				</div>
+				<div class="col-xl-6 mb-5">
+					<div class="card card-branding-presentation" style="background: #e8ded5;">
+						<img
+							src="/images/work/visual-design/logo-ap-custom-cabinets.svg"
+							class=""
+							alt={title}
+						/>
+					</div>
+				</div>
+				<div class="col-xl-6 mb-5">
+					<div class="card card-branding-presentation" style="background: #ccc;">
+						<img
+							src="/images/work/visual-design/logo-argo-wireleess.svg"
+							class=""
+							alt={title}
+						/>
+					</div>
+				</div>
+				<div class="col-xl-6 mb-5">
+					<div class="card card-branding-presentation" style="background: #eee;">
+						<img
+							src="/images/work/visual-design/logo-ecore-design.svg"
+							class=""
+							alt={title}
+						/>
+					</div>
+				</div>
+				<div class="col-xl-6 mb-5">
+					<div class="card card-branding-presentation" style="background: #c0d9e5;">
+						<img
+							src="/images/work/visual-design/logo-half-marathon-monterey-bay-1.svg"
+							class=""
+							alt={title}
+						/>
+					</div>
+				</div>
+				<div class="col-xl-6 mb-5">
+					<div class="card card-branding-presentation" style="background: #c0d9e5;">
+						<img
+							src="/images/work/visual-design/logo-half-marathon-monterey-bay-2.svg"
+							class=""
+							alt={title}
+						/>
+					</div>
+				</div>
+				<div class="col-xl-6 mb-5">
+					<div class="card card-branding-presentation" style="background: #c0d9e5;">
+						<img
+							src="/images/work/visual-design/logo-half-marathon-monterey-bay-3.svg"
+							class=""
+							alt={title}
+						/>
+					</div>
+				</div>
+				<div class="col-xl-6 mb-5">
+					<div class="card card-branding-presentation" style="background: #e5d9d0;">
+						<img
+							src="/images/work/visual-design/logo-mhm-5th-anniversary.svg"
+							class=""
+							alt={title}
+						/>
+					</div>
+				</div>
+				<div class="col-xl-6 mb-5">
+					<div class="card card-branding-presentation" style="background: #e5d9d0;">
+						<img
+							src="/images/work/visual-design/logo-morgan-hill-marathon-1.svg"
+							class=""
+							alt={title}
+						/>
+					</div>
+				</div>
+				<div class="col-xl-6 mb-5">
+					<div class="card card-branding-presentation" style="background: #e5d9d0;">
+						<img
+							src="/images/work/visual-design/logo-morgan-hill-marathon-2.svg"
+							class=""
+							alt={title}
+						/>
+					</div>
+				</div>
+				<div class="col-xl-6 mb-5">
+					<div class="card card-branding-presentation" style="background: #111;">
+						<img
+							src="/images/work/visual-design/logo-newspace-networks.svg"
+							class=""
+							alt={title}
+						/>
+					</div>
+				</div>
+				<div class="col-xl-6 mb-5">
+					<div class="card card-branding-presentation" style="background: #ccc;">
+						<img
+							src="/images/work/visual-design/logo-rm-races-live.svg"
+							class=""
+							alt={title}
+						/>
+					</div>
+				</div>
+				<div class="col-xl-6 mb-5">
+					<div class="card card-branding-presentation" style="background: #ccc;">
+						<img
+							src="/images/work/visual-design/logo-rm-races-live-favicon-3.svg"
+							class=""
+							alt={title}
+						/>
+					</div>
+				</div>
+				<div class="col-xl-6 mb-5">
+					<div class="card card-branding-presentation" style="background: #222;">
+						<img
+							src="/images/work/visual-design/logo-rm-timing-systems.svg"
+							class=""
+							alt={title}
+						/>
+					</div>
+				</div>
+				<div class="col-xl-6 mb-5">
+					<div class="card card-branding-presentation" style="background: #999;">
+						<img
+							src="/images/work/visual-design/logo-virutal-run-usa.svg"
+							class=""
+							alt={title}
+						/>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
 	<!-- <section class="row gx-md-5 section-portfolio">
-		<div class="col-xl-12 pr-5 section-portfolio-label">
+		<div class="col-xl-3 pr-5 section-portfolio-label">
 			<i class="fa-regular fa-file-lines"></i>
-			<h2 class="pr-5">Tech Stack & Tools</h2>
+			<h2 class="pr-5">Alamatios Vineyards</h2>
+			<p class="pr-5">An award-winning winery located in the Silicon Valley</p>
 		</div>
-		<div class="col-xl-3">
-			<div class="card card-normal">
-				<h3>Design Skills</h3><ul>
-					<li>User Research</li><li>Wireframing</li><li>Low/High-Fidelity Designs</li><li>
-						Visual Design Systems
-					</li><li>Adobe Creative Suite</li><li>Figma and XD</li><li>Iterative Design</li>
-				</ul>
-			</div>
-		</div>
-		<div class="col-xl-3">
-			<div class="card card-normal">
-				<h3>Design Skills</h3><ul>
-					<li>User Research</li><li>Wireframing</li><li>Low/High-Fidelity Designs</li><li>
-						Visual Design Systems
-					</li><li>Adobe Creative Suite</li><li>Figma and XD</li><li>Iterative Design</li>
-				</ul>
-			</div>
-		</div>
-		<div class="col-xl-3">
-			<div class="card card-normal">
-				<h3>Design Skills</h3><ul>
-					<li>User Research</li><li>Wireframing</li><li>Low/High-Fidelity Designs</li><li>
-						Visual Design Systems
-					</li><li>Adobe Creative Suite</li><li>Figma and XD</li><li>Iterative Design</li>
-				</ul>
-			</div>
-		</div>
-		<div class="col-xl-3">
-			<div class="card card-normal">
-				<h3>Design Skills</h3><ul>
-					<li>User Research</li><li>Wireframing</li><li>Low/High-Fidelity Designs</li><li>
-						Visual Design Systems
-					</li><li>Adobe Creative Suite</li><li>Figma and XD</li><li>Iterative Design</li>
-				</ul>
+		<div class="col-xl-9 card-branding">
+			<div class="row g-0 mb-5">
+				<div class="col-xl-3 card-branding-bg" style="background-image: url();">
+					
+				</div>
+				<div class="col-xl-9 card-branding-presentation" style="background: #143859;">
+					<img src="/images/work/visual-design/logo-alamitos.svg" class="" alt={title} />
+				</div>
 			</div>
 		</div>
 	</section> -->
-	<section class="row gx-md-5 section-portfolio">
-		<div class="col-xl-3 pr-5 section-portfolio-label">
-			<i class="fa-regular fa-file-lines"></i>
-			<h2 class="pr-5">Planning &amp; Wireframing</h2>
-		</div>
-		<div class="col-xl-9">
-			<div class="row gx-md-5 mb-5">
-				<div class="col-xl-6">
-					<div class="card card-normal">
-						<h3>Research &amp; Analysis</h3>
-						<ul>
-							<li>User Research (Interviews)</li>
-							<li>Competitive Analysis</li>
-							<li>Live Event Field Study</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-xl-6">
-					<div class="card card-normal">
-						<h3>Brainstorming &amp; Wireframing</h3>
-						<ul>
-							<li>Task Analysis</li>
-							<li>Defining User Goals</li>
-							<li>Defining User Journeys</li>
-							<li>Defining Technical Criteria</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="row gx-md-5 section-portfolio">
-		<div class="col-xl-3 pr-5 section-portfolio-label">
-			<i class="fa-brands fa-figma"></i>
-			<h2 class="pr-5">Design &amp; Prototyping</h2>
-		</div>
-		<div class="col-xl-9">
-			<p>
-				I worked alongside the project manager to define the main user types for this app. It
-				is targeted towards a specific audience, in this case the endurance race community,
-				and each type had certain desires in mind. From this we can begin to have a basis for
-				defining functionality.
-			</p>
-			<p>
-				Based on the drafted user types and personas, we were then able to to start
-				brainstorming on the main functions, or tasks, that each user would go about seeking
-				while using the app. At this point, we gather feedback directly from end-users through
-				direct email questionnaire and phone conference meetings.
-			</p>
-			<p>
-				From task analysis, we can define the initial main top-level functionality expected by
-				the app’s users. This will also serve as the skeleton for our wire-frame and in-app
-				menu system.
-			</p>
-			<p class="mb-5">
-				After gathering research, setting the tasks and wire-framing with the team, I then get
-				to the fun part: design. High-fidelity designs and prototyping were created with Adobe
-				Illustrator and Adobe XD.
-			</p>
-			<div class="row gx-md-5">
-				<div class="col-md-12 mb-5">
-					<a
-						class="card card-portfolio card-full card-big card-link"
-						data-bs-toggle="modal"
-						data-bs-target="#galleryModal"
-						data-bs-image="/images/work/rmts/full/rm-timing-systems-app-storyboard.png"
-						data-bs-title="RM Timing Systems - App/Product Design">
-						<div class="row">
-							<div class="col-md-12">
-								<h3>Product Story Board</h3>
-								<p>
-									With all of the business requirements and product
-									specifications set, a design session was held to
-									visualize the overall look and feel of the app. The
-									brand's design system had already been developed, so a
-									big part of the "theme" was already defined.
-								</p>
-							</div>
-							<div class="col-md-12 img">
-								<img
-									src="/images/work/rmts/full/rm-timing-systems-app-storyboard.png"
-									class=""
-									alt={title}
-								/>
-							</div>
-						</div>
-					</a>
-				</div>
-				<!-- <div class="col-md-12 mb-5">
-					<a
-						class="card card-portfolio card-full card-link"
-						data-bs-toggle="modal"
-						data-bs-target="#galleryModal"
-						data-bs-image="/images/work/rmts/thumb-cultural-design.png"
-						data-bs-title="RM Timing Systems - App/Product Design">
-						<div class="row">
-							<div class="col-md-6">
-								<h3>Region Specific, Cultural Design</h3>
-								<p>
-									I worked directly with regional managers to make sure
-									our visual style was catering to the corresponding
-									culture. Options were provided and iterations were made.
-									I managed senior designers during these stages.
-								</p>
-							</div>
-							<div class="col-md-6 img">
-								<img
-									src="/images/work/rmts/thumb-cultural-design.png"
-									class=""
-									alt={title}
-								/>
-							</div>
-						</div>
-					</a>
-				</div> -->
-			</div>
-		</div>
-	</section>
-	<section class="row gx-md-5 section-portfolio">
-		<div class="col-xl-3 pr-5 section-portfolio-label">
-			<i class="fa-solid fa-rotate"></i>
-			<h2 class="pr-5">Feedback &amp; Iteration</h2>
-		</div>
-		<div class="col-xl-9">
-			<div class="row gx-md-5 mb-5">
-				<div class="col-xl-6">
-					<div class="card card-normal">
-						<h3>Feedback Gathering</h3>
-						<ul>
-							<li>
-								Live, in-person User Testing - I had several opportunities to
-								help time at live race events and was able to see how timers
-								and announcers used our app.
-							</li>
-							<li>
-								Post User Feedback - Key feedback notes from initial field
-								tests was to have optimal legibility in outdoor settings
-								(contrast) and an easy-to-use announcer "streamer".
-							</li>
-							<li>
-								Feature Improvements - The app initially was spec'd to
-								integrate with a single race event service provider. However
-								with this new version, we now needed to the ability connect
-								with other services. Thus, a "connect to provider" step
-								process was conceived.
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-xl-6">
-					<div class="card card-normal">
-						<h3>Updates &amp; Evolution</h3>
-						<ul>
-							<li>
-								Contrast is Key - Designing an interface that needed to be
-								legible in outdoor settings was a new challenge. I was use to
-								testing UI designs indoors, so this project brought about new
-								territory.
-							</li>
-							<li>
-								Clarity = Speed in Discovery - Providing clear and clean
-								aesthetic is always a priority for designers, but even more so
-								for this app. During a prototype test at a live event, I
-								realized that an event announcer literally had to read and
-								announce information quickly.
-							</li>
-							<li>
-								Feature Growth - The version 2.0 of this app is bringing about
-								some great improvement over the first. But still, clients are
-								requesting new features for future releases. Hence, we are
-								preparing for the UI to adapt for growth.
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 	<section class="row gx-md-5 section-portfolio mb-5">
 		<div class="col-xl-3 col-12 pr-5 section-portfolio-label">
 			<!-- <i class="fa"></i> -->

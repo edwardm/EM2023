@@ -641,6 +641,33 @@ footer {
 	width: 100%;
 }
 
+.card-branding {
+	min-height: 500px;
+}
+
+.card-branding-bg {
+	min-height: 500px;
+	border-radius: 20px 0 0 20px;
+}
+
+.card-branding-presentation {
+	display: flex;
+	justify-content: center;
+
+	align-items: center;
+	/* min-height: 500px; */
+	min-height: 400px;
+	/* text-align: center;
+	vertical-align: middle; */
+	border-radius: 20px !important;
+	background: var(--offwhite);
+}
+
+.card-branding-presentation img {
+	max-width: 40%;
+	max-height: 150px;
+}
+
 /* carousel *********************************************/
 
 .carousel-inner {
