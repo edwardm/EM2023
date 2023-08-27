@@ -609,8 +609,14 @@ footer {
 	left: 0;
 	width: 450px;
 	border-radius: 15px;
+	transition: .2s;
 	/* max-height: 400px; */
 }
+
+.card-portfolio:hover .img img {
+	transform: scale(1.02);
+}
+
 
 .card-portfolio .col-md-12.img img {
 	width: 100%;
