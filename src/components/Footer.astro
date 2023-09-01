@@ -83,8 +83,14 @@ const today = new Date();
 		"DOMContentLoaded",
 		function () {
 			// https://www.npmjs.com/package/lazyload
-			let images = document.querySelectorAll("main img");
+			let images = document.getElementsByTagName("img");
 			lazyload(images);
+
+			// get active path
+			let activePath = window.location.pathname;
+			if (activePath.includes("/portfolio")){
+				console.log(activePath);
+			} 
 
 			// https://getbootstrap.com/docs/5.3/components/modal/#varying-modal-content
 			const galleryModal = document.getElementById("galleryModal");
