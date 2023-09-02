@@ -87,9 +87,10 @@ document.addEventListener(
 		lazyload(images);
 
 		// set the active state
-		// let activePage = window.location.pathname;
-		// let parentNav = document.getElementsByClassName("nav");
-		// console.log(parentNav);
+		let activePage = window.location.pathname.split('/')[1];;
+		let parentNav = document.getElementsByClassName("nav");
+		console.log(parentNav);
+		console.log(activePage);
 
 		// let childNav = parentNav.querySelectorAll(".nav-item > a");
 
