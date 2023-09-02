@@ -78,44 +78,67 @@ const today = new Date();
 </script>
 <script is:inline src="https://unpkg.com/lazyload@2.0.0-rc.2/lazyload.js"></script>
 <script is:inline src="https://unpkg.com/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-	document.addEventListener(
-		"DOMContentLoaded",
-		function () {
-			// https://www.npmjs.com/package/lazyload
-			let images = document.querySelectorAll("main img");
-			lazyload(images);
+<script is:inline>
+document.addEventListener(
+	"DOMContentLoaded",
+	function () {
+		// https://www.npmjs.com/package/lazyload
+		let images = document.querySelectorAll("main img");
+		lazyload(images);
 
-			// https://getbootstrap.com/docs/5.3/components/modal/#varying-modal-content
-			const galleryModal = document.getElementById("galleryModal");
-			if (galleryModal) {
-				galleryModal.addEventListener("show.bs.modal", (event) => {
-					// Button that triggered the modal
-					const button = event.relatedTarget;
-					// Extract info from data-bs-* attributes
-					const imgSrc = button.getAttribute("data-bs-image");
-					const titleText = button.getAttribute("data-bs-title");
-					// If necessary, you could initiate an Ajax request here
-					// and then do the updating in a callback.
+		// set the active state
+		// let activePage = window.location.pathname;
+		// let parentNav = document.getElementsByClassName("nav");
+		// console.log(parentNav);
 
-					// Update the modal's content.
-					const modalTitle = galleryModal.querySelector(".modal-title");
-					const modalImg = galleryModal.querySelector(".modal-body img");
+		// let childNav = parentNav.querySelectorAll(".nav-item > a");
 
-					modalTitle.textContent = `${titleText}`;
-					modalImg.src = imgSrc;
-				});
-			}
+		// if (activePage.includes("/portfolio")) {
+		// 	childNav.classList.remove("active");
+		// 	let setPage = document.getElementById("nav-portfolio");
+		// 	setPage.classList.add("active");
+		// } else if (activePage.includes("/about")) {
+		// 	childNav.classList.remove("active");
+		// 	let setPage = document.getElementById("nav-about");
+		// 	setPage.classList.add("active");
+		// } else if (activePage.includes("/contact")) {
+		// 	childNav.classList.remove("active");
+		// 	let setPage = document.getElementById("nav-contact");
+		// 	setPage.classList.add("active");
+		// } else {
+		// 	childNav.classList.remove("active");
+		// }
 
-			// window.onscroll = function () {
-			// 	scrollRotate();
-			// };
+		// https://getbootstrap.com/docs/5.3/components/modal/#varying-modal-content
+		const galleryModal = document.getElementById("galleryModal");
+		if (galleryModal) {
+			galleryModal.addEventListener("show.bs.modal", (event) => {
+				// Button that triggered the modal
+				const button = event.relatedTarget;
+				// Extract info from data-bs-* attributes
+				const imgSrc = button.getAttribute("data-bs-image");
+				const titleText = button.getAttribute("data-bs-title");
+				// If necessary, you could initiate an Ajax request here
+				// and then do the updating in a callback.
 
-			// function scrollRotate() {
-			// 	let image = document.getElementsByClassName("body-bg");
-			// 	image.style.transform = "rotate(" + window.pageYOffset / 2 + "deg)";
-			// }
-		},
-		false
-	);
+				// Update the modal's content.
+				const modalTitle = galleryModal.querySelector(".modal-title");
+				const modalImg = galleryModal.querySelector(".modal-body img");
+
+				modalTitle.textContent = `${titleText}`;
+				modalImg.src = imgSrc;
+			});
+		}
+
+		// window.onscroll = function () {
+		// 	scrollRotate();
+		// };
+
+		// function scrollRotate() {
+		// 	let image = document.getElementsByClassName("body-bg");
+		// 	image.style.transform = "rotate(" + window.pageYOffset / 2 + "deg)";
+		// }
+	},
+	false
+);
 </script>

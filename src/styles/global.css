@@ -58,6 +58,10 @@ body {
 	line-height: 1.5em !important;
 	/* min-height: 100vh; */
 	background-color: var(--accent-dark) !important;
+	background: no-repeat url(/images/bg-radial.svg);
+	/* background-size: 100%; */
+	background-position: top right;
+	background-attachment: fixed;
 	/* background: var(--bg-gradient) url(/images/bg-line-art-1.svg) top center no-repeat; */
 }
 
