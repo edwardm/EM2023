@@ -69,81 +69,67 @@ const today = new Date();
 			},
 		],
 	});
-	// this function makes barba smoother, page-to-page
+	// page-to-page, reset scroll position to top
 	function scrollTop() {
 		window.scrollTo({
 			top: 0,
 			behavior: "smooth",
 		});
 	}
+	// detect active age, since barba causes a bug
 	function detectActivePage() {
 		// set the active state
-		let activePage = window.location.pathname.split('/')[1];;
-		let parentNav = document.getElementsByClassName("nav");
-		console.log(parentNav);
-		console.log(activePage);
+		let activePage = window.location.pathname.split("/")[1];
+		// let parentNav = document.getElementsByClassName("nav");
+		let childNav = document.getElementsByClassName("nav-a");
+		// console.log(activePage);
+		// console.log(parentNav);
+		// console.log(childNav);
+		// childNav.classList.remove("active");
+		for (var i = 0; i < childNav.length; i++) {
+			childNav[i].classList.remove('active')
+		}
+		
+		if (activePage.includes("portfolio")) {
+			document.getElementById("nav-portfolio").classList.add("active");
+		} else if (activePage.includes("about")) {
+			document.getElementById("nav-about").classList.add("active");
+		} else if (activePage.includes("contact")) {
+			document.getElementById("nav-contact").classList.add("active");
+		}
 	}
 </script>
 <script is:inline src="https://unpkg.com/lazyload@2.0.0-rc.2/lazyload.js"></script>
 <script is:inline src="https://unpkg.com/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-document.addEventListener(
-	"DOMContentLoaded",
-	function () {
-		// https://www.npmjs.com/package/lazyload
-		let images = document.querySelectorAll("main img");
-		lazyload(images);
+	document.addEventListener(
+		"DOMContentLoaded",
+		function () {
+			// https://www.npmjs.com/package/lazyload
+			let images = document.querySelectorAll("main img");
+			lazyload(images);
 
-		
+			// https://getbootstrap.com/docs/5.3/components/modal/#varying-modal-content
+			const galleryModal = document.getElementById("galleryModal");
+			if (galleryModal) {
+				galleryModal.addEventListener("show.bs.modal", (event) => {
+					// Button that triggered the modal
+					const button = event.relatedTarget;
+					// Extract info from data-bs-* attributes
+					const imgSrc = button.getAttribute("data-bs-image");
+					const titleText = button.getAttribute("data-bs-title");
+					// If necessary, you could initiate an Ajax request here
+					// and then do the updating in a callback.
 
-		// let childNav = parentNav.querySelectorAll(".nav-item > a");
+					// Update the modal's content.
+					const modalTitle = galleryModal.querySelector(".modal-title");
+					const modalImg = galleryModal.querySelector(".modal-body img");
 
-		// if (activePage.includes("/portfolio")) {
-		// 	childNav.classList.remove("active");
-		// 	let setPage = document.getElementById("nav-portfolio");
-		// 	setPage.classList.add("active");
-		// } else if (activePage.includes("/about")) {
-		// 	childNav.classList.remove("active");
-		// 	let setPage = document.getElementById("nav-about");
-		// 	setPage.classList.add("active");
-		// } else if (activePage.includes("/contact")) {
-		// 	childNav.classList.remove("active");
-		// 	let setPage = document.getElementById("nav-contact");
-		// 	setPage.classList.add("active");
-		// } else {
-		// 	childNav.classList.remove("active");
-		// }
-
-		// https://getbootstrap.com/docs/5.3/components/modal/#varying-modal-content
-		const galleryModal = document.getElementById("galleryModal");
-		if (galleryModal) {
-			galleryModal.addEventListener("show.bs.modal", (event) => {
-				// Button that triggered the modal
-				const button = event.relatedTarget;
-				// Extract info from data-bs-* attributes
-				const imgSrc = button.getAttribute("data-bs-image");
-				const titleText = button.getAttribute("data-bs-title");
-				// If necessary, you could initiate an Ajax request here
-				// and then do the updating in a callback.
-
-				// Update the modal's content.
-				const modalTitle = galleryModal.querySelector(".modal-title");
-				const modalImg = galleryModal.querySelector(".modal-body img");
-
-				modalTitle.textContent = `${titleText}`;
-				modalImg.src = imgSrc;
-			});
-		}
-
-		// window.onscroll = function () {
-		// 	scrollRotate();
-		// };
-
-		// function scrollRotate() {
-		// 	let image = document.getElementsByClassName("body-bg");
-		// 	image.style.transform = "rotate(" + window.pageYOffset / 2 + "deg)";
-		// }
-	},
-	false
-);
+					modalTitle.textContent = `${titleText}`;
+					modalImg.src = imgSrc;
+				});
+			}
+		},
+		false
+	);
 </script>
