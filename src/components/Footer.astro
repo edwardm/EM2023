@@ -62,7 +62,8 @@ const today = new Date();
 							opacity: 0,
 							duration: 0.4,
 						}),
-						scrollTop()
+						scrollTop(),
+						detectActivePage()
 					);
 				},
 			},
@@ -75,10 +76,17 @@ const today = new Date();
 			behavior: "smooth",
 		});
 	}
+	function detectActivePage() {
+		// set the active state
+		let activePage = window.location.pathname.split('/')[1];;
+		let parentNav = document.getElementsByClassName("nav");
+		console.log(parentNav);
+		console.log(activePage);
+	}
 </script>
 <script is:inline src="https://unpkg.com/lazyload@2.0.0-rc.2/lazyload.js"></script>
 <script is:inline src="https://unpkg.com/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-<script is:inline>
+<script>
 document.addEventListener(
 	"DOMContentLoaded",
 	function () {
@@ -86,11 +94,7 @@ document.addEventListener(
 		let images = document.querySelectorAll("main img");
 		lazyload(images);
 
-		// set the active state
-		let activePage = window.location.pathname.split('/')[1];;
-		let parentNav = document.getElementsByClassName("nav");
-		console.log(parentNav);
-		console.log(activePage);
+		
 
 		// let childNav = parentNav.querySelectorAll(".nav-item > a");
 
