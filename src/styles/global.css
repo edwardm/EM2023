@@ -76,17 +76,6 @@ body::after {
 	background: transparent url(/images/bg-line-art-1.svg) top center no-repeat;
 }
 
-/* .body-bg {
-	z-index: -10;
-	content: " ";
-	position: fixed;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	background: transparent url(/images/bg-line-art-1.svg) top center no-repeat;
-} */
-
 header {
 	border: none !important;
 }
@@ -150,23 +139,34 @@ a.logo>span>span:last-child {
 	font-weight: 400;
 	text-transform: uppercase;
 	letter-spacing: 0.4px;
+	overflow: hidden;
 }
 
 .nav-item a {
 	display: inline-block;
 	position: relative;
 	padding: 4.5em 2.5em 0.5em 2.5em;
+	transition: all .3s ease-in-out;
+}
+
+/* .nav-item a.active {
+	color: var(--accent-bright) !important;
+} */
+
+.nav-item a::before {
+	transition: all .3s ease-in-out;
+	content: " ";
+	position: absolute;
+	top: -6px;
+	right: 2.5em;
+	left: 2.5em;
+	height: 6px;
+	border-radius: 0px 0px 5px 5px;
+	background: var(--bg-gradient-x);
 }
 
 .nav-item a.active::before {
-	content: " ";
-	position: absolute;
 	top: 0;
-	right: 2.5em;
-	left: 2.5em;
-	height: 4px;
-	border-radius: 0px 0px 5px 5px;
-	background: var(--bg-gradient-x);
 }
 
 main {
@@ -503,20 +503,25 @@ section.section-portfolio .section-portfolio-label::before {
 	position: absolute;
 	top: -2.49em;
 	left: 1.3em;
-	width: 70px;
+	width: 52px;
 	height: 5px;
 	border-radius: 0px 0px 5px 5px;
 	background: var(--bg-gradient-x);
 }
 
 section.section-portfolio i {
-	border: 1px solid var(--gray-dark);
+	/* border: 1px solid var(--gray-dark);
 	width: 70px;
 	height: 70px;
 	text-align: center;
 	line-height: 70px;
 	font-size: 40px;
-	border-radius: 5px;
+	border-radius: 5px; */
+	font-size: 40px;
+	width: 52px;
+	height: 52px;
+	text-align: center;
+	line-height: 52px;
 	/* color: rgba(153, 153, 153, 1),
 		rgba(85, 85, 85, 1); */
 	background: #FFFFFF;
@@ -774,13 +779,49 @@ section.section-portfolio .carousel-control-next i {
 
 } */
 
+/* TWBS overrides */
+
+@media (min-width: 1600px) {
+
+	.container-xxl,
+	.container-xl,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container {
+		max-width: 1500px !important;
+	}
+
+	.card-full,
+	.card-portfolio {
+		min-height: 400px;
+	}
+
+	.card-portfolio .img img {
+		width: 150%;
+	}
+
+	.card-portfolio.card-full .img img {
+		width: 100%;
+	}
+}
+
+
+
+/* @media (min-width: 1440px) {
+
+	.g-md-5,
+	.gx-md-5 {
+		--bs-gutter-x: 4rem !important;
+	}
+} */
+
 @media (max-width: 720px) {
 
-	/* body::after {
-		
-		background-position: top center;
-		background-size: cover;
-	} */
+	body::after {
+		background-position: top right;
+		background-size: 200%;
+	}
 
 	/* .navbar-toggler {
 		background-color: var(--bg-gradient) !important;
