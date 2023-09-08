@@ -678,6 +678,13 @@ footer {
 	background: var(--offwhite);
 }
 
+.card-branding-presentation a {
+	text-decoration: none;
+	border: none;
+	display: inline-block;
+	text-align: center;
+}
+
 .card-branding-presentation img {
 	max-width: 40%;
 	max-height: 150px;

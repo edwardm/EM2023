@@ -6,7 +6,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://dev-astro.edwardmargallo.com/",
+	site: "https://www.edwardmargallo.com/",
 	// base: '/em2023',
 	// root: './em2023',
 	//srcDir: './em2023',
