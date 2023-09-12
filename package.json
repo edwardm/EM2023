@@ -19,6 +19,7 @@
 		"astro-bootstrap": "^0.6.1"
 	},
 	"devDependencies": {
-		"@types/bootstrap": "^5.2.6"
+		"@types/bootstrap": "^5.2.6",
+		"prettier-plugin-astro": "^0.12.0"
 	}
 }
