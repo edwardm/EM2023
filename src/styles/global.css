@@ -66,6 +66,7 @@ body {
 }
 
 body::after {
+	opacity: 0.5;
 	z-index: -10;
 	content: " ";
 	position: fixed;
