@@ -1,8 +1,8 @@
 <svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="1920" height="1080" fill="url(#paint0_radial_1396_9259)"/>
 <defs>
-<radialGradient id="paint0_radial_1396_9259" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1260.5 8.26402e-05) rotate(102.026) scale(878.277 529.409)">
-<stop stop-color="#1C1F55"/>
+<radialGradient id="paint0_radial_1396_9259" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(750.5 -1.57871e-05) rotate(-37.9325) scale(436.775 1217.32)">
+<stop stop-color="#0C275B"/>
 <stop offset="1" stop-color="#111222"/>
 </radialGradient>
 </defs>
