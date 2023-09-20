@@ -398,7 +398,7 @@ hr {
 	font-size: 0.65em;
 	letter-spacing: 0.4px;
 	display: inline-block;
-	line-height: 1.5em !important;
+	line-height: 1.7em !important;
 	padding: 0.2em 1em;
 	margin: 0 0.75em 1.5em 0;
 	border-radius: 50px;
@@ -538,11 +538,11 @@ section.section-portfolio i {
 	-webkit-text-fill-color: transparent;
 } */
 
-.modal-fullscreen img {
+.modal-fullscreen .modal-body img {
 	/* max-height: 85vh; */
 	/* max-height: 1080px; */
 	width: 100%;
-	max-width: 1600px;
+	max-width: 1000px;
 }
 
 footer {
