@@ -4,9 +4,9 @@ import Layout from "../../layouts/Default.astro";
 // import Header from "../../components/Header.astro";
 // import Footer from "../../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
-const title = "RM Timing Systems Product Design";
+const title = "RM Races Live - SaaS Event Platform";
 const description =
-	"An event racing app utilized by race announcers and race organizers on-site, at a live event.";
+	"A web-based platform for the endurance race industry. A full-fledged race event management and results platform with features ranging from event registration, results processing and management all through a robust dashboard.";
 import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
 
@@ -25,17 +25,17 @@ const posts = (await getCollection("portfolio")).sort(
 		<div class="col-lg-6 pe-lg-5">
 			<h1 class="col-12 mb-2">{title}</h1>
 			<div class="py-3">
-				<span class="tag">User Experience</span>
-				<span class="tag">User Interface</span>
+				<span class="tag">SaaS</span>
+					<span class="tag">UI</span>
+					<span class="tag">UX</span>
+					<span class="tag">Front-End Development</span>
 			</div>
 			<h2 class="col-12 mb-5 pb-5 pe-lg-5 description">
-				An event racing app utilized by race announcers and race organizers on-site, at a live
-				event. It’s main purpose is to connect to an event results processing provider which
-				feeds real-time race stats to the end-user. This is a 2.0 major version update.
+				{description}
 			</h2>
 		</div>
 		<div class="col-lg-6 card-normal img-container">
-			<img src="/images/work/img-hero-rmts-app@2x.png" alt={title} />
+			<img src="/images/work/img-hero-rmrl@2x.png" alt={title} />
 		</div>
 	</section>
 	<section class="row gx-md-5 section-portfolio">
