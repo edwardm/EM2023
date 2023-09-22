@@ -251,7 +251,7 @@ h3 {
 	position: absolute;
 	content: " ";
 	left: -2.2em;
-	width: 7px;
+	width: 5px;
 	height: 1.5em;
 	border-radius: 0 4px 4px 0;
 	background: var(--bg-gradient);
@@ -470,6 +470,10 @@ section.hero-detail .img-container {
 section.hero-detail .img-container img {
 	width: 100%;
 	border-radius: 20px;
+}
+
+section .tags {
+	margin-bottom: 1em;
 }
 
 section.section-portfolio {
@@ -805,12 +809,20 @@ section.section-portfolio .carousel-control-next i {
 		min-height: 400px;
 	}
 
+	.card-big {
+		min-height: 700px;
+	}
+
 	.card-portfolio .img img {
 		width: 150%;
 	}
 
 	.card-portfolio.card-full .img img {
 		width: 100%;
+	}
+
+	.card-portfolio.card-full.card-big .img {
+		margin-top: 2em;
 	}
 }
 
@@ -958,6 +970,21 @@ section.section-portfolio .carousel-control-next i {
 		font-size: 0.9em;
 	}
 
+	.card-full h3,
+	.card-full p {
+		padding-right: 0;
+	}
+
+	.card-full p {
+		text-align: center;
+	}
+
+	.text-link {
+		margin: 0 auto;
+		display: block;
+		text-align: center;
+	}
+
 	.card-portfolio,
 	.card-normal {
 		padding: 2em 2em 0 2em;
@@ -998,9 +1025,27 @@ section.section-portfolio .carousel-control-next i {
 		line-height: 54px;
 	}
 
+	section .tags {
+		text-align: center;
+	}
+
+	section .tag {
+		margin-bottom: 1em;
+	}
+
 	section,
 	footer {
-		padding: 2em 0;
+		padding-top: 2em;
+		padding-bottom: 2em;
+	}
+
+	footer {
+		padding-left: 3em;
+		padding-right: 3em;
+	}
+
+	footer a.logo img {
+		width: 60px !important;
 	}
 
 	.carousel-inner {

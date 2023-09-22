@@ -5,4 +5,4 @@ export const SITE_TITLE = "Edward Margallo - Lead UI/UX Designer and Front-End D
 export const MY_NAME = "Edward Margallo";
 export const MY_TITLE = "Lead UI/UX Designer & Design Systems";
 export const SITE_DESCRIPTION =
-	"A seasoned UI/UX Designer, who brings a wealth of expertise in leading design teams, architecting enterprise-level design systems from the ground up, and actively engaging in front-end development.";
+	"A seasoned UI/UX Designer, who brings a wealth of expertise in leading design teams, building enterprise-level design systems from the ground up, and actively engaging in front-end development.";
