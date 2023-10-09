@@ -118,15 +118,22 @@ const today = new Date();
 					// Extract info from data-bs-* attributes
 					const imgSrc = button.getAttribute("data-bs-image");
 					const titleText = button.getAttribute("data-bs-title");
+					const bgcolor = button.getAttribute("data-bs-bgcolor");
+					const modalType = button.getAttribute("data-bs-type");
 					// If necessary, you could initiate an Ajax request here
 					// and then do the updating in a callback.
 
 					// Update the modal's content.
+					const modalClass = galleryModal.querySelector(".modal-body");
 					const modalTitle = galleryModal.querySelector(".modal-title");
+					const modalbody = galleryModal.querySelector(".modal-body");
 					const modalImg = galleryModal.querySelector(".modal-body img");
 
+					modalClass.classList.add = modalType;
 					modalTitle.textContent = `${titleText}`;
+					modalbody.style.backgroundColor = bgcolor;
 					modalImg.src = imgSrc;
+					modalImg.style.backgroundColor = bgcolor;
 				});
 			}
 		},
