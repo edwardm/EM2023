@@ -76,7 +76,7 @@ const today = new Date();
 			behavior: "smooth",
 		});
 	}
-	// detect active age, since barba causes a bug
+	// detect active page, since barba causes a bug
 	function detectActivePage() {
 		// set the active state
 		let activePage = window.location.pathname.split("/")[1];
@@ -89,7 +89,6 @@ const today = new Date();
 		for (var i = 0; i < childNav.length; i++) {
 			childNav[i].classList.remove("active");
 		}
-
 		if (activePage.includes("portfolio")) {
 			document.getElementById("nav-portfolio").classList.add("active");
 		} else if (activePage.includes("about")) {
@@ -123,17 +122,28 @@ const today = new Date();
 					// If necessary, you could initiate an Ajax request here
 					// and then do the updating in a callback.
 
-					// Update the modal's content.
+					// Target the modal's elements
 					const modalClass = galleryModal.querySelector(".modal-body");
 					const modalTitle = galleryModal.querySelector(".modal-title");
 					const modalbody = galleryModal.querySelector(".modal-body");
 					const modalImg = galleryModal.querySelector(".modal-body img");
 
-					modalClass.classList.add = modalType;
+					// Update the modal's content
+					// Check if the data-attr exists
+					if(modalType!==null){
+						modalClass.classList.add(modalType);
+					}
 					modalTitle.textContent = `${titleText}`;
 					modalbody.style.backgroundColor = bgcolor;
 					modalImg.src = imgSrc;
 					modalImg.style.backgroundColor = bgcolor;
+				});
+				galleryModal.addEventListener("hidden.bs.modal", (event) => {
+					// Need to reset the addition of custom classes
+					const modalClass = galleryModal.querySelector(".modal-body");
+					// Update the modal's content
+					modalClass.classList.remove("modal-logo");
+
 				});
 			}
 		},

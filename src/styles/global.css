@@ -685,10 +685,9 @@ footer {
 .card-branding-presentation {
 	display: flex;
 	justify-content: center;
-
 	align-items: center;
 	/* min-height: 500px; */
-	min-height: 400px;
+	min-height: 500px;
 	/* text-align: center;
 	vertical-align: middle; */
 	border-radius: 20px !important;
@@ -696,15 +695,27 @@ footer {
 }
 
 .card-branding-presentation a {
+	cursor: pointer;
+	display: flex !important;
+	width: 100%;
+	flex: 1;
 	text-decoration: none;
 	border: none;
 	display: inline-block;
 	text-align: center;
+	align-items: center;
+	justify-content: center;
 }
 
+/* .card-branding-presentation a:hover img {
+	opacity: 0.8;
+	padding-top: 1px;
+} */
+
 .card-branding-presentation img {
-	max-width: 40%;
+	max-width: 35%;
 	max-height: 150px;
+	/* margin-top: calc(100%/2.5); */
 }
 
 /* carousel *********************************************/
@@ -785,15 +796,24 @@ section.section-portfolio .carousel-control-next i {
 
 .modal-body {
 	position: relative;
-	padding-top: 4em !important;
+	padding-top: 12vh !important;
 	background: var(--accent-dark);
 }
 
 .modal-body img {
+	/* margin-top: 10vh; */
 	border-radius: 10px;
-	max-width: 1000px;
 	box-shadow: 0 30px 30px var(--black);
 	background: var(--offwhite);
+}
+
+.modal-body.modal-logo img {
+	margin-top: 17vh;
+	width: auto;
+	max-width: 400px !important;
+	max-height: 300px;
+	box-shadow: none;
+	border-radius: 0;
 }
 
 /* .carousel-control-prev:hover,
@@ -801,6 +821,24 @@ section.section-portfolio .carousel-control-next i {
 .carousel-control-next:hover,
 .carousel-control-next:focus {
 
+} */
+
+@media (min-width: 1440px) {
+	.modal-fullscreen .modal-body img {
+		max-width: 1000px;
+	}
+}
+
+@media (min-width: 1600px) {
+	.modal-fullscreen .modal-body img {
+		max-width: 1200px;
+	}
+}
+
+/* @media (min-width: 1920px) {
+	.modal-fullscreen .modal-body img {
+		max-width: 1200px;
+	}
 } */
 
 /* TWBS overrides */
@@ -835,6 +873,10 @@ section.section-portfolio .carousel-control-next i {
 
 	.card-portfolio.card-full.card-big .img {
 		margin-top: 2em;
+	}
+
+	.modal-body img {
+		max-width: 1600px;
 	}
 }
 
