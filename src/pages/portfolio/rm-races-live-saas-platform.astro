@@ -6,7 +6,7 @@ import Layout from "../../layouts/Default.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 const title = "RM Races Live - SaaS Event Platform";
 const description =
-	"A web-based platform for the endurance race industry. A full-fledged race event management and results platform with features ranging from event registration, results processing and management all through a robust dashboard.";
+	"A web-based platform for the endurance race industry. This full-fledged race event management and results platform contains features ranging from event registration, results processing and management all through a robust dashboard.";
 import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
 
@@ -104,7 +104,7 @@ const posts = (await getCollection("portfolio")).sort(
 							data-bs-target="#galleryCarousel"
 							data-bs-slide-to="2"
 							aria-label="Slide 3"></button>
-						<!-- <button
+						<button
 							type="button"
 							data-bs-target="#galleryCarousel"
 							data-bs-slide-to="3"
@@ -123,17 +123,60 @@ const posts = (await getCollection("portfolio")).sort(
 							type="button"
 							data-bs-target="#galleryCarousel"
 							data-bs-slide-to="6"
-							aria-label="Slide 7"></button> -->
+							aria-label="Slide 7"></button>
+						<button
+							type="button"
+							data-bs-target="#galleryCarousel"
+							data-bs-slide-to="7"
+							aria-label="Slide 8"></button>
+						<button
+							type="button"
+							data-bs-target="#galleryCarousel"
+							data-bs-slide-to="8"
+							aria-label="Slide 9"></button>
+						<button
+							type="button"
+							data-bs-target="#galleryCarousel"
+							data-bs-slide-to="9"
+							aria-label="Slide 10"></button>
+						<button
+							type="button"
+							data-bs-target="#galleryCarousel"
+							data-bs-slide-to="10"
+							aria-label="Slide 11"></button>
+						<button
+							type="button"
+							data-bs-target="#galleryCarousel"
+							data-bs-slide-to="11"
+							aria-label="Slide 12"></button>
+						<!-- <button
+							type="button"
+							data-bs-target="#galleryCarousel"
+							data-bs-slide-to="12"
+							aria-label="Slide 13"></button> -->
 					</div>
 					<div class="carousel-inner">
+						<div class="carousel-item" data-bs-interval="10000">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/rmrl/rmrl-home@2x.png"
+								data-bs-title={title}>
+								<img
+									src="/images/work/rmrl/rmrl-home.png"
+									class=""
+									alt={title}
+								/>
+							</a>
+						</div>
 						<div class="carousel-item active" data-bs-interval="10000">
 							<a
 								data-bs-toggle="modal"
 								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/rmts/full/rm-timing-systems-app-task-analysis.png"
-								data-bs-title="RM Timing Systems - App/Product Design">
+								data-bs-image="/images/work/rmrl/rmrl-bib-lookup@2x.png"
+								data-bs-title={title}>
 								<img
-									src="/images/work/rmts/full/rm-timing-systems-app-task-analysis.png"
+									src="/images/work/rmrl/rmrl-bib-lookup.png"
 									class=""
 									alt={title}
 								/>
@@ -143,10 +186,10 @@ const posts = (await getCollection("portfolio")).sort(
 							<a
 								data-bs-toggle="modal"
 								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/rmts/full/rm-timing-systems-app-use-types-personas.png"
-								data-bs-title="RM Timing Systems - App/Product Design">
+								data-bs-image="/images/work/rmrl/rmrl-event-dashboard@2x.png"
+								data-bs-title={title}>
 								<img
-									src="/images/work/rmts/full/rm-timing-systems-app-use-types-personas.png"
+									src="/images/work/rmrl/rmrl-event-dashboard.png"
 									class=""
 									alt={title}
 								/>
@@ -156,10 +199,49 @@ const posts = (await getCollection("portfolio")).sort(
 							<a
 								data-bs-toggle="modal"
 								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/rmts/full/Asset-19.png"
-								data-bs-title="RM Timing Systems - App/Product Design">
+								data-bs-image="/images/work/rmrl/rmrl-event-listing@2x.png"
+								data-bs-title={title}>
 								<img
-									src="/images/work/rmts/full/Asset-19.png"
+									src="/images/work/rmrl/rmrl-event-listing.png"
+									class=""
+									alt={title}
+								/>
+							</a>
+						</div>
+						<div class="carousel-item" data-bs-interval="10000">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/rmrl/rmrl-org-listing@2x.png"
+								data-bs-title={title}>
+								<img
+									src="/images/work/rmrl/rmrl-org-listing.png"
+									class=""
+									alt={title}
+								/>
+							</a>
+						</div>
+						<div class="carousel-item" data-bs-interval="10000">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/rmrl/rmrl-result-kiosk@2x.png"
+								data-bs-title={title}>
+								<img
+									src="/images/work/rmrl/rmrl-result-kiosk.png"
+									class=""
+									alt={title}
+								/>
+							</a>
+						</div>
+						<div class="carousel-item" data-bs-interval="10000">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/rmrl/rmrl-result-report@2x.png"
+								data-bs-title={title}>
+								<img
+									src="/images/work/rmrl/rmrl-result-report.png"
 									class=""
 									alt={title}
 								/>
@@ -169,54 +251,80 @@ const posts = (await getCollection("portfolio")).sort(
 							<a
 								data-bs-toggle="modal"
 								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/rmts/full/docs.aai.com - detail.png"
-								data-bs-title="RM Timing Systems - App/Product Design">
+								data-bs-image="/images/work/rmrl/rmrl-result-report-tablet.png"
+								data-bs-title={title}>
 								<img
-									src="/images/work/rmts/full/docs.aai.com - detail.png"
-									class=""
-									alt={title}
-								/>
-							</a>
-						</div>
-						<div class="carousel-item" data-bs-interval="10000">
-							<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/rmts/full/RPA Security - REFRESH WDS 3.0 - 1 - 1.png"
-								data-bs-title="RM Timing Systems - App/Product Design">
-								<img
-									src="/images/work/rmts/full/RPA Security - REFRESH WDS 3.0 - 1 - 1.png"
-									class=""
-									alt={title}
-								/>
-							</a>
-						</div>
-						<div class="carousel-item" data-bs-interval="10000">
-							<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/rmts/full/TEMPLATE Product - Redesign 3.0 - 2 - 1.png"
-								data-bs-title="RM Timing Systems - App/Product Design">
-								<img
-									src="/images/work/rmts/full/TEMPLATE Product - Redesign 3.0 - 2 - 1.png"
-									class=""
-									alt={title}
-								/>
-							</a>
-						</div>
-						<div class="carousel-item" data-bs-interval="10000">
-							<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/rmts/full/SCREENSHOT - Customer Stories Listing.png"
-								data-bs-title="RM Timing Systems - App/Product Design">
-								<img
-									src="/images/work/rmts/full/SCREENSHOT - Customer Stories Listing.png"
+									src="/images/work/rmrl/rmrl-result-report-tablet.png"
 									class=""
 									alt={title}
 								/>
 							</a>
 						</div> -->
+						<div class="carousel-item" data-bs-interval="10000">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/rmrl/rmrl-results@2x.png"
+								data-bs-title={title}>
+								<img
+									src="/images/work/rmrl/rmrl-results.png"
+									class=""
+									alt={title}
+								/>
+							</a>
+						</div>
+						<div class="carousel-item" data-bs-interval="10000">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/rmrl/rmrl-results-mobile@2x.png"
+								data-bs-title={title}>
+								<img
+									src="/images/work/rmrl/rmrl-results-mobile.png"
+									class=""
+									alt={title}
+								/>
+							</a>
+						</div>
+						<div class="carousel-item" data-bs-interval="10000">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/rmrl/rmrl-streamer@2x.png"
+								data-bs-title={title}>
+								<img
+									src="/images/work/rmrl/rmrl-streamer.png"
+									class=""
+									alt={title}
+								/>
+							</a>
+						</div>
+						<div class="carousel-item" data-bs-interval="10000">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/rmrl/rmrl-streamer-config@2x.png"
+								data-bs-title={title}>
+								<img
+									src="/images/work/rmrl/rmrl-streamer-config.png"
+									class=""
+									alt={title}
+								/>
+							</a>
+						</div>
+						<div class="carousel-item" data-bs-interval="10000">
+							<a
+								data-bs-toggle="modal"
+								data-bs-target="#galleryModal"
+								data-bs-image="/images/work/rmrl/rmrl-event-settings@2x.png"
+								data-bs-title={title}>
+								<img
+									src="/images/work/rmrl/rmrl-event-settings.png"
+									class=""
+									alt={title}
+								/>
+							</a>
+						</div>
 					</div>
 					<button
 						class="carousel-control-prev"
@@ -348,8 +456,8 @@ const posts = (await getCollection("portfolio")).sort(
 						class="card card-portfolio card-full card-big card-link"
 						data-bs-toggle="modal"
 						data-bs-target="#galleryModal"
-						data-bs-image="/images/work/rmts/full/rm-timing-systems-app-storyboard.png"
-						data-bs-title="RM Timing Systems - App/Product Design">
+						data-bs-image="/images/work/rmrl/rm-timing-systems-app-storyboard.png"
+						data-bs-title={title}>
 						<div class="row">
 							<div class="col-md-12">
 								<h3>Product Story Board</h3>
@@ -363,7 +471,7 @@ const posts = (await getCollection("portfolio")).sort(
 							</div>
 							<div class="col-md-12 img">
 								<img
-									src="/images/work/rmts/full/rm-timing-systems-app-storyboard.png"
+									src="/images/work/rmrl/rm-timing-systems-app-storyboard.png"
 									class=""
 									alt={title}
 								/>
@@ -376,8 +484,8 @@ const posts = (await getCollection("portfolio")).sort(
 						class="card card-portfolio card-full card-link"
 						data-bs-toggle="modal"
 						data-bs-target="#galleryModal"
-						data-bs-image="/images/work/rmts/thumb-cultural-design.png"
-						data-bs-title="RM Timing Systems - App/Product Design">
+						data-bs-image="/images/work/rmrl/thumb-cultural-design.png"
+						data-bs-title={title}>
 						<div class="row">
 							<div class="col-md-6">
 								<h3>Region Specific, Cultural Design</h3>
@@ -390,7 +498,7 @@ const posts = (await getCollection("portfolio")).sort(
 							</div>
 							<div class="col-md-6 img">
 								<img
-									src="/images/work/rmts/thumb-cultural-design.png"
+									src="/images/work/rmrl/thumb-cultural-design.png"
 									class=""
 									alt={title}
 								/>
