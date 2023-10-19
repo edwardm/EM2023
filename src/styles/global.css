@@ -259,6 +259,14 @@ h3 {
 	font-size: 0.9em !important;
 }
 
+h3.topic {
+	font-size: 1.1em !important;
+}
+
+/* h3.topic i {
+	font-size: 0.6rem !important;
+} */
+
 .card h3::before {
 	position: absolute;
 	content: " ";
@@ -526,7 +534,7 @@ section.section-portfolio .section-portfolio-label::before {
 	background: var(--bg-gradient-x);
 }
 
-section.section-portfolio i {
+.section-portfolio-label i {
 	/* border: 1px solid var(--gray-dark);
 	width: 70px;
 	height: 70px;
@@ -667,6 +675,11 @@ footer {
 .card-big {
 	padding-right: 2em;
 	min-height: 600px;
+}
+
+.card-long {
+	padding-right: 2em;
+	min-height: 780px;
 }
 
 .card-big .img img {
