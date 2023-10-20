@@ -680,7 +680,7 @@ footer {
 
 .card-long {
 	padding-right: 2em;
-	min-height: 860px;
+	min-height: 780px;
 }
 
 .card-big .img img {
@@ -878,7 +878,7 @@ section.section-portfolio .carousel-control-next i {
 	}
 
 	.card-long {
-		min-height: 860px;
+		min-height: 780px;
 	}
 
 	.card-portfolio .img img {
