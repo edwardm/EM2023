@@ -260,12 +260,13 @@ h3 {
 }
 
 h3.topic {
-	font-size: 1.1em !important;
+	font-size: 1.2em !important;
 }
 
-/* h3.topic i {
-	font-size: 0.6rem !important;
-} */
+h3.topic i {
+	margin-right: 10px;
+	/* font-size: 0.6rem !important; */
+}
 
 .card h3::before {
 	position: absolute;
@@ -526,7 +527,7 @@ section.section-portfolio .section-portfolio-label {
 section.section-portfolio .section-portfolio-label::before {
 	content: " ";
 	position: absolute;
-	top: -2.49em;
+	top: -2.46em;
 	left: 1.3em;
 	width: 52px;
 	height: 5px;
@@ -679,7 +680,7 @@ footer {
 
 .card-long {
 	padding-right: 2em;
-	min-height: 780px;
+	min-height: 860px;
 }
 
 .card-big .img img {
@@ -874,6 +875,10 @@ section.section-portfolio .carousel-control-next i {
 
 	.card-big {
 		min-height: 700px;
+	}
+
+	.card-long {
+		min-height: 860px;
 	}
 
 	.card-portfolio .img img {
