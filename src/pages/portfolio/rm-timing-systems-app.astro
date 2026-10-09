@@ -1,25 +1,11 @@
 ---
 import Layout from "../../layouts/Default.astro";
-// import BaseHead from "../../components/BaseHead.astro";
-// import Header from "../../components/Header.astro";
-// import Footer from "../../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 const title = "RM Timing Systems Product Design";
 const description =
 	"An event racing app utilized by race announcers and race organizers on-site, at a live event.";
-import { getCollection } from "astro:content";
-import FormattedDate from "../../components/FormattedDate.astro";
-
-const posts = (await getCollection("portfolio")).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
 ---
 
-<Layout
-	title={title}
-	description={description}
-	pubDate={new Date("August 08 2021")}
-	heroImage="/blog-placeholder-about.jpg">
+<Layout title={title} description={description}>
 	<!-- TO-DO BREADCRUMB -->
 	<section class="row title hero-detail">
 		<div class="col-lg-6 pe-lg-5">
@@ -29,13 +15,21 @@ const posts = (await getCollection("portfolio")).sort(
 				<span class="tag">User Interface</span>
 			</div>
 			<h2 class="col-12 mb-5 pb-5 pe-lg-5 description">
-				An event racing app utilized by race announcers and race organizers on-site, at a live
-				event. It’s main purpose is to connect to an event results processing provider which
-				feeds real-time race stats to the end-user. This is a 2.0 major version update.
+				An event racing app utilized by race announcers and race
+				organizers on-site, at a live event. It’s main purpose is to
+				connect to an event results processing provider which feeds
+				real-time race stats to the end-user. This is a 2.0 major
+				version update.
 			</h2>
 		</div>
 		<div class="col-lg-6 card-normal img-container">
-			<img src="/images/work/img-hero-rmts-app@2x.webp" alt={title} />
+			<img
+				src="/images/work/img-hero-rmts-app@2x.webp"
+				alt={title}
+				loading="eager"
+				decoding="async"
+				fetchpriority="high"
+			/>
 		</div>
 	</section>
 	<section class="row gx-md-5 section-portfolio">
@@ -84,8 +78,10 @@ const posts = (await getCollection("portfolio")).sort(
 			<h2 class="pr-5">Project Gallery</h2>
 		</div>
 		<div class="col-xl-9">
-			<div class="card card-portfolio card-padding" style="height: auto !important;">
-				<div id="galleryCarousel" class="carousel carousel-dark slide mb-5">
+			<div class="card card-portfolio card-padding card-auto-height">
+				<div
+					id="galleryCarousel"
+					class="carousel carousel-dark slide mb-5">
 					<div class="carousel-indicators">
 						<button
 							type="button"
@@ -93,17 +89,20 @@ const posts = (await getCollection("portfolio")).sort(
 							class="active"
 							aria-current="true"
 							data-bs-slide-to="0"
-							aria-label="Slide 1"></button>
+							aria-label="Slide 1">
+						</button>
 						<button
 							type="button"
 							data-bs-target="#galleryCarousel"
 							data-bs-slide-to="1"
-							aria-label="Slide 2"></button>
+							aria-label="Slide 2">
+						</button>
 						<button
 							type="button"
 							data-bs-target="#galleryCarousel"
 							data-bs-slide-to="2"
-							aria-label="Slide 3"></button>
+							aria-label="Slide 3">
+						</button>
 						<!-- <button
 							type="button"
 							data-bs-target="#galleryCarousel"
@@ -126,7 +125,9 @@ const posts = (await getCollection("portfolio")).sort(
 							aria-label="Slide 7"></button> -->
 					</div>
 					<div class="carousel-inner">
-						<div class="carousel-item active" data-bs-interval="10000">
+						<div
+							class="carousel-item active"
+							data-bs-interval="10000">
 							<a
 								data-bs-toggle="modal"
 								data-bs-target="#galleryModal"
@@ -136,6 +137,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/rmts/full/rm-timing-systems-app-task-analysis.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -149,6 +152,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/rmts/full/rm-timing-systems-app-use-types-personas.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -162,6 +167,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/rmts/full/Asset-19.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -321,26 +328,29 @@ const posts = (await getCollection("portfolio")).sort(
 		</div>
 		<div class="col-xl-9">
 			<p>
-				I worked alongside the project manager to define the main user types for this app. It
-				is targeted towards a specific audience, in this case the endurance race community,
-				and each type had certain desires in mind. From this we can begin to have a basis for
-				defining functionality.
+				I worked alongside the project manager to define the main user
+				types for this app. It is targeted towards a specific audience,
+				in this case the endurance race community, and each type had
+				certain desires in mind. From this we can begin to have a basis
+				for defining functionality.
 			</p>
 			<p>
-				Based on the drafted user types and personas, we were then able to to start
-				brainstorming on the main functions, or tasks, that each user would go about seeking
-				while using the app. At this point, we gather feedback directly from end-users through
-				direct email questionnaire and phone conference meetings.
+				Based on the drafted user types and personas, we were then able
+				to to start brainstorming on the main functions, or tasks, that
+				each user would go about seeking while using the app. At this
+				point, we gather feedback directly from end-users through direct
+				email questionnaire and phone conference meetings.
 			</p>
 			<p>
-				From task analysis, we can define the initial main top-level functionality expected by
-				the app’s users. This will also serve as the skeleton for our wire-frame and in-app
-				menu system.
+				From task analysis, we can define the initial main top-level
+				functionality expected by the app’s users. This will also serve
+				as the skeleton for our wire-frame and in-app menu system.
 			</p>
 			<p class="mb-5">
-				After gathering research, setting the tasks and wire-framing with the team, I then get
-				to the fun part: design. High-fidelity designs and prototyping were created with Adobe
-				Illustrator and Adobe XD.
+				After gathering research, setting the tasks and wire-framing
+				with the team, I then get to the fun part: design. High-fidelity
+				designs and prototyping were created with Adobe Illustrator and
+				Adobe XD.
 			</p>
 			<div class="row gx-md-5">
 				<div class="col-md-12 mb-5">
@@ -354,11 +364,12 @@ const posts = (await getCollection("portfolio")).sort(
 							<div class="col-md-12">
 								<h3>Product Story Board</h3>
 								<p>
-									With all of the business requirements and product
-									specifications set, a design session was held to
-									visualize the overall look and feel of the app. The
-									brand's design system had already been developed, so a
-									big part of the "theme" was already defined.
+									With all of the business requirements and
+									product specifications set, a design session
+									was held to visualize the overall look and
+									feel of the app. The brand's design system
+									had already been developed, so a big part of
+									the "theme" was already defined.
 								</p>
 							</div>
 							<div class="col-md-12 img">
@@ -366,6 +377,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/rmts/full/rm-timing-systems-app-storyboard.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 						</div>
@@ -413,20 +426,23 @@ const posts = (await getCollection("portfolio")).sort(
 						<h3>Feedback Gathering</h3>
 						<ul>
 							<li>
-								Live, in-person User Testing - I had several opportunities to
-								help time at live race events and was able to see how timers
-								and announcers used our app.
+								Live, in-person User Testing - I had several
+								opportunities to help time at live race events
+								and was able to see how timers and announcers
+								used our app.
 							</li>
 							<li>
-								Post User Feedback - Key feedback notes from initial field
-								tests was to have optimal legibility in outdoor settings
-								(contrast) and an easy-to-use announcer "streamer".
+								Post User Feedback - Key feedback notes from
+								initial field tests was to have optimal
+								legibility in outdoor settings (contrast) and an
+								easy-to-use announcer "streamer".
 							</li>
 							<li>
-								Feature Improvements - The app initially was spec'd to
-								integrate with a single race event service provider. However
-								with this new version, we now needed to the ability connect
-								with other services. Thus, a "connect to provider" step
+								Feature Improvements - The app initially was
+								spec'd to integrate with a single race event
+								service provider. However with this new version,
+								we now needed to the ability connect with other
+								services. Thus, a "connect to provider" step
 								process was conceived.
 							</li>
 						</ul>
@@ -437,22 +453,25 @@ const posts = (await getCollection("portfolio")).sort(
 						<h3>Updates &amp; Evolution</h3>
 						<ul>
 							<li>
-								Contrast is Key - Designing an interface that needed to be
-								legible in outdoor settings was a new challenge. I was use to
-								testing UI designs indoors, so this project brought about new
+								Contrast is Key - Designing an interface that
+								needed to be legible in outdoor settings was a
+								new challenge. I was use to testing UI designs
+								indoors, so this project brought about new
 								territory.
 							</li>
 							<li>
-								Clarity = Speed in Discovery - Providing clear and clean
-								aesthetic is always a priority for designers, but even more so
-								for this app. During a prototype test at a live event, I
-								realized that an event announcer literally had to read and
-								announce information quickly.
+								Clarity = Speed in Discovery - Providing clear
+								and clean aesthetic is always a priority for
+								designers, but even more so for this app. During
+								a prototype test at a live event, I realized
+								that an event announcer literally had to read
+								and announce information quickly.
 							</li>
 							<li>
-								Feature Growth - The version 2.0 of this app is bringing about
-								some great improvement over the first. But still, clients are
-								requesting new features for future releases. Hence, we are
+								Feature Growth - The version 2.0 of this app is
+								bringing about some great improvement over the
+								first. But still, clients are requesting new
+								features for future releases. Hence, we are
 								preparing for the UI to adapt for growth.
 							</li>
 						</ul>

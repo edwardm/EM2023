@@ -1,7 +1,7 @@
 :root {
 	--accent: #2337ff;
-	--accent-light: #88B9E6;
-	--accent-bright: #00F0FF;
+	--accent-light: #88b9e6;
+	--accent-bright: #00f0ff;
 	--accent-dark: #111222;
 	--white: #fff;
 	--offwhite: #ddd;
@@ -12,18 +12,31 @@
 	--gray-dark: #333;
 	--gray-very-dark: #111;
 	--black: #000;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
-	--bg-gradient: linear-gradient(165deg, rgba(21, 103, 227, 0.3) 25%, rgba(31, 44, 158, 0.80) 80%);
-	--bg-gradient-hover: linear-gradient(165deg, rgba(21, 103, 227, 0.5) 25%, rgba(31, 44, 158, 85) 60%);
-	--bg-gradient-x: linear-gradient(165deg, #2D5EA8 0%, #1F2C9E 100%);
-	--bg-gradient-x-bright: linear-gradient(165deg, var(--accent-bright) 0%, #1F2C9E 100%);
-	--bg-gradient-transparent: linear-gradient(165deg, rgba(45, 94, 168, 0.10) 0%, rgba(31, 44, 158, 0.25) 100%);
-}
-
-.highlight {
-	background: red !important;
+	--gray-gradient: rgba(170, 170, 170, 0.5), #fff;
+	--box-shadow: 0 2px 6px rgba(102, 102, 102, 0.25),
+		0 8px 24px rgba(102, 102, 102, 0.33),
+		0 16px 32px rgba(102, 102, 102, 0.33);
+	--bg-gradient: linear-gradient(
+		165deg,
+		rgba(21, 103, 227, 0.3) 25%,
+		rgba(31, 44, 158, 0.8) 80%
+	);
+	--bg-gradient-hover: linear-gradient(
+		165deg,
+		rgba(21, 103, 227, 0.5) 25%,
+		rgba(31, 44, 158, 0.85) 60%
+	);
+	--bg-gradient-x: linear-gradient(165deg, #2d5ea8 0%, #1f2c9e 100%);
+	--bg-gradient-x-bright: linear-gradient(
+		165deg,
+		var(--accent-bright) 0%,
+		#1f2c9e 100%
+	);
+	--bg-gradient-transparent: linear-gradient(
+		165deg,
+		rgba(45, 94, 168, 0.1) 0%,
+		rgba(31, 44, 158, 0.25) 100%
+	);
 }
 
 /* @font-face {
@@ -44,7 +57,7 @@
 
 body {
 	position: relative;
-	font-family: 'League Spartan', sans-serif !important;
+	font-family: "League Spartan", sans-serif !important;
 	font-weight: 300 !important;
 	font-size: 1.1em !important;
 	margin: 0;
@@ -77,6 +90,14 @@ body::after {
 	background: transparent url(/images/bg-line-art-1.svg) top center no-repeat;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+	outline: 3px solid var(--accent-bright);
+	outline-offset: 3px;
+}
+
 header {
 	border: none !important;
 }
@@ -89,7 +110,6 @@ a.logo:focus {
 	color: var(--white) !important;
 	border: none;
 	/* vertical-align: center; */
-
 }
 
 a.logo img {
@@ -100,7 +120,7 @@ a.logo img {
 }
 
 a.logo img {
-	box-shadow: 0px 20px 10px 0px rgba(0, 0, 0, 0.20);
+	box-shadow: 0px 20px 10px 0px rgba(0, 0, 0, 0.2);
 	transition: transform ease-in 100ms !important;
 }
 
@@ -109,26 +129,26 @@ a.logo:hover img {
 	transform: translate(0, -3px);
 }
 
-a.logo>span {
+a.logo > span {
 	display: inline-block;
 	padding: 0 0 0 1.5em;
 }
 
-a.logo>span>span {
+a.logo > span > span {
 	clear: both;
 	display: block;
 }
 
-a.logo>span>span:first-child {
-	font-family: 'Lexend Mega', sans-serif;
+a.logo > span > span:first-child {
+	font-family: "Lexend Mega", sans-serif;
 	text-transform: uppercase !important;
 	font-size: 0.95em;
 	font-weight: 600;
 	letter-spacing: 0.4px;
 }
 
-a.logo>span>span:last-child {
-	font-family: 'Lexend', sans-serif;
+a.logo > span > span:last-child {
+	font-family: "Lexend", sans-serif;
 	color: var(--gray-very-light) !important;
 	font-size: 0.8em;
 	font-weight: 200;
@@ -136,7 +156,7 @@ a.logo>span>span:last-child {
 }
 
 .nav {
-	font-family: 'Lexend Mega', sans-serif;
+	font-family: "Lexend Mega", sans-serif;
 	font-size: 0.75em;
 	font-weight: 400;
 	text-transform: uppercase;
@@ -148,7 +168,7 @@ a.logo>span>span:last-child {
 	display: inline-block;
 	position: relative;
 	padding: 4.5em 2.5em 0.5em 2.5em;
-	transition: all .3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 /* .nav-item a.active {
@@ -156,7 +176,7 @@ a.logo>span>span:last-child {
 } */
 
 .nav-item a::before {
-	transition: all .3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 	content: " ";
 	position: absolute;
 	top: -6px;
@@ -184,7 +204,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Lexend', sans-serif;
+	font-family: "Lexend", sans-serif;
 	font-weight: 600 !important;
 	color: var(--white) !important;
 	margin: 0 0 1.5em 0 !important;
@@ -192,12 +212,16 @@ h6 {
 }
 
 .title h1 {
-	font-family: 'Lexend Mega', sans-serif;
+	font-family: "Lexend Mega", sans-serif;
 	/* text-transform: uppercase; */
 	font-size: 2.2em !important;
 	/** TEXT GRADIENT */
 	color: var(--white) !important;
-	background-image: -webkit-linear-gradient(0deg, #fff 0%, #9ee2ff 75%) !important;
+	background-image: -webkit-linear-gradient(
+		0deg,
+		#fff 0%,
+		#9ee2ff 75%
+	) !important;
 	background-clip: text !important;
 	-webkit-background-clip: text !important;
 	text-fill-color: transparent !important;
@@ -237,11 +261,15 @@ h2.description {
 }
 
 .hero-home h1 {
-	font-family: 'Lexend Mega', sans-serif;
+	font-family: "Lexend Mega", sans-serif;
 	font-size: 2em !important;
 	/* text-transform: uppercase; */
 	font-weight: 300 !important;
-	background-image: -webkit-linear-gradient(0deg, #fff 0%, #9ee2ff 100%) !important;
+	background-image: -webkit-linear-gradient(
+		0deg,
+		#fff 0%,
+		#9ee2ff 100%
+	) !important;
 	background-clip: text !important;
 	-webkit-background-clip: text !important;
 	text-fill-color: transparent !important;
@@ -249,7 +277,7 @@ h2.description {
 }
 
 .hero-home h2 {
-	font-family: 'League Spartan', sans-serif;
+	font-family: "League Spartan", sans-serif;
 	font-size: 1.5em !important;
 	color: var(--gray-light) !important;
 }
@@ -307,7 +335,9 @@ h5 {
 
 .btn-primary:hover {
 	text-shadow: 0px -2px 0px rgba(0, 0, 0, 1);
-	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.40), 0px 1px 0px 0px rgba(255, 255, 255, 0.20) inset !important;
+	box-shadow:
+		0px 20px 20px 0px rgba(0, 0, 0, 0.4),
+		0px 1px 0px 0px rgba(255, 255, 255, 0.2) inset !important;
 	color: var(--accent-bright) !important;
 	transform: translate(0, -1px);
 }
@@ -329,7 +359,7 @@ main a {
 }
 
 main ul a {
-	border-bottom: none
+	border-bottom: none;
 }
 
 a:hover {
@@ -379,7 +409,7 @@ table {
 
 code {
 	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
+	background-color: var(--gray-light);
 	border-radius: 2px;
 }
 
@@ -388,7 +418,7 @@ pre {
 	border-radius: 8px;
 }
 
-pre>code {
+pre > code {
 	all: unset;
 }
 
@@ -401,12 +431,16 @@ blockquote {
 
 hr {
 	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
+	border-top: 1px solid var(--gray-light);
 }
 
 .form-control {
 	border-radius: 10px !important;
 	background: var(--black) !important;
+}
+
+.contact-message {
+	height: 170px;
 }
 
 .form-floating label::after {
@@ -479,14 +513,12 @@ section.title {
 
 section.hero-detail {
 	padding-bottom: 5em;
-
 }
 
 section.hero-detail .img-container {
 	padding: 0;
 	overflow: hidden;
 }
-
 
 section.hero-detail .img-container img {
 	width: 100%;
@@ -550,7 +582,7 @@ section.section-portfolio .section-portfolio-label::before {
 	line-height: 52px;
 	/* color: rgba(153, 153, 153, 1),
 		rgba(85, 85, 85, 1); */
-	background: #FFFFFF;
+	background: #ffffff;
 	background: linear-gradient(to right, #ddd 0%, #888 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -595,6 +627,10 @@ footer {
 	padding: 2em 2em 0 2em;
 }
 
+.card-auto-height {
+	height: auto !important;
+}
+
 .card-normal {
 	padding: 2em 2em 2em 2em;
 	background: var(--bg-gradient-transparent) !important;
@@ -611,7 +647,9 @@ footer {
 	/* -webkit-transition: background-color 1000ms linear;
 	-ms-transition: background-color 1000ms linear;
 	transition: background-color 1000ms linear; */
-	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.40), 0px 1px 0px 0px rgba(255, 255, 255, 0.30) inset !important;
+	box-shadow:
+		0px 20px 20px 0px rgba(0, 0, 0, 0.4),
+		0px 1px 0px 0px rgba(255, 255, 255, 0.3) inset !important;
 	backdrop-filter: blur(6px) !important;
 	transform: translate(0, -5px);
 }
@@ -644,14 +682,13 @@ footer {
 	left: 0;
 	width: 450px;
 	border-radius: 15px;
-	transition: .2s;
+	transition: 0.2s;
 	/* max-height: 400px; */
 }
 
 .card-portfolio:hover .img img {
 	transform: scale(1.02);
 }
-
 
 .card-portfolio .col-md-12.img img {
 	width: 100%;
@@ -804,8 +841,26 @@ section.section-portfolio .carousel-control-next i {
 }
 
 .modal-header {
+	display: flex;
+	align-items: center;
 	gap: 20px;
+	padding: 0.75rem 1rem;
 	background: var(--bg-gradient-transparent);
+}
+
+.modal-header > img {
+	display: block;
+	width: 60px;
+	height: auto;
+	flex: 0 0 auto;
+}
+
+.modal-header .modal-title {
+	flex: 1;
+	min-width: 0;
+	margin: 0 !important;
+	text-align: left !important;
+	line-height: 1.2 !important;
 }
 
 .modal-body {
@@ -858,7 +913,6 @@ section.section-portfolio .carousel-control-next i {
 /* TWBS overrides */
 
 @media (min-width: 1600px) {
-
 	.container-xxl,
 	.container-xl,
 	.container-lg,
@@ -898,8 +952,6 @@ section.section-portfolio .carousel-control-next i {
 	}
 }
 
-
-
 /* @media (min-width: 1440px) {
 
 	.g-md-5,
@@ -909,7 +961,6 @@ section.section-portfolio .carousel-control-next i {
 } */
 
 @media (max-width: 720px) {
-
 	body::after {
 		background-position: top right;
 		background-size: 200%;
@@ -929,7 +980,6 @@ section.section-portfolio .carousel-control-next i {
 }
 
 @media (max-width: 428px) {
-
 	.container {
 		padding-left: 1.5em !important;
 		padding-right: 1.5em !important;
@@ -946,17 +996,16 @@ section.section-portfolio .carousel-control-next i {
 		width: 70px !important;
 	}
 
-	a.logo>span {
-		padding: 0 0 0 1.0em;
+	a.logo > span {
+		padding: 0 0 0 1em;
 	}
 
-	a.logo>span>span:first-child {
-
+	a.logo > span > span:first-child {
 		font-size: 0.85em;
 		line-height: 20px;
 	}
 
-	a.logo>span>span:last-child {
+	a.logo > span > span:last-child {
 		font-size: 0.65em;
 		line-height: 20px;
 	}
@@ -991,7 +1040,6 @@ section.section-portfolio .carousel-control-next i {
 
 	.title h1 {
 		font-size: 1.4em !important;
-
 	}
 
 	h1.modal-title {
@@ -1087,7 +1135,7 @@ section.section-portfolio .carousel-control-next i {
 
 	section.section-portfolio .section-portfolio-label::before {
 		width: 54px;
-		left: calc((100% - 54px)/2);
+		left: calc((100% - 54px) / 2);
 	}
 
 	section.section-portfolio i {
@@ -1147,4 +1195,21 @@ section.section-portfolio .carousel-control-next i {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		scroll-behavior: auto !important;
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+
+	::view-transition-group(root),
+	::view-transition-old(root),
+	::view-transition-new(root) {
+		animation: none !important;
+	}
 }
