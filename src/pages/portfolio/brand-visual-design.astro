@@ -1,24 +1,11 @@
 ---
 import Layout from "../../layouts/Default.astro";
-// import BaseHead from "../../components/BaseHead.astro";
-// import Header from "../../components/Header.astro";
-// import Footer from "../../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 const title = "Brand & Visual Design Compilation";
-const description = "A compilation of various brand/identity design work I have created in the past years.";
-import { getCollection } from "astro:content";
-import FormattedDate from "../../components/FormattedDate.astro";
-
-const posts = (await getCollection("portfolio")).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
+const description =
+	"A compilation of various brand/identity design work I have created in the past years.";
 ---
 
-<Layout
-	title={title}
-	description={description}
-	pubDate={new Date("August 08 2021")}
-	heroImage="/blog-placeholder-about.jpg">
+<Layout title={title} description={description}>
 	<!-- TO-DO BREADCRUMB -->
 	<section class="row title hero-detail">
 		<div class="col-lg-6 pe-lg-5">
@@ -28,14 +15,21 @@ const posts = (await getCollection("portfolio")).sort(
 				<span class="tag">Brand Design</span>
 			</div>
 			<h2 class="col-12 mb-5 pb-5 pe-lg-5 description">
-				Over the years, I've had the pleasure to work on numerous identity design projects in
-				various industries. Ranging from tech start-ups to endurance race events, and from
-				award-winning wineries to small businesses. Each project infused the character and
-				brand of their respective organizations.
+				Over the years, I've had the pleasure to work on numerous
+				identity design projects in various industries. Ranging from
+				tech start-ups to endurance race events, and from award-winning
+				wineries to small businesses. Each project infused the character
+				and brand of their respective organizations.
 			</h2>
 		</div>
 		<div class="col-lg-6 card-normal img-container">
-			<img src="/images/work/img-hero-visual@2x.webp" alt={title} />
+			<img
+				src="/images/work/img-hero-visual@2x.webp"
+				alt={title}
+				loading="eager"
+				decoding="async"
+				fetchpriority="high"
+			/>
 		</div>
 	</section>
 	<section class="row gx-md-5 section-portfolio">
@@ -74,308 +68,380 @@ const posts = (await getCollection("portfolio")).sort(
 		<div class="col-xl-9">
 			<div class="row gx-md-5">
 				<div class="col-xl-6 mb-5">
-					<div class="card card-branding-presentation" style="background: #222;">
+					<div
+						class="card card-branding-presentation"
+						style="background: #222;">
 						<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/visual-design/logo-activo.svg"
-								data-bs-title="Brand / Visual Design"
-								data-bs-bgcolor="#222"
-								data-bs-type="modal-logo">
+							data-bs-toggle="modal"
+							data-bs-target="#galleryModal"
+							data-bs-image="/images/work/visual-design/logo-activo.svg"
+							data-bs-title="Brand / Visual Design"
+							data-bs-bgcolor="#222"
+							data-bs-type="modal-logo">
 							<img
 								src="/images/work/visual-design/logo-activo.svg"
 								class=""
 								alt={title}
+								loading="lazy"
+								decoding="async"
 							/>
 						</a>
 					</div>
 				</div>
 				<div class="col-xl-6 mb-5">
-					<div class="card card-branding-presentation" style="background: #143859;">
+					<div
+						class="card card-branding-presentation"
+						style="background: #143859;">
 						<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/visual-design/logo-alamitos.svg"
-								data-bs-title="Brand / Visual Design"
-								data-bs-bgcolor="#143859"
-								data-bs-type="modal-logo">
-						<img
-							src="/images/work/visual-design/logo-alamitos.svg"
-							class=""
-							alt={title}
-						/>
+							data-bs-toggle="modal"
+							data-bs-target="#galleryModal"
+							data-bs-image="/images/work/visual-design/logo-alamitos.svg"
+							data-bs-title="Brand / Visual Design"
+							data-bs-bgcolor="#143859"
+							data-bs-type="modal-logo">
+							<img
+								src="/images/work/visual-design/logo-alamitos.svg"
+								class=""
+								alt={title}
+								loading="lazy"
+								decoding="async"
+							/>
 						</a>
 					</div>
 				</div>
 				<div class="col-xl-6 mb-5">
-					<div class="card card-branding-presentation" style="background: #0f2d60;">
+					<div
+						class="card card-branding-presentation"
+						style="background: #0f2d60;">
 						<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/visual-design/logo-galactic-sky.svg"
-								data-bs-title="Brand / Visual Design"
-								data-bs-bgcolor="#0f2d60"
-								data-bs-type="modal-logo">
-						<img
-							src="/images/work/visual-design/logo-galactic-sky.svg"
-							class=""
-							alt={title}
-						/>
+							data-bs-toggle="modal"
+							data-bs-target="#galleryModal"
+							data-bs-image="/images/work/visual-design/logo-galactic-sky.svg"
+							data-bs-title="Brand / Visual Design"
+							data-bs-bgcolor="#0f2d60"
+							data-bs-type="modal-logo">
+							<img
+								src="/images/work/visual-design/logo-galactic-sky.svg"
+								class=""
+								alt={title}
+								loading="lazy"
+								decoding="async"
+							/>
 						</a>
 					</div>
 				</div>
 				<div class="col-xl-6 mb-5">
-					<div class="card card-branding-presentation" style="background: #555;">
+					<div
+						class="card card-branding-presentation"
+						style="background: #555;">
 						<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/visual-design/logo-vector-badge-1001.webp"
-								data-bs-title="Brand / Visual Design"
-								data-bs-bgcolor="#555"
-								data-bs-type="modal-logo">
-						<img
-							src="/images/work/visual-design/logo-vector-badge-1001.webp"
-							class=""
-							alt={title}
-						/>
+							data-bs-toggle="modal"
+							data-bs-target="#galleryModal"
+							data-bs-image="/images/work/visual-design/logo-vector-badge-1001.webp"
+							data-bs-title="Brand / Visual Design"
+							data-bs-bgcolor="#555"
+							data-bs-type="modal-logo">
+							<img
+								src="/images/work/visual-design/logo-vector-badge-1001.webp"
+								class=""
+								alt={title}
+								loading="lazy"
+								decoding="async"
+							/>
 						</a>
 					</div>
 				</div>
 				<div class="col-xl-6 mb-5">
-					<div class="card card-branding-presentation" style="background: #e8ded5;">
+					<div
+						class="card card-branding-presentation"
+						style="background: #e8ded5;">
 						<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/visual-design/logo-ap-custom-cabinets.svg"
-								data-bs-title="Brand / Visual Design"
-								data-bs-bgcolor="#e8ded5"
-								data-bs-type="modal-logo">
-						<img
-							src="/images/work/visual-design/logo-ap-custom-cabinets.svg"
-							class=""
-							alt={title}
-						/>
+							data-bs-toggle="modal"
+							data-bs-target="#galleryModal"
+							data-bs-image="/images/work/visual-design/logo-ap-custom-cabinets.svg"
+							data-bs-title="Brand / Visual Design"
+							data-bs-bgcolor="#e8ded5"
+							data-bs-type="modal-logo">
+							<img
+								src="/images/work/visual-design/logo-ap-custom-cabinets.svg"
+								class=""
+								alt={title}
+								loading="lazy"
+								decoding="async"
+							/>
 						</a>
 					</div>
 				</div>
 				<div class="col-xl-6 mb-5">
-					<div class="card card-branding-presentation" style="background: #fff;">
+					<div
+						class="card card-branding-presentation"
+						style="background: #fff;">
 						<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/visual-design/logo-argo-wireleess.svg"
-								data-bs-title="Brand / Visual Design"
-								data-bs-bgcolor="#fff"
-								data-bs-type="modal-logo">
-						<img
-							src="/images/work/visual-design/logo-argo-wireleess.svg"
-							class=""
-							alt={title}
-						/>
+							data-bs-toggle="modal"
+							data-bs-target="#galleryModal"
+							data-bs-image="/images/work/visual-design/logo-argo-wireleess.svg"
+							data-bs-title="Brand / Visual Design"
+							data-bs-bgcolor="#fff"
+							data-bs-type="modal-logo">
+							<img
+								src="/images/work/visual-design/logo-argo-wireleess.svg"
+								class=""
+								alt={title}
+								loading="lazy"
+								decoding="async"
+							/>
 						</a>
 					</div>
 				</div>
 				<div class="col-xl-6 mb-5">
-					<div class="card card-branding-presentation" style="background: #eee;">
+					<div
+						class="card card-branding-presentation"
+						style="background: #eee;">
 						<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/visual-design/logo-ecore-design.svg"
-								data-bs-title="Brand / Visual Design"
-								data-bs-bgcolor="#eee"
-								data-bs-type="modal-logo">
-						<img
-							src="/images/work/visual-design/logo-ecore-design.svg"
-							class=""
-							alt={title}
-						/>
+							data-bs-toggle="modal"
+							data-bs-target="#galleryModal"
+							data-bs-image="/images/work/visual-design/logo-ecore-design.svg"
+							data-bs-title="Brand / Visual Design"
+							data-bs-bgcolor="#eee"
+							data-bs-type="modal-logo">
+							<img
+								src="/images/work/visual-design/logo-ecore-design.svg"
+								class=""
+								alt={title}
+								loading="lazy"
+								decoding="async"
+							/>
 						</a>
 					</div>
 				</div>
 				<div class="col-xl-6 mb-5">
-					<div class="card card-branding-presentation" style="background: #c0d9e5;">
+					<div
+						class="card card-branding-presentation"
+						style="background: #c0d9e5;">
 						<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/visual-design/logo-half-marathon-monterey-bay-1.svg"
-								data-bs-title="Brand / Visual Design"
-								data-bs-bgcolor="#c0d9e5"
-								data-bs-type="modal-logo">
-						<img
-							src="/images/work/visual-design/logo-half-marathon-monterey-bay-1.svg"
-							class=""
-							alt={title}
-						/>
+							data-bs-toggle="modal"
+							data-bs-target="#galleryModal"
+							data-bs-image="/images/work/visual-design/logo-half-marathon-monterey-bay-1.svg"
+							data-bs-title="Brand / Visual Design"
+							data-bs-bgcolor="#c0d9e5"
+							data-bs-type="modal-logo">
+							<img
+								src="/images/work/visual-design/logo-half-marathon-monterey-bay-1.svg"
+								class=""
+								alt={title}
+								loading="lazy"
+								decoding="async"
+							/>
 						</a>
 					</div>
 				</div>
 				<div class="col-xl-6 mb-5">
-					<div class="card card-branding-presentation" style="background: #c0d9e5;">
+					<div
+						class="card card-branding-presentation"
+						style="background: #c0d9e5;">
 						<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/visual-design/logo-half-marathon-monterey-bay-2.svg"
-								data-bs-title="Brand / Visual Design"
-								data-bs-bgcolor="#c0d9e5"
-								data-bs-type="modal-logo">
-						<img
-							src="/images/work/visual-design/logo-half-marathon-monterey-bay-2.svg"
-							class=""
-							alt={title}
-						/>
+							data-bs-toggle="modal"
+							data-bs-target="#galleryModal"
+							data-bs-image="/images/work/visual-design/logo-half-marathon-monterey-bay-2.svg"
+							data-bs-title="Brand / Visual Design"
+							data-bs-bgcolor="#c0d9e5"
+							data-bs-type="modal-logo">
+							<img
+								src="/images/work/visual-design/logo-half-marathon-monterey-bay-2.svg"
+								class=""
+								alt={title}
+								loading="lazy"
+								decoding="async"
+							/>
 						</a>
 					</div>
 				</div>
 				<div class="col-xl-6 mb-5">
-					<div class="card card-branding-presentation" style="background: #c0d9e5;">
+					<div
+						class="card card-branding-presentation"
+						style="background: #c0d9e5;">
 						<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/visual-design/logo-half-marathon-monterey-bay-3.svg"
-								data-bs-title="Brand / Visual Design"
-								data-bs-bgcolor="#c0d9e5"
-								data-bs-type="modal-logo">
-						<img
-							src="/images/work/visual-design/logo-half-marathon-monterey-bay-3.svg"
-							class=""
-							alt={title}
-						/>
+							data-bs-toggle="modal"
+							data-bs-target="#galleryModal"
+							data-bs-image="/images/work/visual-design/logo-half-marathon-monterey-bay-3.svg"
+							data-bs-title="Brand / Visual Design"
+							data-bs-bgcolor="#c0d9e5"
+							data-bs-type="modal-logo">
+							<img
+								src="/images/work/visual-design/logo-half-marathon-monterey-bay-3.svg"
+								class=""
+								alt={title}
+								loading="lazy"
+								decoding="async"
+							/>
 						</a>
 					</div>
 				</div>
 				<div class="col-xl-6 mb-5">
-					<div class="card card-branding-presentation" style="background: #e5d9d0;">
+					<div
+						class="card card-branding-presentation"
+						style="background: #e5d9d0;">
 						<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/visual-design/logo-mhm-5th-anniversary.svg"
-								data-bs-title="Brand / Visual Design"
-								data-bs-bgcolor="#e5d9d0"
-								data-bs-type="modal-logo">
-						<img
-							src="/images/work/visual-design/logo-mhm-5th-anniversary.svg"
-							class=""
-							alt={title}
-						/>
+							data-bs-toggle="modal"
+							data-bs-target="#galleryModal"
+							data-bs-image="/images/work/visual-design/logo-mhm-5th-anniversary.svg"
+							data-bs-title="Brand / Visual Design"
+							data-bs-bgcolor="#e5d9d0"
+							data-bs-type="modal-logo">
+							<img
+								src="/images/work/visual-design/logo-mhm-5th-anniversary.svg"
+								class=""
+								alt={title}
+								loading="lazy"
+								decoding="async"
+							/>
 						</a>
 					</div>
 				</div>
 				<div class="col-xl-6 mb-5">
-					<div class="card card-branding-presentation" style="background: #e5d9d0;">
+					<div
+						class="card card-branding-presentation"
+						style="background: #e5d9d0;">
 						<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/visual-design/logo-morgan-hill-marathon-1.svg"
-								data-bs-title="Brand / Visual Design"
-								data-bs-bgcolor="#e5d9d0"
-								data-bs-type="modal-logo">
-						<img
-							src="/images/work/visual-design/logo-morgan-hill-marathon-1.svg"
-							class=""
-							alt={title}
-						/>
+							data-bs-toggle="modal"
+							data-bs-target="#galleryModal"
+							data-bs-image="/images/work/visual-design/logo-morgan-hill-marathon-1.svg"
+							data-bs-title="Brand / Visual Design"
+							data-bs-bgcolor="#e5d9d0"
+							data-bs-type="modal-logo">
+							<img
+								src="/images/work/visual-design/logo-morgan-hill-marathon-1.svg"
+								class=""
+								alt={title}
+								loading="lazy"
+								decoding="async"
+							/>
 						</a>
 					</div>
 				</div>
 				<div class="col-xl-6 mb-5">
-					<div class="card card-branding-presentation" style="background: #e5d9d0;">
+					<div
+						class="card card-branding-presentation"
+						style="background: #e5d9d0;">
 						<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/visual-design/logo-morgan-hill-marathon-2.svg"
-								data-bs-title="Brand / Visual Design"
-								data-bs-bgcolor="#e5d9d0"
-								data-bs-type="modal-logo">
-						<img
-							src="/images/work/visual-design/logo-morgan-hill-marathon-2.svg"
-							class=""
-							alt={title}
-						/>
+							data-bs-toggle="modal"
+							data-bs-target="#galleryModal"
+							data-bs-image="/images/work/visual-design/logo-morgan-hill-marathon-2.svg"
+							data-bs-title="Brand / Visual Design"
+							data-bs-bgcolor="#e5d9d0"
+							data-bs-type="modal-logo">
+							<img
+								src="/images/work/visual-design/logo-morgan-hill-marathon-2.svg"
+								class=""
+								alt={title}
+								loading="lazy"
+								decoding="async"
+							/>
 						</a>
 					</div>
 				</div>
 				<div class="col-xl-6 mb-5">
-					<div class="card card-branding-presentation" style="background: #111;">
+					<div
+						class="card card-branding-presentation"
+						style="background: #111;">
 						<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/visual-design/logo-newspace-networks.svg"
-								data-bs-title="Brand / Visual Design"
-								data-bs-bgcolor="#111"
-								data-bs-type="modal-logo">
-						<img
-							src="/images/work/visual-design/logo-newspace-networks.svg"
-							class=""
-							alt={title}
-						/>
+							data-bs-toggle="modal"
+							data-bs-target="#galleryModal"
+							data-bs-image="/images/work/visual-design/logo-newspace-networks.svg"
+							data-bs-title="Brand / Visual Design"
+							data-bs-bgcolor="#111"
+							data-bs-type="modal-logo">
+							<img
+								src="/images/work/visual-design/logo-newspace-networks.svg"
+								class=""
+								alt={title}
+								loading="lazy"
+								decoding="async"
+							/>
 						</a>
 					</div>
 				</div>
 				<div class="col-xl-6 mb-5">
-					<div class="card card-branding-presentation" style="background: #ccc;">
+					<div
+						class="card card-branding-presentation"
+						style="background: #ccc;">
 						<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/visual-design/logo-rm-races-live.svg"
-								data-bs-title="Brand / Visual Design"
-								data-bs-bgcolor="#ccc"
-								data-bs-type="modal-logo">
-						<img
-							src="/images/work/visual-design/logo-rm-races-live.svg"
-							class=""
-							alt={title}
-						/>
+							data-bs-toggle="modal"
+							data-bs-target="#galleryModal"
+							data-bs-image="/images/work/visual-design/logo-rm-races-live.svg"
+							data-bs-title="Brand / Visual Design"
+							data-bs-bgcolor="#ccc"
+							data-bs-type="modal-logo">
+							<img
+								src="/images/work/visual-design/logo-rm-races-live.svg"
+								class=""
+								alt={title}
+								loading="lazy"
+								decoding="async"
+							/>
 						</a>
 					</div>
 				</div>
 				<div class="col-xl-6 mb-5">
-					<div class="card card-branding-presentation" style="background: #ccc;">
+					<div
+						class="card card-branding-presentation"
+						style="background: #ccc;">
 						<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/visual-design/logo-rm-races-live-favicon-3.svg"
-								data-bs-title="Brand / Visual Design"
-								data-bs-bgcolor="#ccc"
-								data-bs-type="modal-logo">
-						<img
-							src="/images/work/visual-design/logo-rm-races-live-favicon-3.svg"
-							class=""
-							alt={title}
-						/>
+							data-bs-toggle="modal"
+							data-bs-target="#galleryModal"
+							data-bs-image="/images/work/visual-design/logo-rm-races-live-favicon-3.svg"
+							data-bs-title="Brand / Visual Design"
+							data-bs-bgcolor="#ccc"
+							data-bs-type="modal-logo">
+							<img
+								src="/images/work/visual-design/logo-rm-races-live-favicon-3.svg"
+								class=""
+								alt={title}
+								loading="lazy"
+								decoding="async"
+							/>
 						</a>
 					</div>
 				</div>
 				<div class="col-xl-6 mb-5">
-					<div class="card card-branding-presentation" style="background: #111;">
+					<div
+						class="card card-branding-presentation"
+						style="background: #111;">
 						<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/visual-design/logo-rm-timing-systems.svg"
-								data-bs-title="Brand / Visual Design"
-								data-bs-bgcolor="#111"
-								data-bs-type="modal-logo">
-						<img
-							src="/images/work/visual-design/logo-rm-timing-systems.svg"
-							class=""
-							alt={title}
-						/>
+							data-bs-toggle="modal"
+							data-bs-target="#galleryModal"
+							data-bs-image="/images/work/visual-design/logo-rm-timing-systems.svg"
+							data-bs-title="Brand / Visual Design"
+							data-bs-bgcolor="#111"
+							data-bs-type="modal-logo">
+							<img
+								src="/images/work/visual-design/logo-rm-timing-systems.svg"
+								class=""
+								alt={title}
+								loading="lazy"
+								decoding="async"
+							/>
 						</a>
 					</div>
 				</div>
 				<div class="col-xl-6 mb-5">
-					<div class="card card-branding-presentation" style="background: #bbb;">
+					<div
+						class="card card-branding-presentation"
+						style="background: #bbb;">
 						<a
-								data-bs-toggle="modal"
-								data-bs-target="#galleryModal"
-								data-bs-image="/images/work/visual-design/logo-virutal-run-usa.svg"
-								data-bs-title="Brand / Visual Design"
-								data-bs-bgcolor="#bbb"
-								data-bs-type="modal-logo">
-						<img
-							src="/images/work/visual-design/logo-virutal-run-usa.svg"
-							class=""
-							alt={title}
-						/>
+							data-bs-toggle="modal"
+							data-bs-target="#galleryModal"
+							data-bs-image="/images/work/visual-design/logo-virutal-run-usa.svg"
+							data-bs-title="Brand / Visual Design"
+							data-bs-bgcolor="#bbb"
+							data-bs-type="modal-logo">
+							<img
+								src="/images/work/visual-design/logo-virutal-run-usa.svg"
+								class=""
+								alt={title}
+								loading="lazy"
+								decoding="async"
+							/>
 						</a>
 					</div>
 				</div>

@@ -5,148 +5,60 @@ const today = new Date();
 
 <footer class="text-center">
 	<p>
-		<a href="/" class="logo"
-			><img
+		<a href="/" class="logo">
+			<img
 				src="/images/EM-Logo-Mark.svg"
-				style="width: 60px;"
+				width="60"
 				class="mb-3"
 				alt={SITE_TITLE}
-			/></a
-		>
+			/>
+		</a>
 	</p>
-	<p><small>&copy; {today.getFullYear()} {MY_NAME}. All rights reserved.</small></p>
-	<p><small>All trademarks mentioned are copyright their respective owners.</small></p>
+	<p>
+		<small>
+			&copy; {today.getFullYear()}
+			{MY_NAME}. All rights reserved.
+		</small>
+	</p>
+	<p>
+		<small>
+			All trademarks mentioned are copyright their respective owners.
+		</small>
+	</p>
 </footer>
 
-<!-- global modal - portfolio gallery -->
 <div
 	class="modal fade"
 	id="galleryModal"
 	data-bs-theme="dark"
 	aria-hidden="true"
-	aria-labelledby="galleryModal"
+	aria-labelledby="galleryModalTitle"
 	tabindex="-1">
 	<div class="modal-dialog modal-fullscreen">
 		<div class="modal-content">
 			<div class="modal-header">
-				<img src="/images/EM-Logo-Mark.svg" style="width: 60px;" alt={SITE_TITLE} />
-				<h1 class="float-start modal-title fs-4">Full screen modal</h1>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-				></button>
+				<img
+					src="/images/EM-Logo-Mark.svg"
+					width="60"
+					alt={SITE_TITLE}
+				/>
+				<h2 id="galleryModalTitle" class="modal-title fs-4">
+					Project image
+				</h2>
+				<button
+					type="button"
+					class="btn-close"
+					data-bs-dismiss="modal"
+					aria-label="Close">
+				</button>
 			</div>
 			<div class="modal-body text-center">
-				<img src="" class="mx-auto" alt="..." />
+				<img src="" class="mx-auto" alt="" />
 			</div>
 		</div>
 	</div>
 </div>
 
-<!-- load barba and gsap first, to prevent buggy performance -->
-<script is:inline src="https://unpkg.com/@barba/core"></script>
-<script is:inline src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
 <script>
-	// https://barba.js.org/docs/getstarted/legacy/
-	barba.init({
-		transitions: [
-			{
-				name: "opacity-transition",
-				leave(data) {
-					return gsap.to(data.current.container, {
-						opacity: 0,
-						duration: 0.4,
-					});
-				},
-				enter(data) {
-					return (
-						gsap.from(data.next.container, {
-							opacity: 0,
-							duration: 0.4,
-						}),
-						scrollTop(),
-						detectActivePage()
-					);
-				},
-			},
-		],
-	});
-	// page-to-page, reset scroll position to top
-	function scrollTop() {
-		window.scrollTo({
-			top: 0,
-			behavior: "smooth",
-		});
-	}
-	// detect active page, since barba causes a bug
-	function detectActivePage() {
-		// set the active state
-		let activePage = window.location.pathname.split("/")[1];
-		// let parentNav = document.getElementsByClassName("nav");
-		let childNav = document.getElementsByClassName("nav-a");
-		// console.log(activePage);
-		// console.log(parentNav);
-		// console.log(childNav);
-		// childNav.classList.remove("active");
-		for (var i = 0; i < childNav.length; i++) {
-			childNav[i].classList.remove("active");
-		}
-		if (activePage.includes("portfolio")) {
-			document.getElementById("nav-portfolio").classList.add("active");
-		} else if (activePage.includes("about")) {
-			document.getElementById("nav-about").classList.add("active");
-		} else if (activePage.includes("contact")) {
-			document.getElementById("nav-contact").classList.add("active");
-		}
-	}
-</script>
-<script is:inline src="https://unpkg.com/lazyload@2.0.0-rc.2/lazyload.js"></script>
-<script is:inline src="https://unpkg.com/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-	document.addEventListener(
-		"DOMContentLoaded",
-		function () {
-			// https://www.npmjs.com/package/lazyload
-			let images = document.querySelectorAll("main img");
-			lazyload(images);
-
-			// https://getbootstrap.com/docs/5.3/components/modal/#varying-modal-content
-			const galleryModal = document.getElementById("galleryModal");
-			if (galleryModal) {
-				galleryModal.addEventListener("show.bs.modal", (event) => {
-					// Button that triggered the modal
-					const button = event.relatedTarget;
-					// Extract info from data-bs-* attributes
-					const imgSrc = button.getAttribute("data-bs-image");
-					const titleText = button.getAttribute("data-bs-title");
-					const bgcolor = button.getAttribute("data-bs-bgcolor");
-					const modalType = button.getAttribute("data-bs-type");
-					// If necessary, you could initiate an Ajax request here
-					// and then do the updating in a callback.
-
-					// Target the modal's elements
-					const modalClass = galleryModal.querySelector(".modal-body");
-					const modalTitle = galleryModal.querySelector(".modal-title");
-					const modalbody = galleryModal.querySelector(".modal-body");
-					const modalImg = galleryModal.querySelector(".modal-body img");
-
-					// Update the modal's content
-					// Check if the data-attr exists
-					if(modalType!==null){
-						modalClass.classList.add(modalType);
-					}
-					modalTitle.textContent = `${titleText}`;
-					modalbody.style.backgroundColor = bgcolor;
-					modalImg.src = imgSrc;
-					modalImg.style.backgroundColor = bgcolor;
-				});
-				galleryModal.addEventListener("hidden.bs.modal", (event) => {
-					// Need to reset the addition of custom classes
-					const modalClass = galleryModal.querySelector(".modal-body");
-					// Update the modal's content
-					modalClass.classList.remove("modal-logo");
-
-				});
-			}
-		},
-		false
-	);
+	import "../scripts/site";
 </script>

@@ -1,26 +1,25 @@
 ---
-// import type { CollectionEntry } from "astro:content";
-import "bootstrap/dist/css/bootstrap.css";
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-const { title } = Astro.props;
-// import FormattedDate from "../components/FormattedDate.astro";
+import { SITE_DESCRIPTION } from "../consts";
 
-// type Props = CollectionEntry<"portfolio">["data"];
+interface Props {
+	title: string;
+	description?: string;
+}
 
-// const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description = SITE_DESCRIPTION } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={title} description={description} />
 	</head>
-	<body id={title} data-barba="wrapper">
+	<body>
 		<Header />
-		<main class="container mx-auto" data-barba="container" data-barba-namespace={title}>
+		<main class="container mx-auto">
 			<slot />
 		</main>
 		<Footer />

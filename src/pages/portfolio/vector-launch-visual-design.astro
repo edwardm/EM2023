@@ -1,24 +1,11 @@
 ---
 import Layout from "../../layouts/Default.astro";
-// import BaseHead from "../../components/BaseHead.astro";
-// import Header from "../../components/Header.astro";
-// import Footer from "../../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 const title = "Silicon Valley Site Services Website Redesign 2023";
-const description = "A completely revamped web exerperience for this company's branches of businesses.";
-import { getCollection } from "astro:content";
-// import FormattedDate from "../../components/FormattedDate.astro";
-
-// const posts = (await getCollection("portfolio")).sort(
-// 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-// );
+const description =
+	"A completely revamped web exerperience for this company's branches of businesses.";
 ---
 
-<Layout
-	title={title}
-	description={description}
-	pubDate={new Date("August 08 2021")}
-	heroImage="/blog-placeholder-about.jpg">
+<Layout title={title} description={description}>
 	<!-- TO-DO BREADCRUMB -->
 	<section class="row title hero-detail">
 		<div class="col-lg-6 pe-lg-5">
@@ -28,15 +15,22 @@ import { getCollection } from "astro:content";
 				<span class="tag">User Interface</span>
 			</div>
 			<h2 class="col-12 mb-5 pb-5 pe-lg-5 description">
-				The main goal of this project was to modernize, and completely revamp the look and
-				feel of not only the company’s corporate website, but all other customer facing
-				subdomains for a consistent brand presence. To do this, I led the build-out and
-				evangelized the adoption of an entirely new design system from the ground up, while
-				managing a team of web experts.
+				The main goal of this project was to modernize, and completely
+				revamp the look and feel of not only the company’s corporate
+				website, but all other customer facing subdomains for a
+				consistent brand presence. To do this, I led the build-out and
+				evangelized the adoption of an entirely new design system from
+				the ground up, while managing a team of web experts.
 			</h2>
 		</div>
 		<div class="col-lg-6 card-normal img-container">
-			<img src="/images/work/img-hero-svss-website-redesign@2x.webp" alt={title} />
+			<img
+				src="/images/work/img-hero-svss-website-redesign@2x.webp"
+				alt={title}
+				loading="eager"
+				decoding="async"
+				fetchpriority="high"
+			/>
 		</div>
 	</section>
 	<section class="row gx-md-5 section-portfolio">
@@ -91,8 +85,10 @@ import { getCollection } from "astro:content";
 			<h2 class="pr-5">Project Gallery</h2>
 		</div>
 		<div class="col-xl-9">
-			<div class="card card-portfolio card-padding" style="height: auto !important;">
-				<div id="galleryCarousel" class="carousel carousel-dark slide mb-5">
+			<div class="card card-portfolio card-padding card-auto-height">
+				<div
+					id="galleryCarousel"
+					class="carousel carousel-dark slide mb-5">
 					<div class="carousel-indicators">
 						<button
 							type="button"
@@ -100,20 +96,25 @@ import { getCollection } from "astro:content";
 							data-bs-slide-to="0"
 							class="active"
 							aria-current="true"
-							aria-label="Slide 1"></button>
+							aria-label="Slide 1">
+						</button>
 						<button
 							type="button"
 							data-bs-target="#galleryCarousel"
 							data-bs-slide-to="1"
-							aria-label="Slide 2"></button>
+							aria-label="Slide 2">
+						</button>
 						<button
 							type="button"
 							data-bs-target="#galleryCarousel"
 							data-bs-slide-to="2"
-							aria-label="Slide 3"></button>
+							aria-label="Slide 3">
+						</button>
 					</div>
 					<div class="carousel-inner">
-						<div class="carousel-item active" data-bs-interval="10000">
+						<div
+							class="carousel-item active"
+							data-bs-interval="10000">
 							<a
 								data-bs-toggle="modal"
 								data-bs-target="#galleryModal"
@@ -123,6 +124,8 @@ import { getCollection } from "astro:content";
 									src="/images/work/full/HP - AAI.COM 2023 - EM 1.png"
 									class=""
 									alt="..."
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -136,6 +139,8 @@ import { getCollection } from "astro:content";
 									src="/images/Image Container - Full@3x.webp"
 									class=""
 									alt="..."
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -149,6 +154,8 @@ import { getCollection } from "astro:content";
 									src="/images/Image Container - Full@3x.webp"
 									class=""
 									alt="..."
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -242,27 +249,39 @@ import { getCollection } from "astro:content";
 						<h3>Defining Requirements</h3>
 						<ul>
 							<li>
-								Needs base foundations, core UI components and layout blocks
+								Needs base foundations, core UI components and
+								layout blocks
 							</li>
-							<li>Ability to rapid prototype layouts with ease</li>
-							<li>Allows for templatization of key sections and pages</li>
+							<li>
+								Ability to rapid prototype layouts with ease
+							</li>
+							<li>
+								Allows for templatization of key sections and
+								pages
+							</li>
 							<li>Adaptable to all corporate web properties</li>
-							<li>Easily understandable by fellow designers and developers</li>
+							<li>
+								Easily understandable by fellow designers and
+								developers
+							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<h3>Kick-off Calls: Key Takeaways</h3>
 			<p>
-				After a competitive analysis, we had several kick-off calls where we discussed the
-				general design and visual langauge that we as an orgnization wanted to embrace. Over
-				the course of these meetings, we looked at brainstorming ideas for a new home page
-				that would essentially become the foundation for defining the initial design system.
-				Besides the obvious, primary point of site-wide consistency, our key takeaways
-				included: 1) A modernization of visual style though miminmalism 2) From a content
-				style guide standpoint, an emphasis on heading typography and presentation, and 3) A
-				more focused, and toned-down, usage of our brand color system (not only through CSS
-				application, but through actual image assets).
+				After a competitive analysis, we had several kick-off calls
+				where we discussed the general design and visual langauge that
+				we as an orgnization wanted to embrace. Over the course of these
+				meetings, we looked at brainstorming ideas for a new home page
+				that would essentially become the foundation for defining the
+				initial design system. Besides the obvious, primary point of
+				site-wide consistency, our key takeaways included: 1) A
+				modernization of visual style though miminmalism 2) From a
+				content style guide standpoint, an emphasis on heading
+				typography and presentation, and 3) A more focused, and
+				toned-down, usage of our brand color system (not only through
+				CSS application, but through actual image assets).
 			</p>
 		</div>
 	</section>
@@ -273,10 +292,11 @@ import { getCollection } from "astro:content";
 		</div>
 		<div class="col-xl-9">
 			<p class="mb-5">
-				A design system is crucial for any creative team (design, content or technical) since
-				it becomes the source of truth for building interfaces and experiences. While most
-				importantly it requires adoption and support, the system needs to also cover several
-				essential categories for it to be successful.
+				A design system is crucial for any creative team (design,
+				content or technical) since it becomes the source of truth for
+				building interfaces and experiences. While most importantly it
+				requires adoption and support, the system needs to also cover
+				several essential categories for it to be successful.
 			</p>
 			<div class="row gx-md-5">
 				<div class="col-md-6 mb-5">
@@ -285,8 +305,9 @@ import { getCollection } from "astro:content";
 							<div class="col-md-12">
 								<h3>Base Foundations</h3>
 								<p>
-									Covering the themes of color, typograhy, grids,
-									responsiveness and overall design system usage.
+									Covering the themes of color, typograhy,
+									grids, responsiveness and overall design
+									system usage.
 								</p>
 							</div>
 							<div class="col-md-12 img">
@@ -294,6 +315,8 @@ import { getCollection } from "astro:content";
 									src="/images/Image Container - Full.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 						</div>
@@ -305,8 +328,9 @@ import { getCollection } from "astro:content";
 							<div class="col-md-12">
 								<h3>Key UI Components</h3>
 								<p>
-									Amet eiusmod ea incididunt tempor enim nisi non veniam.
-									Exercitation id Lorem nostrud voluptate nulla ut.
+									Amet eiusmod ea incididunt tempor enim nisi
+									non veniam. Exercitation id Lorem nostrud
+									voluptate nulla ut.
 								</p>
 							</div>
 							<div class="col-md-12 img">
@@ -314,6 +338,8 @@ import { getCollection } from "astro:content";
 									src="/images/Image Container - Full.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 						</div>
@@ -327,8 +353,9 @@ import { getCollection } from "astro:content";
 							<div class="col-md-12">
 								<h3>Layout &amp; Content Blocks</h3>
 								<p>
-									Amet eiusmod ea incididunt tempor enim nisi non veniam.
-									Exercitation id Lorem nostrud voluptate nulla ut.
+									Amet eiusmod ea incididunt tempor enim nisi
+									non veniam. Exercitation id Lorem nostrud
+									voluptate nulla ut.
 								</p>
 							</div>
 							<div class="col-md-12 img">
@@ -336,6 +363,8 @@ import { getCollection } from "astro:content";
 									src="/images/Image Container - Full.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 						</div>
@@ -347,8 +376,9 @@ import { getCollection } from "astro:content";
 							<div class="col-md-12">
 								<h3>Component Variations</h3>
 								<p>
-									Amet eiusmod ea incididunt tempor enim nisi non veniam.
-									Exercitation id Lorem nostrud voluptate nulla ut.
+									Amet eiusmod ea incididunt tempor enim nisi
+									non veniam. Exercitation id Lorem nostrud
+									voluptate nulla ut.
 								</p>
 							</div>
 							<div class="col-md-12 img">
@@ -356,6 +386,8 @@ import { getCollection } from "astro:content";
 									src="/images/Image Container - Full.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 						</div>
@@ -367,8 +399,9 @@ import { getCollection } from "astro:content";
 							<div class="col-md-6">
 								<h3>Responsive Variations</h3>
 								<p>
-									Amet eiusmod ea incididunt tempor enim nisi non veniam.
-									Exercitation id Lorem nostrud voluptate nulla ut.
+									Amet eiusmod ea incididunt tempor enim nisi
+									non veniam. Exercitation id Lorem nostrud
+									voluptate nulla ut.
 								</p>
 							</div>
 							<div class="col-md-6 img">
@@ -376,6 +409,8 @@ import { getCollection } from "astro:content";
 									src="/images/Image Container - Full.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 						</div>
@@ -387,8 +422,9 @@ import { getCollection } from "astro:content";
 							<div class="col-md-6">
 								<h3>Image Style Guide</h3>
 								<p>
-									Amet eiusmod ea incididunt tempor enim nisi non veniam.
-									Exercitation id Lorem nostrud voluptate nulla ut.
+									Amet eiusmod ea incididunt tempor enim nisi
+									non veniam. Exercitation id Lorem nostrud
+									voluptate nulla ut.
 								</p>
 							</div>
 							<div class="col-md-6 img">
@@ -396,6 +432,8 @@ import { getCollection } from "astro:content";
 									src="/images/Image Container - Full.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 						</div>
@@ -416,17 +454,18 @@ import { getCollection } from "astro:content";
 						<h3>Feedback Gathering</h3>
 						<ul>
 							<li>
-								Continuous adjustment and audits applied to current components
-								as new content strategy docs and requirements were rolling in
+								Continuous adjustment and audits applied to
+								current components as new content strategy docs
+								and requirements were rolling in
 							</li>
 							<li>
-								Sub-domain owners and key development team members provided
-								feedback on usage and areas of improvement for certain use
-								cases
+								Sub-domain owners and key development team
+								members provided feedback on usage and areas of
+								improvement for certain use cases
 							</li>
 							<li>
-								Reporting back to the development team for updates to the
-								design system
+								Reporting back to the development team for
+								updates to the design system
 							</li>
 						</ul>
 					</div>
@@ -435,12 +474,18 @@ import { getCollection } from "astro:content";
 					<div class="card card-normal">
 						<h3>Updates &amp; Evolution</h3>
 						<ul>
-							<li>Net new UI components and content blocks added as needed</li>
 							<li>
-								Sync with senior designers for update reviews and library
-								publishing
+								Net new UI components and content blocks added
+								as needed
 							</li>
-							<li>Continuous improvements to the image style library</li>
+							<li>
+								Sync with senior designers for update reviews
+								and library publishing
+							</li>
+							<li>
+								Continuous improvements to the image style
+								library
+							</li>
 						</ul>
 					</div>
 				</div>

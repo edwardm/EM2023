@@ -1,25 +1,11 @@
 ---
 import Layout from "../../layouts/Default.astro";
-// import BaseHead from "../../components/BaseHead.astro";
-// import Header from "../../components/Header.astro";
-// import Footer from "../../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 const title = "Automation Anywhere Website Redesign";
 const description =
 	"The main goal of this project was to modernize, and completely revamp the look and feel of not only the companys corporate website, but all other customer facing subdomains for a consistence brand presence.";
-import { getCollection } from "astro:content";
-import FormattedDate from "../../components/FormattedDate.astro";
-
-const posts = (await getCollection("portfolio")).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
 ---
 
-<Layout
-	title={title}
-	description={description}
-	pubDate={new Date("August 08 2021")}
-	heroImage="/blog-placeholder-about.jpg">
+<Layout title={title} description={description}>
 	<!-- TO-DO BREADCRUMB -->
 	<section class="row title hero-detail">
 		<div class="col-lg-6 pe-lg-5">
@@ -29,15 +15,23 @@ const posts = (await getCollection("portfolio")).sort(
 				<span class="tag">User Interface</span>
 			</div>
 			<h2 class="col-12 mb-5 pb-5 pe-lg-5 description">
-				Given the responsibility to revamp the online identity of an enterprise-level software
-				company is a stimulating challenge. This project, in particular, required
-				collaboration with numerous stakeholders, departments, and technical teams to
-				initiate. I assumed a leadership role in shaping the fresh creative direction for this
-				growing Forbes Top 100 Cloud company.
+				Given the responsibility to revamp the online identity of an
+				enterprise-level software company is a stimulating challenge.
+				This project, in particular, required collaboration with
+				numerous stakeholders, departments, and technical teams to
+				initiate. I assumed a leadership role in shaping the fresh
+				creative direction for this growing Forbes Top 100 Cloud
+				company.
 			</h2>
 		</div>
 		<div class="col-lg-6 card-normal img-container">
-			<img src="/images/work/img-hero-aai-website-redesign@2x.webp" alt={title} />
+			<img
+				src="/images/work/img-hero-aai-website-redesign@2x.webp"
+				alt={title}
+				loading="eager"
+				decoding="async"
+				fetchpriority="high"
+			/>
 		</div>
 	</section>
 	<section class="row gx-md-5 section-portfolio">
@@ -93,8 +87,10 @@ const posts = (await getCollection("portfolio")).sort(
 			<h2 class="pr-5">Project Gallery</h2>
 		</div>
 		<div class="col-xl-9">
-			<div class="card card-portfolio card-padding" style="height: auto !important;">
-				<div id="galleryCarousel" class="carousel carousel-dark slide mb-5">
+			<div class="card card-portfolio card-padding card-auto-height">
+				<div
+					id="galleryCarousel"
+					class="carousel carousel-dark slide mb-5">
 					<div class="carousel-indicators">
 						<button
 							type="button"
@@ -102,40 +98,49 @@ const posts = (await getCollection("portfolio")).sort(
 							class="active"
 							aria-current="true"
 							data-bs-slide-to="0"
-							aria-label="Slide 1"></button>
+							aria-label="Slide 1">
+						</button>
 						<button
 							type="button"
 							data-bs-target="#galleryCarousel"
 							data-bs-slide-to="1"
-							aria-label="Slide 2"></button>
+							aria-label="Slide 2">
+						</button>
 						<button
 							type="button"
 							data-bs-target="#galleryCarousel"
 							data-bs-slide-to="2"
-							aria-label="Slide 3"></button>
+							aria-label="Slide 3">
+						</button>
 						<button
 							type="button"
 							data-bs-target="#galleryCarousel"
 							data-bs-slide-to="3"
-							aria-label="Slide 4"></button>
+							aria-label="Slide 4">
+						</button>
 						<button
 							type="button"
 							data-bs-target="#galleryCarousel"
 							data-bs-slide-to="4"
-							aria-label="Slide 5"></button>
+							aria-label="Slide 5">
+						</button>
 						<button
 							type="button"
 							data-bs-target="#galleryCarousel"
 							data-bs-slide-to="5"
-							aria-label="Slide 6"></button>
+							aria-label="Slide 6">
+						</button>
 						<button
 							type="button"
 							data-bs-target="#galleryCarousel"
 							data-bs-slide-to="6"
-							aria-label="Slide 7"></button>
+							aria-label="Slide 7">
+						</button>
 					</div>
 					<div class="carousel-inner">
-						<div class="carousel-item active" data-bs-interval="10000">
+						<div
+							class="carousel-item active"
+							data-bs-interval="10000">
 							<a
 								data-bs-toggle="modal"
 								data-bs-target="#galleryModal"
@@ -145,6 +150,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/aai-website/full/HP - AAI.COM 2023 - EM 1.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -158,6 +165,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/aai-website/full/Product - ASP V2.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -171,6 +180,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/aai-website/full/Cloud Platform - Refresh WDS 3 - 1.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -184,6 +195,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/aai-website/full/docs.aai.com - detail.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -197,6 +210,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/aai-website/full/RPA Security - REFRESH WDS 3.0 - 1 - 1.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -210,6 +225,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/aai-website/full/TEMPLATE Product - Redesign 3.0 - 2 - 1.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -223,6 +240,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/aai-website/full/SCREENSHOT - Customer Stories Listing.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -315,13 +334,18 @@ const posts = (await getCollection("portfolio")).sort(
 						<h3>Brainstorming &amp; Wireframing</h3>
 						<ul>
 							<li>
-								Internal "design jam" with senior designers and in-house
-								creative team
+								Internal "design jam" with senior designers and
+								in-house creative team
 							</li>
 							<li>User journey mapping</li>
 							<li>Determining best page flow for consumption</li>
-							<li>Crafting component variations for certain use-cases</li>
-							<li>Feedback from SEO and CRO for best-practices</li>
+							<li>
+								Crafting component variations for certain
+								use-cases
+							</li>
+							<li>
+								Feedback from SEO and CRO for best-practices
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -335,11 +359,13 @@ const posts = (await getCollection("portfolio")).sort(
 		</div>
 		<div class="col-xl-9">
 			<p class="mb-5">
-				While the website redesign presented a substantial challenge, as a design lead, I had
-				confidence in our execution and delivery capabilities. This assurance stemmed from our
-				development of a design system that significantly streamlined our design process and
-				approach. Moreover, consistently sharing ideas and progress updates with all creative
-				stakeholders throughout the journey ensured alignment and mutual understanding.
+				While the website redesign presented a substantial challenge, as
+				a design lead, I had confidence in our execution and delivery
+				capabilities. This assurance stemmed from our development of a
+				design system that significantly streamlined our design process
+				and approach. Moreover, consistently sharing ideas and progress
+				updates with all creative stakeholders throughout the journey
+				ensured alignment and mutual understanding.
 			</p>
 			<div class="row gx-md-5">
 				<div class="col-md-6 mb-5">
@@ -353,8 +379,9 @@ const posts = (await getCollection("portfolio")).sort(
 							<div class="col-md-12">
 								<h3>Component Variations</h3>
 								<p>
-									Common content blocks had pre-built variants to choose
-									from, which allowed for presentation flexibility.
+									Common content blocks had pre-built variants
+									to choose from, which allowed for
+									presentation flexibility.
 								</p>
 							</div>
 							<div class="col-md-12 img">
@@ -362,6 +389,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/aai-website/thumb-component-variations.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 						</div>
@@ -378,8 +407,9 @@ const posts = (await getCollection("portfolio")).sort(
 							<div class="col-md-12">
 								<h3>Navigation Updates</h3>
 								<p>
-									Several rounds of navigation updates were executed, to
-									cater to the new product stack and narrative.
+									Several rounds of navigation updates were
+									executed, to cater to the new product stack
+									and narrative.
 								</p>
 							</div>
 							<div class="col-md-12 img">
@@ -387,6 +417,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/aai-website/thumb-navigation-updates.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 						</div>
@@ -405,9 +437,10 @@ const posts = (await getCollection("portfolio")).sort(
 							<div class="col-md-12">
 								<h3>Page Templatization</h3>
 								<p>
-									For faster page building and consistency, we templatized
-									the most common sections. This allowed PMMs to more
-									easily plan for the future.
+									For faster page building and consistency, we
+									templatized the most common sections. This
+									allowed PMMs to more easily plan for the
+									future.
 								</p>
 							</div>
 							<div class="col-md-12 img">
@@ -415,6 +448,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/aai-website/thumb-page-templatization.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 						</div>
@@ -431,9 +466,10 @@ const posts = (await getCollection("portfolio")).sort(
 							<div class="col-md-12">
 								<h3>Responsive Layouts</h3>
 								<p>
-									Most top-level layouts and MVP pages were built with
-									responsive design frames. Aiding not only PMMs, but the
-									development team as well.
+									Most top-level layouts and MVP pages were
+									built with responsive design frames. Aiding
+									not only PMMs, but the development team as
+									well.
 								</p>
 							</div>
 							<div class="col-md-12 img">
@@ -441,6 +477,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/aai-website/thumb-responsive-layouts.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 						</div>
@@ -457,10 +495,11 @@ const posts = (await getCollection("portfolio")).sort(
 							<div class="col-md-6">
 								<h3>Subdomain Support</h3>
 								<p>
-									I took lead and made it a priority for our company's sub
-									domain properties to adopt the new design system. My
-									main role was to evangelize the system and provide any
-									UI/UX support that was needed. I managed senior
+									I took lead and made it a priority for our
+									company's sub domain properties to adopt the
+									new design system. My main role was to
+									evangelize the system and provide any UI/UX
+									support that was needed. I managed senior
 									designers during the adoption.
 								</p>
 							</div>
@@ -469,6 +508,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/aai-website/thumb-subdomain-support.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 						</div>
@@ -485,10 +526,11 @@ const posts = (await getCollection("portfolio")).sort(
 							<div class="col-md-6">
 								<h3>Region Specific, Cultural Design</h3>
 								<p>
-									I worked directly with regional managers to make sure
-									our visual style was catering to the corresponding
-									culture. Options were provided and iterations were made.
-									I managed senior designers during these stages.
+									I worked directly with regional managers to
+									make sure our visual style was catering to
+									the corresponding culture. Options were
+									provided and iterations were made. I managed
+									senior designers during these stages.
 								</p>
 							</div>
 							<div class="col-md-6 img">
@@ -496,6 +538,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/aai-website/thumb-cultural-design.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 						</div>
@@ -516,17 +560,19 @@ const posts = (await getCollection("portfolio")).sort(
 						<h3>Feedback Gathering</h3>
 						<ul>
 							<li>
-								As new content docs and requirements were rolling in, WCS team
-								made sure to stay in sync with the strategy of "hot" pages
+								As new content docs and requirements were
+								rolling in, WCS team made sure to stay in sync
+								with the strategy of "hot" pages
 							</li>
 							<li>
-								Sub-domain owners and key development team members provided
-								direct feedback on usage and areas of improvement for use
-								cases
+								Sub-domain owners and key development team
+								members provided direct feedback on usage and
+								areas of improvement for use cases
 							</li>
 							<li>
-								Reporting back to the development team for updates to the
-								design system, updates to sections or net new pages.
+								Reporting back to the development team for
+								updates to the design system, updates to
+								sections or net new pages.
 							</li>
 						</ul>
 					</div>
@@ -536,14 +582,17 @@ const posts = (await getCollection("portfolio")).sort(
 						<h3>Updates &amp; Evolution</h3>
 						<ul>
 							<li>
-								New designs in the pipeline: Customer Stories, Blogs, Asset
-								Library and Events & Webinars
+								New designs in the pipeline: Customer Stories,
+								Blogs, Asset Library and Events & Webinars
 							</li>
 							<li>
-								Continued experimentation with Conversion Rate methods and
-								Call to Action approaches
+								Continued experimentation with Conversion Rate
+								methods and Call to Action approaches
 							</li>
-							<li>Continued monthly support for sub-domain redesign projects</li>
+							<li>
+								Continued monthly support for sub-domain
+								redesign projects
+							</li>
 						</ul>
 					</div>
 				</div>

@@ -1,25 +1,11 @@
 ---
 import Layout from "../../layouts/Default.astro";
-// import BaseHead from "../../components/BaseHead.astro";
-// import Header from "../../components/Header.astro";
-// import Footer from "../../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 const title = "RM Races Live - SaaS Event Platform";
 const description =
 	"A web-based platform for the endurance race industry. This full-fledged race event management and results platform contains features ranging from online registration, results processing and data tracking all through a robust dashboard. As the service became widely adopted, new tools, features and integrations were added to meet customer needs.";
-import { getCollection } from "astro:content";
-import FormattedDate from "../../components/FormattedDate.astro";
-
-const posts = (await getCollection("portfolio")).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
 ---
 
-<Layout
-	title={title}
-	description={description}
-	pubDate={new Date("August 08 2021")}
-	heroImage="/blog-placeholder-about.jpg">
+<Layout title={title} description={description}>
 	<!-- TO-DO BREADCRUMB -->
 	<section class="row title hero-detail">
 		<div class="col-lg-6 pe-lg-5">
@@ -35,7 +21,13 @@ const posts = (await getCollection("portfolio")).sort(
 			</h2>
 		</div>
 		<div class="col-lg-6 card-normal img-container">
-			<img src="/images/work/img-hero-rmrl@2x.webp" alt={title} />
+			<img
+				src="/images/work/img-hero-rmrl@2x.webp"
+				alt={title}
+				loading="eager"
+				decoding="async"
+				fetchpriority="high"
+			/>
 		</div>
 	</section>
 	<section class="row gx-md-5 section-portfolio">
@@ -84,9 +76,7 @@ const posts = (await getCollection("portfolio")).sort(
 			<h2 class="pr-5">Project Gallery</h2>
 		</div>
 		<div class="col-xl-9">
-			<div
-				class="card card-portfolio card-padding"
-				style="height: auto !important;">
+			<div class="card card-portfolio card-padding card-auto-height">
 				<div
 					id="galleryCarousel"
 					class="carousel carousel-dark slide mb-5">
@@ -184,6 +174,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/rmrl/rmrl-results-mobile@2x.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -197,6 +189,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/rmrl/rmrl-result-kiosk@2x.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -210,6 +204,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/rmrl/rmrl-result-report@2x.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -223,6 +219,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/rmrl/rmrl-home@2x.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -236,6 +234,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/rmrl/rmrl-event-dashboard@2x.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -249,6 +249,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/rmrl/rmrl-bib-lookup@2x.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -262,6 +264,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/rmrl/rmrl-event-listing@2x.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -275,6 +279,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/rmrl/rmrl-org-listing@2x.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -301,6 +307,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/rmrl/rmrl-results@2x.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -314,6 +322,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/rmrl/rmrl-streamer@2x.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -327,6 +337,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/rmrl/rmrl-streamer-config@2x.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -340,6 +352,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/rmrl/rmrl-event-settings@2x.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -449,7 +463,8 @@ const posts = (await getCollection("portfolio")).sort(
 		<div class="col-xl-9">
 			<!------------------ TOPIC ------------------>
 			<h3 class="topic">
-				<i class="fa-solid fa-chalkboard mr-5"></i> Event Management Dashboard
+				<i class="fa-solid fa-chalkboard mr-5"></i> Event Management
+				Dashboard
 			</h3>
 			<div class="row gx-md-5 mb-5">
 				<div class="col-xl-6">
@@ -532,6 +547,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/rmrl/rmrl-event-dashboard@2x.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 						</div>
@@ -621,6 +638,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/rmrl/rmrl-results@2x.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 						</div>
@@ -717,6 +736,8 @@ const posts = (await getCollection("portfolio")).sort(
 									src="/images/work/rmrl/rmrl-result-kiosk@2x.webp"
 									class=""
 									alt={title}
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 						</div>

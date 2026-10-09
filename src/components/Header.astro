@@ -1,8 +1,6 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import { SITE_TITLE } from "../consts";
-import { MY_NAME } from "../consts";
-import { MY_TITLE } from "../consts";
+import { MY_NAME, MY_TITLE, SITE_TITLE } from "../consts";
 ---
 
 <div class="container">
@@ -10,7 +8,7 @@ import { MY_TITLE } from "../consts";
 		<a
 			href="/"
 			class="logo d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-			<img src="/images/EM-Logo-Mark.svg" style="width: 100px;" height="auto" alt={SITE_TITLE} />
+			<img src="/images/EM-Logo-Mark.svg" width="100" alt={SITE_TITLE} />
 			<span>
 				<span class="logo-name">{MY_NAME}</span>
 				<span class="logo-title">{MY_TITLE}</span>
@@ -18,11 +16,22 @@ import { MY_TITLE } from "../consts";
 		</a>
 		<nav>
 			<ul class="nav nav-pills">
-				<HeaderLink id="nav-portfolio" class="nav-a nav-portfolio" href="/portfolio">
+				<HeaderLink
+					id="nav-portfolio"
+					class="nav-a nav-portfolio"
+					href="/portfolio">
 					Portfolio
 				</HeaderLink>
-				<HeaderLink id="nav-about" class="nav-a nav-about" href="/about">About</HeaderLink>
-				<HeaderLink id="nav-contact" class="nav-a nav-contact" href="/contact">
+				<HeaderLink
+					id="nav-about"
+					class="nav-a nav-about"
+					href="/about">
+					About
+				</HeaderLink>
+				<HeaderLink
+					id="nav-contact"
+					class="nav-a nav-contact"
+					href="/contact">
 					Contact
 				</HeaderLink>
 			</ul>

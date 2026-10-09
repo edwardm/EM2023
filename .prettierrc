@@ -1,7 +1,6 @@
 {
 	"tabWidth": 4,
 	"useTabs": true,
-	"editor.formatOnSave": true,
 	"htmlWhitespaceSensitivity": "ignore",
 	"bracketSameLine": true
 }
