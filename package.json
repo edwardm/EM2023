@@ -11,14 +11,14 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/mdx": "^4.3.13",
-		"@astrojs/rss": "^4.0.15",
-		"@astrojs/sitemap": "^3.7.0",
+		"@astrojs/mdx": "^8.0.3",
+		"@astrojs/rss": "^4.0.19",
+		"@astrojs/sitemap": "^3.7.4",
 		"@esbuild/win32-x64": "^0.19.1",
 		"@fortawesome/fontawesome-free": "^6.4.2",
-		"astro": "^5.16.15",
+		"astro": "^7.3.8",
 		"bootstrap": "^5.3.8",
-		"sharp": "^0.35.3"
+		"sharp": "^0.35.5"
 	},
 	"devDependencies": {
 		"@types/bootstrap": "^5.2.6",
