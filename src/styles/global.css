@@ -237,6 +237,10 @@ h2 {
 	font-size: 1.4em !important;
 }
 
+section.section-portfolio .section-portfolio-label h2 {
+	font-size: 1.2em !important;
+}
+
 .card-portfolio h2 {
 	font-size: 1.2em !important;
 }
